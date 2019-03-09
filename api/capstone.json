@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "ken"
+    }
+  ],
+  "home": [
+    {
+      "id": 1,
+      "userId": 1
+    }
+  ],
+  "task": [
+    {
+      "id": 1,
+      "homeId": 1,
+      "categoryId": 1
+    }
+
+  ],
+  "category": [
+   { "id": 1,
+    "categoryName": "flooring"
+  }
+
+  ]
+}
