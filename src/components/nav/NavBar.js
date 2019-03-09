@@ -10,7 +10,7 @@ class NavBar extends Component {
       <nav className="navbar-light flex-wrap light-blue p-0 shadow">
                 <ul className="nav nav-pills">
                     <li className="nav-item">
-                        <Link className="nav-link" to="/">Welcome</Link>
+                        <Link className="nav-link" to="/homes">Homes</Link>
                     </li>
                     </ul>
                     </nav>

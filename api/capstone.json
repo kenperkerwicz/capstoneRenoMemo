@@ -5,24 +5,48 @@
       "username": "ken"
     }
   ],
-  "home": [
+  "homes": [
     {
-      "id": 1,
-      "userId": 1
+      "userId": null,
+      "id": 2,
+      "homeAddress": "123444",
+      "dateOfEntry": 1552173194,
+      "name": ""
+    },
+    {
+      "userId": null,
+      "id": 3,
+      "homeAddress": "156 madison street",
+      "dateOfEntry": 1552173452
+    },
+    {
+      "userId": null,
+      "id": 4,
+      "homeAddress": "123",
+      "dateOfEntry": 1552173713
+    },
+    {
+      "userId": null,
+      "id": 5,
+      "homeAddress": "2",
+      "dateOfEntry": 1552174509
     }
   ],
-  "task": [
+  "tasks": [
     {
       "id": 1,
       "homeId": 1,
-      "categoryId": 1
+      "categoryId": 1,
+      "taskName": "",
+      "contact": "",
+      "expectedCompDate": "",
+      "dateCreated": ""
     }
-
   ],
   "category": [
-   { "id": 1,
-    "categoryName": "flooring"
-  }
-
+    {
+      "id": 1,
+      "categoryName": "flooring"
+    }
   ]
 }

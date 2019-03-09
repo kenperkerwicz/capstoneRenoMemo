@@ -1,5 +1,6 @@
 import React from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import HomeForm from './home/HomeForm'
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -17,6 +18,9 @@ export default class Example extends React.Component {
     }));
   }
 
+
+
+
   render() {
     return (
       <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
@@ -27,7 +31,7 @@ export default class Example extends React.Component {
 
 
           <DropdownItem divider />
-          <DropdownItem onClick={() => window.alert('hi')}>West Nashville</DropdownItem>
+          <DropdownItem onClick={() => {return <HomeForm />} }>West Nashville</DropdownItem>
           <DropdownItem divider />
           <DropdownItem onClick={() => window.alert('hi')}>Madison</DropdownItem>
 
