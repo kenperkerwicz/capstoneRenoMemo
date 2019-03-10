@@ -7,16 +7,22 @@
   ],
   "homes": [
     {
-      "id": 2,
-      "dateOfEntry": 1552177583,
-      "homeAddress": "123 Hamblen Blvd Madison TN ",
-      "userId": null
-    },
-    {
       "id": 3,
       "dateOfEntry": 1552178722,
       "homeAddress": "615 brick street Nashville TN 37205",
       "userId": null
+    },
+    {
+      "userId": null,
+      "id": 4,
+      "homeAddress": "123 Hamblen Blvd Madison TN ",
+      "dateOfEntry": 1552244775
+    },
+    {
+      "userId": null,
+      "id": 5,
+      "homeAddress": "123 Hamblen Blvd Madison TN ",
+      "dateOfEntry": 1552245291
     }
   ],
   "tasks": [],
