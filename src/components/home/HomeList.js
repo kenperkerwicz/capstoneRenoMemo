@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
-// import MovieCard from "./MovieCard";
+ import HomeCard from "./HomeCard";
+ import './home.css'
 
 export default class HomeList extends Component {
   render () {
@@ -19,15 +20,15 @@ export default class HomeList extends Component {
               </div>
       <section className="homes">
 
-        {/* {
-          // this.props.movies.sort((a,b) => {return b.dateofEntry - a.dateofEntry})
+        {
+          // this.props.homes.sort((a,b) => {return b.dateofEntry - a.dateofEntry})
 
 
-          this.props.homes.filter(mv => mv.userId === user)
+          this.props.homes
           .map(home =>
             <HomeCard key={home.id} home={home} {...this.props} userId={home.userId}/>
         )
-        } */}
+        }
       </section>
       </React.Fragment>
     )

@@ -7,42 +7,19 @@
   ],
   "homes": [
     {
-      "userId": null,
       "id": 2,
-      "homeAddress": "123444",
-      "dateOfEntry": 1552173194,
-      "name": ""
+      "dateOfEntry": 1552177583,
+      "homeAddress": "123 Hamblen Blvd Madison TN ",
+      "userId": null
     },
     {
-      "userId": null,
       "id": 3,
-      "homeAddress": "156 madison street",
-      "dateOfEntry": 1552173452
-    },
-    {
-      "userId": null,
-      "id": 4,
-      "homeAddress": "123",
-      "dateOfEntry": 1552173713
-    },
-    {
-      "userId": null,
-      "id": 5,
-      "homeAddress": "2",
-      "dateOfEntry": 1552174509
+      "dateOfEntry": 1552178722,
+      "homeAddress": "615 brick street Nashville TN 37205",
+      "userId": null
     }
   ],
-  "tasks": [
-    {
-      "id": 1,
-      "homeId": 1,
-      "categoryId": 1,
-      "taskName": "",
-      "contact": "",
-      "expectedCompDate": "",
-      "dateCreated": ""
-    }
-  ],
+  "tasks": [],
   "category": [
     {
       "id": 1,

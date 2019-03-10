@@ -58,6 +58,7 @@ export default class HomeForm extends Component {
               className="form-control"
               onChange={this.handleFieldChange}
               id="homeAddress"
+              placeholder="number street city state zip"
             />
           </div>
 

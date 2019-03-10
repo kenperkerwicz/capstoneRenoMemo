@@ -22,22 +22,69 @@ state = {
         })
       );
 
+      deleteHome = (id) => {
+        return HomeManager.removeAndList(id)
+          .then(homes => this.setState({
+            homes: homes
+          })
+          )
+      }
+
+      getAllHomesAgain = () => {
+        fetch("http://localhost:8088/Homes")
+          .then(r => r.json())
+          .then(movies => this.setState({ movies: movies }))
+      }
+
+      updateHome = (editedHomeObject) => {
+        return HomeManager.put(editedHomeObject)
+          .then(() => HomeManager.getAll())
+          .then(homes => {
+            this.setState({
+             homes: homes
+            })
+          });
+      };
+
+      getHomeToEdit = (id) => {
+        return HomeManager.get(id).then(home => this.setState({
+          home: home
+        }))
+      }
+
+      editHome = (home) => {
+        return HomeManager.updateHome(home).then(() => {
+          return HomeManager.getAll()
+        }).then(homes => this.setState(
+          {
+            homes: homes
+          }
+        ))
+      }
+
+
 
   componentDidMount() {
 
+    const newState = {}
+
+    HomeManager.getAll().then().then(homes => newState.homes = homes).then(() => {
+      this.setState(newState)})
+
   }
+
   render() {
     return (
        <React.Fragment>
       <Route exact path="/homes" render={(props) => {
           return <HomeList
           {...props}
-            // homes={this.state.homes}
-            // deleteHome={this.deleteHome}
-            // loadHomes={this.getAllHomes}
-            // name={this.state.homeName}
-            // userId={this.state.userId}
-            // dateofEntry={this.state.dateofEntry}
+             homes={this.state.homes}
+            deleteHome={this.deleteHome}
+            loadHomes={this.getAllHomes}
+           name={this.state.homeName}
+            userId={this.state.userId}
+           dateofEntry={this.state.dateofEntry}
 
           />
         }} />
@@ -50,7 +97,7 @@ state = {
         }} />
         <Route
           path="/homes/:homeId(\d+)/edit" render={props => {
-            return <HomeEditForm {...props} homees={this.state.homes} updateHome={this.updateHomee} getHomeToEdit={this.getHomeToEdit} edit={this.editHome} />
+            return <HomeEditForm {...props} homees={this.state.homes} updateHome={this.updateHome} getHomeToEdit={this.getHomeToEdit} edit={this.editHome} />
           }}
         />
        </React.Fragment>
