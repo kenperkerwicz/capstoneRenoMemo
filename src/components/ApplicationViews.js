@@ -6,6 +6,7 @@ import HomeList from "./home/HomeList"
 import HomeForm from "./home/HomeForm"
 import HomeManager from "../modules/HomeManager"
 import HomeEditForm from "./home/HomeEditForm"
+import HomeTasks from "./home/HomeTasks"
 
 class ApplicationViews extends Component {
 
@@ -95,11 +96,17 @@ state = {
              userId={this.state.userId}
           />
         }} />
-        <Route
+        <Route exact
           path="/homes/:homeId(\d+)/edit" render={props => {
             return <HomeEditForm {...props} homees={this.state.homes} updateHome={this.updateHome} getHomeToEdit={this.getHomeToEdit} edit={this.editHome} />
+
           }}
         />
+
+              <Route exact path="/homes/:homeId(\d+)" render={(props) => {
+                    return <HomeTasks {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId = {this.state.userId}/>
+                }} />
+
        </React.Fragment>
     )
 

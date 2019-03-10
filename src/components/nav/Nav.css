@@ -1,6 +1,6 @@
 .nav-link {
 
-  background-color: yellow;
+  background-color :#93a7c6;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -9,11 +9,14 @@
 }
 
 .nav-pills {
-  background-color: yellow;
+  background-color: #93a7c6;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   text-align: center;
 
+}
+.nav-item {
+  background-color: white;
 }

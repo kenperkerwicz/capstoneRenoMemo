@@ -1,3 +1,9 @@
 .HomeButton {
   text-align: center;
 }
+.btn-success {
+  display: flexbox;
+  justify-content: space-evenly;
+  padding: 5px;
+  margin-left: 10px;
+}
