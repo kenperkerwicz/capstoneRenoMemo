@@ -24,7 +24,7 @@ export default class HomeList extends Component {
           // this.props.homes.sort((a,b) => {return b.dateofEntry - a.dateofEntry})
 
 
-          this.props.homes
+          this.props.homes.filter(mv => mv.userId === user)
           .map(home =>
             <HomeCard key={home.id} home={home} {...this.props} userId={home.userId}/>
         )

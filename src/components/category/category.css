@@ -1,0 +1,18 @@
+
+.mainDiv {
+  text-align: center;
+  display: flexbox;
+}
+
+.header {
+  display: inline-block;
+}
+
+.cardDisplay {
+ padding: 25px;
+ text-align: left;
+}
+
+.h3 {
+  padding: 15px;
+}

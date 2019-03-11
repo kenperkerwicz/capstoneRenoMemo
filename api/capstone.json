@@ -2,16 +2,16 @@
   "users": [
     {
       "id": 1,
-      "username": "ken"
+      "username": "ken",
+      "password": "12"
+    },
+    {
+      "username": "randy",
+      "password": "123",
+      "id": 2
     }
   ],
   "homes": [
-    {
-      "id": 3,
-      "dateOfEntry": 1552178722,
-      "homeAddress": "615 brick street Nashville TN 37204",
-      "userId": null
-    },
     {
       "userId": null,
       "id": 4,
@@ -31,10 +31,28 @@
       "dateOfEntry": 1552313130
     },
     {
-      "userId": null,
       "id": 7,
-      "homeAddress": "1234 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1552315174
+      "dateOfEntry": 1552319052,
+      "homeAddress": "123 Hamblen Blvd Madison NC",
+      "userId": 1
+    },
+    {
+      "id": 8,
+      "dateOfEntry": 1552319400,
+      "homeAddress": "123 nice street nashville tn 37205",
+      "userId": 2
+    },
+    {
+      "userId": 2,
+      "id": 9,
+      "homeAddress": "123 House Blvd Houseville TN ",
+      "dateOfEntry": 1552319807
+    },
+    {
+      "userId": 2,
+      "id": 10,
+      "homeAddress": "911 nice street madison tn 37206",
+      "dateOfEntry": 1552321120
     }
   ],
   "tasks": [
