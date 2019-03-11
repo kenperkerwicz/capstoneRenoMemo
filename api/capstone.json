@@ -9,56 +9,49 @@
       "username": "randy",
       "password": "123",
       "id": 2
+    },
+    {
+      "username": "charles",
+      "password": "12",
+      "id": 3
     }
   ],
   "homes": [
     {
-      "userId": null,
-      "id": 4,
-      "homeAddress": "123 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1552244775
+      "userId": 1,
+      "id": 1,
+      "homeAddress": "123444 Hamblen Blvd Madison TN ",
+      "dateOfEntry": 1552331857
     },
     {
-      "userId": null,
+      "userId": 1,
+      "id": 2,
+      "homeAddress": "123444  ",
+      "dateOfEntry": 1552331863
+    },
+    {
+      "userId": 2,
+      "id": 3,
+      "homeAddress": "12223 Hamblen Blvd Madison TN ",
+      "dateOfEntry": 1552332009
+    },
+    {
+      "id": 4,
+      "dateOfEntry": 1552333383,
+      "homeAddress": "999 1st street madison TN 37205",
+      "userId": 3
+    },
+    {
+      "userId": 3,
       "id": 5,
       "homeAddress": "123 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1552245291
+      "dateOfEntry": 1552337557
     },
     {
-      "userId": null,
       "id": 6,
-      "homeAddress": "123 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1552313130
-    },
-    {
-      "id": 8,
-      "dateOfEntry": 1552319400,
-      "homeAddress": "123 nice street nashville tn 37205",
-      "userId": 2
-    },
-    {
-      "userId": 2,
-      "id": 9,
-      "homeAddress": "123 House Blvd Houseville TN ",
-      "dateOfEntry": 1552319807
-    },
-    {
-      "userId": 2,
-      "id": 10,
-      "homeAddress": "911 nice street madison tn 37206",
-      "dateOfEntry": 1552321120
-    },
-    {
-      "userId": 1,
-      "id": 11,
-      "homeAddress": "511 Hamblen Dr Madison Tn 37206",
-      "dateOfEntry": 1552323579
-    },
-    {
-      "userId": 1,
-      "id": 12,
-      "homeAddress": "123 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1552324104
+      "dateOfEntry": 1552337564,
+      "homeAddress": "123",
+      "userId": 3
     }
   ],
   "tasks": [
@@ -69,7 +62,7 @@
       "taskName": "",
       "contact": "",
       "expectedCompDate": "",
-      "homeId": ""
+      "homeId": 1
     }
   ],
   "category": [

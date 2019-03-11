@@ -30,7 +30,8 @@ export default class HomeCard extends Component {
                         <a href="#"
                             onClick={() => this.props.deleteHome(this.props.home.id)}
                             className="btn btn-success">Delete</a>
-                            <Link className="nav-link" to={`/homes/${this.props.home.id}`}>Categories to Complete</Link>
+
+                            <Link className="nav-link" to={`/homes/${this.props.home.id}`}>Tasks to Complete</Link>
 
                     </h5>
                 </div>

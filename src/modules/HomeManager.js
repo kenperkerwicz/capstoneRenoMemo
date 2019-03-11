@@ -8,6 +8,7 @@ export default {
   getAll() {
     return fetch(`${remoteURL}/homes`).then(e => e.json())
   },
+  
   removeAndList(id) {
     return fetch(`http://localhost:8088/homes/${id}`, {
             method: "DELETE"

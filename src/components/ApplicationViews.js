@@ -90,7 +90,7 @@ state = {
 
           />
         }} />
-         <Route path="/homes/new" render={(props) => {
+         <Route exact path="/homes/new" render={(props) => {
           return <HomeForm {...props}
            addHome={this.addHome}
             homes={this.state.homes}
@@ -113,6 +113,8 @@ state = {
                     {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId = {this.state.userId}
                     />
                 }} />
+
+                
 
        </React.Fragment>
     )

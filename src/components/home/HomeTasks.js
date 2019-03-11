@@ -46,7 +46,7 @@ export default class HomeTasks extends Component {
              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
           What needs to be done
-        </DropdownToggle>
+        </DropdownToggle> 
         <DropdownMenu>
 
 
