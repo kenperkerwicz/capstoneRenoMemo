@@ -11,8 +11,13 @@
 .cardDisplay {
  padding: 25px;
  text-align: left;
+ width: 250px;
 }
 
 .h3 {
   padding: 15px;
+}
+
+.ToDo {
+  text-align: center;
 }

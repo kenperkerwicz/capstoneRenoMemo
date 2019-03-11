@@ -31,12 +31,6 @@
       "dateOfEntry": 1552313130
     },
     {
-      "id": 7,
-      "dateOfEntry": 1552319052,
-      "homeAddress": "123 Hamblen Blvd Madison NC",
-      "userId": 1
-    },
-    {
       "id": 8,
       "dateOfEntry": 1552319400,
       "homeAddress": "123 nice street nashville tn 37205",
@@ -53,6 +47,18 @@
       "id": 10,
       "homeAddress": "911 nice street madison tn 37206",
       "dateOfEntry": 1552321120
+    },
+    {
+      "userId": 1,
+      "id": 11,
+      "homeAddress": "511 Hamblen Dr Madison Tn 37206",
+      "dateOfEntry": 1552323579
+    },
+    {
+      "userId": 1,
+      "id": 12,
+      "homeAddress": "123 Hamblen Blvd Madison TN ",
+      "dateOfEntry": 1552324104
     }
   ],
   "tasks": [

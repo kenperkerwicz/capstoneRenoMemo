@@ -1,7 +1,7 @@
 
 import React, { Component } from "react"
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import CategoryDisplay from "../category/CategoryDisplay"
+import CategoryDisplay from "../category/CategoryForm"
 
 
 export default class HomeTasks extends Component {
@@ -34,10 +34,7 @@ export default class HomeTasks extends Component {
         <div key={home.id} className="card">
           <div className="card-body">
             <h4 className="card-title">
-
               {home.homeAddress}
-
-
             </h4>
             <h6 className="card-title">{home.name}</h6>
             <a href="#"
