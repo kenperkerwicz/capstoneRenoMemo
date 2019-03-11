@@ -1,6 +1,7 @@
 
 import React, { Component } from "react"
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import CategoryDisplay from "../category/CategoryDisplay"
 
 
 export default class HomeTasks extends Component {
@@ -47,15 +48,15 @@ export default class HomeTasks extends Component {
 
              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
-          Dropdown
+          What needs to be done
         </DropdownToggle>
         <DropdownMenu>
 
 
           <DropdownItem divider />
-          <DropdownItem onClick={() => {console.log('hello')} }>flooring</DropdownItem>
+          <DropdownItem onClick={() => this.props.history.push("/homes/category") }>flooring</DropdownItem>
           <DropdownItem divider />
-          <DropdownItem onClick={() => window.alert('hi')}>roofing</DropdownItem>
+          <DropdownItem onClick={() => this.props.history.push("/homes/category") }>roofing</DropdownItem>
 
 
         </DropdownMenu>

@@ -7,6 +7,7 @@ import HomeForm from "./home/HomeForm"
 import HomeManager from "../modules/HomeManager"
 import HomeEditForm from "./home/HomeEditForm"
 import HomeTasks from "./home/HomeTasks"
+import CategoryDisplay from "./category/CategoryDisplay";
 
 class ApplicationViews extends Component {
 
@@ -107,6 +108,11 @@ state = {
                     return <HomeTasks {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId = {this.state.userId}/>
                 }} />
 
+                <Route exact path="/homes/category" render={(props) => {
+                    return <CategoryDisplay
+                    // {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId = {this.state.userId}
+                    />
+                }} />
        </React.Fragment>
     )
 
