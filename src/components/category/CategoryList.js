@@ -15,10 +15,10 @@ export default class CategoryList extends Component {
           // this.props.homes.sort((a,b) => {return b.dateofEntry - a.dateofEntry})
 
 
-          this.props
-          .map(category =>
-            <CategoryCard key={home.id} home={home} {...this.props} userId={home.userId}/>
-        )
+        //   this.props
+        //   .map(category =>
+        //     <CategoryCard key={home.id} home={home} {...this.props} userId={home.userId}/>
+        // )
         }
 
     </div>
