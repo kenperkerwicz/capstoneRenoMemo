@@ -19,12 +19,6 @@
   "homes": [
     {
       "userId": 1,
-      "id": 1,
-      "homeAddress": "123444 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1552331857
-    },
-    {
-      "userId": 1,
       "id": 2,
       "homeAddress": "123444  ",
       "dateOfEntry": 1552331863
@@ -56,16 +50,16 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "userId": 1,
-      "catId": 1,
-      "taskName": "",
-      "contact": "",
-      "expectedCompDate": "",
-      "homeId": 1
-    }
-  ],
-  "category": [
+    "id": "",
+    "userId": "",
+    "categoryId": "",
+    "taskName": "",
+    "contact": "",
+    "expectedCompDate": "",
+    "homeId": ""
+  }
+],
+  "categories": [
     {
       "id": 1,
       "categoryName": "flooring"

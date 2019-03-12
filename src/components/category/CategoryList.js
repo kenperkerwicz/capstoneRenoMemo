@@ -1,16 +1,25 @@
 import React, { Component } from "react";
+import CategoryCard from "./CategoryCard"
 
 
 export default class CategoryList extends Component {
 
 
-  
+
 
 
   render () {
     return <div>
-      <h7 className="ToDo"> Individual To Do cards will all go here (this is in  CategoryList.js)
-    </h7>
+
+{
+          // this.props.homes.sort((a,b) => {return b.dateofEntry - a.dateofEntry})
+
+
+          this.props
+          .map(category =>
+            <CategoryCard key={home.id} home={home} {...this.props} userId={home.userId}/>
+        )
+        }
 
     </div>
   }

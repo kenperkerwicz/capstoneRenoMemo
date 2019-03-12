@@ -46,7 +46,7 @@ export default class HomeTasks extends Component {
              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
           What needs to be done
-        </DropdownToggle> 
+        </DropdownToggle>
         <DropdownMenu>
 
 
@@ -54,6 +54,11 @@ export default class HomeTasks extends Component {
           <DropdownItem onClick={() => this.props.history.push("/homes/category") }>flooring</DropdownItem>
           <DropdownItem divider />
           <DropdownItem onClick={() => this.props.history.push("/homes/category") }>roofing</DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem onClick={() => this.props.history.push("/homes/category") }>bathrooms</DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem onClick={() => this.props.history.push("/homes/category") }>kitchen</DropdownItem>
+
 
 
         </DropdownMenu>

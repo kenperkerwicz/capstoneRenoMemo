@@ -9,9 +9,11 @@
 }
 
 .cardDisplay {
- padding: 25px;
+ padding: 3px;
  text-align: left;
  width: 250px;
+ border: 1px;
+ border-style: double;
 }
 
 .h3 {

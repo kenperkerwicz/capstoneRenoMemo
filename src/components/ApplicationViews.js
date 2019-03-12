@@ -8,11 +8,14 @@ import HomeManager from "../modules/HomeManager"
 import HomeEditForm from "./home/HomeEditForm"
 import HomeTasks from "./home/HomeTasks"
 import CategoryForm from "./category/CategoryForm";
+import CategoryList from "./category/CategoryList"
 
 class ApplicationViews extends Component {
 
 state = {
-  homes: []
+  homes: [],
+  categories: [],
+  tasks: []
 }
 
   addHome = home =>
@@ -99,7 +102,7 @@ state = {
         }} />
         <Route exact
           path="/homes/:homeId(\d+)/edit" render={props => {
-            return <HomeEditForm {...props} homees={this.state.homes} updateHome={this.updateHome} getHomeToEdit={this.getHomeToEdit} edit={this.editHome} />
+            return <HomeEditForm {...props} homes={this.state.homes} updateHome={this.updateHome} getHomeToEdit={this.getHomeToEdit} edit={this.editHome} />
 
           }}
         />
@@ -108,13 +111,22 @@ state = {
                     return <HomeTasks {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId = {this.state.userId}/>
                 }} />
 
-                <Route exact path="/homes/category" render={(props) => {
+                <Route exact path="/homes/category/new" render={(props) => {
                     return <CategoryForm
                     {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId = {this.state.userId}
                     />
                 }} />
+                <Route exact path="/homes/category" render={(props) => {
+                    return <CategoryList
+                    {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId = {this.state.userId}
+                    categories={this.state.categories}
+                    tasks={this.state.tasks}
 
-                
+
+                    />
+                }} />
+
+
 
        </React.Fragment>
     )

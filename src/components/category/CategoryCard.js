@@ -15,7 +15,7 @@ export default class CategoryCard extends Component {
 
   render () {
  return (
-   <div>
+   <div className ="cardDisplay">
    <h1>Category Cards</h1>
    <h4>will go here</h4>
 
