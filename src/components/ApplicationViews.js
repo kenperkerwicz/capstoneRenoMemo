@@ -6,17 +6,20 @@ import HomeList from "./home/HomeList"
 import HomeForm from "./home/HomeForm"
 import HomeManager from "../modules/HomeManager"
 import HomeEditForm from "./home/HomeEditForm"
+import TaskManager from "../modules/TaskManager"
 import HomeTasks from "./home/HomeTasks"
-import CategoryForm from "./category/CategoryForm";
+import TaskCategoryForm from "./task/TaskForm";
 import CategoryList from "./category/CategoryList"
+import TaskCategoryList from "./task/TaskCategoryList"
+import TaskForm from "./task/TaskForm"
 
 class ApplicationViews extends Component {
 
-state = {
-  homes: [],
-  categories: [],
-  tasks: []
-}
+  state = {
+    homes: [],
+    categories: [],
+    tasks: []
+  }
 
   addHome = home =>
     HomeManager.post(home)
@@ -27,45 +30,62 @@ state = {
         })
       );
 
-      deleteHome = (id) => {
-        return HomeManager.removeAndList(id)
-          .then(homes => this.setState({
-            homes: homes
-          })
-          )
-      }
+  deleteHome = (id) => {
+    return HomeManager.removeAndList(id)
+      .then(homes => this.setState({
+        homes: homes
+      })
+      )
+  }
 
-      getAllHomesAgain = () => {
-        fetch("http://localhost:8088/Homes")
-          .then(r => r.json())
-          .then(movies => this.setState({ movies: movies }))
-      }
+  getAllHomesAgain = () => {
+    fetch("http://localhost:8088/Homes")
+      .then(r => r.json())
+      .then(movies => this.setState({ movies: movies }))
+  }
 
-      updateHome = (editedHomeObject) => {
-        return HomeManager.put(editedHomeObject)
-          .then(() => HomeManager.getAll())
-          .then(homes => {
-            this.setState({
-             homes: homes
-            })
-          });
-      };
+  updateHome = (editedHomeObject) => {
+    return HomeManager.put(editedHomeObject)
+      .then(() => HomeManager.getAll())
+      .then(homes => {
+        this.setState({
+          homes: homes
+        })
+      });
+  };
 
-      getHomeToEdit = (id) => {
-        return HomeManager.get(id).then(home => this.setState({
-          home: home
-        }))
-      }
+  getHomeToEdit = (id) => {
+    return HomeManager.get(id).then(home => this.setState({
+      home: home
+    }))
+  }
 
-      editHome = (home) => {
-        return HomeManager.updateHome(home).then(() => {
-          return HomeManager.getAll()
-        }).then(homes => this.setState(
-          {
-            homes: homes
-          }
-        ))
+  editHome = (home) => {
+    return HomeManager.updateHome(home).then(() => {
+      return HomeManager.getAll()
+    }).then(homes => this.setState(
+      {
+        homes: homes
       }
+    ))
+  }
+  deleteTask = (id) => {
+    return TaskManager.removeAndList(id)
+      .then(tasks => this.setState({
+        tasks: tasks
+      })
+      )
+  }
+  addTask = task =>
+    TaskManager.post(task)
+      .then(() => TaskManager.getAll())
+      .then(tasks =>
+        this.setState({
+          tasks: tasks
+        })
+      );
+
+
 
 
 
@@ -73,31 +93,33 @@ state = {
 
     const newState = {}
 
-    HomeManager.getAll().then().then(homes => newState.homes = homes).then(() => {
-      this.setState(newState)})
+    HomeManager.getAll().then(homes => newState.homes = homes).then(() => {
+      this.setState(newState)
+    }).then(() => TaskManager.getAll())
+    .then(tasks => newState.tasks = tasks)
 
   }
 
   render() {
     return (
-       <React.Fragment>
-      <Route exact path="/homes" render={(props) => {
+      <React.Fragment>
+        <Route exact path="/homes" render={(props) => {
           return <HomeList
-          {...props}
-             homes={this.state.homes}
+            {...props}
+            homes={this.state.homes}
             deleteHome={this.deleteHome}
             loadHomes={this.getAllHomes}
-           name={this.state.homeName}
+            name={this.state.homeName}
             userId={this.state.userId}
-           dateofEntry={this.state.dateofEntry}
+            dateofEntry={this.state.dateofEntry}
 
           />
         }} />
-         <Route exact path="/homes/new" render={(props) => {
+        <Route exact path="/homes/new" render={(props) => {
           return <HomeForm {...props}
-           addHome={this.addHome}
+            addHome={this.addHome}
             homes={this.state.homes}
-             userId={this.state.userId}
+            userId={this.state.userId}
           />
         }} />
         <Route exact
@@ -107,30 +129,55 @@ state = {
           }}
         />
 
-              <Route exact path="/homes/:homeId(\d+)" render={(props) => {
-                    return <HomeTasks {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId = {this.state.userId}
-                    homeId= {this.state.homeId} task={this.state.taskId}
-                    taskName={this.state.taskName}/>
-                }} />
+        <Route exact path="/homes/:homeId(\d+)" render={(props) => {
+          return <CategoryList
+            {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
+            categories={this.state.categories}
+            tasks={this.state.tasks} />
+        }} />
+        <Route exact path="/homes/:homeId(\d+)/:categoryId(\d+)" render={(props) => {
+          return <HomeTasks {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
+            homeId={this.state.homeId} task={this.state.taskId}
+            taskName={this.state.taskName} />
+        }} />
 
-                <Route exact path="/homes/category/new" render={(props) => {
-                    return <CategoryForm
-                    {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId = {this.state.userId}
-                    />
-                }} />
-                <Route exact path="/homes/category" render={(props) => {
-                    return <CategoryList
-                    {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId = {this.state.userId}
-                    categories={this.state.categories}
-                    tasks={this.state.tasks}
+        <Route exact path="/category/new" render={(props) => {
+          return <TaskCategoryForm
+            {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
+            tasks= {this.state.tasks}
+          />
+        }} />
+        <Route exact path="/category" render={(props) => {
+          return <CategoryList
+            {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
+            categories={this.state.categories}
+            tasks={this.state.tasks}
+          />
+        }} />
+        <Route exact path="/tasks" render={(props) => {
+          return <TaskCategoryList
+            {...props} delete={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
+            categories={this.state.categories}
+            tasks={this.state.tasks}
+            deleteTask = {this.deleteTask}
+            categoryId={this.state.categoryId}
+          taskName={this.state.taskName}
+          contact={this.state.contact}
+          expectedCompDate= {this.state.tuesday}
 
 
-                    />
-                }} />
+          />
+        }} />
+        <Route exact path="/tasks/new" render={(props) => {
+          return <TaskForm {...props}
+            addtask={this.addTask}
+           tasks={this.state.tasks}
+            userId={this.state.userId}
 
+          />
+        }} />
 
-
-       </React.Fragment>
+      </React.Fragment>
     )
 
   }
@@ -138,3 +185,7 @@ state = {
 }
 
 export default ApplicationViews
+
+// <HomeTasks {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId = {this.state.userId}
+//                     homeId= {this.state.homeId} task={this.state.taskId}
+//                     taskName={this.state.taskName}/>

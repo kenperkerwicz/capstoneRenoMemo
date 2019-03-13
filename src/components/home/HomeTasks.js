@@ -58,7 +58,7 @@ export default class HomeTasks extends Component {
               className="card-link">Delete</a>
 
 
-            <CategoryList />
+            {/* <CategoryList /> */}
           </div>
         </div>
       </section>

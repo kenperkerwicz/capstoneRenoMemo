@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './category.css'
-import CategoryList from "./CategoryList"
-import CategoryCard from "./CategoryCard"
+import TaskCategoryList from "./TaskCategoryList"
+import TaskCategoryCard from "./CategoryCard"
 
 export default class CategoryForm extends Component {
 
@@ -21,6 +21,7 @@ export default class CategoryForm extends Component {
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
   };
+
   constructNewCard = evt => {
     evt.preventDefault();
     if (this.state.taskName === "") {
@@ -45,8 +46,8 @@ export default class CategoryForm extends Component {
 
       // Create the home and redirect user to the home list
       this.props
-        .addCard(card)
-        .then(() => this.props.history.push("/category"));
+        .addTask(card)
+        .then(() => this.props.history.push("/tasks"));
     }
   };
 
@@ -54,17 +55,37 @@ export default class CategoryForm extends Component {
   render () {
     return <div className="mainDiv">
     {console.log('hello')}
+    {this.state.taskName}
       <div className="header">
       <input
               type="text"
               required
               className="form-control"
               onChange={this.handleFieldChange}
-              id="categoryForm"
-              placeholder="card info."
+              id="taskName"
+              placeholder="taskName"
             />
 
-<button
+            <input
+              type="text"
+              required
+              className="form-control"
+              onChange={this.handleFieldChange}
+              id="contact"
+              placeholder="contact"
+            />
+            <input
+              type="text"
+              required
+              className="form-control"
+              onChange={this.handleFieldChange}
+              id="expectedCompDate"
+              placeholder="expectedCompDate"
+            />
+
+
+
+              <button
             type="submit"
             onClick={this.constructNewCard}
             className="btn btn-primary"

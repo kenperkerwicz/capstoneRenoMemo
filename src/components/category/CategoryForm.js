@@ -38,7 +38,7 @@ export default class CategoryForm extends Component {
       </div>
       <br></br>
 
-      <div className="cardDisplay">{<CategoryCard/>}</div>
+      {/* <div className="cardDisplay">{<CategoryCard/>}</div> */}
 
     </div>
 

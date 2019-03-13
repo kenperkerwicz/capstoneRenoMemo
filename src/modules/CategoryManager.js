@@ -5,24 +5,24 @@ export default {
     return fetch(`${remoteURL}/homes/${id}`).then(e => e.json())
   },
 
-  getTasks(homeId, categoryId) {
-      return fetch (`http://localhost:8088/tasks?homeId=${homeId}&categoryId=${categoryId}`).then(e => e.json())
+  getTasks(id) {
+      return fetch (`http://localhost:8088/tasks?homeId=${id}`).then(e => e.json())
     },
     // posts?title=json-server&author=typicode)
 
   getAll() {
-    return fetch(`${remoteURL}/tasks`).then(e => e.json())
+    return fetch(`${remoteURL}/categories`).then(e => e.json())
   },
 
   removeAndList(id) {
-    return fetch(`http://localhost:8088/tasks/${id}`, {
+    return fetch(`http://localhost:8088/categories/${id}`, {
             method: "DELETE"
         })
-        .then(() => fetch(`http://localhost:8088/tasks`))
+        .then(() => fetch(`http://localhost:8088/categories`))
         .then(e => e.json())
   },
   post(newTask) {
-    return fetch(`${remoteURL}/tasks`, {
+    return fetch(`${remoteURL}/homes`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
