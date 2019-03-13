@@ -108,7 +108,9 @@ state = {
         />
 
               <Route exact path="/homes/:homeId(\d+)" render={(props) => {
-                    return <HomeTasks {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId = {this.state.userId}/>
+                    return <HomeTasks {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId = {this.state.userId}
+                    homeId= {this.state.homeId} task={this.state.taskId}
+                    taskName={this.state.taskName}/>
                 }} />
 
                 <Route exact path="/homes/category/new" render={(props) => {

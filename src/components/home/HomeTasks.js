@@ -2,23 +2,38 @@
 import React, { Component } from "react"
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import CategoryDisplay from "../category/CategoryForm"
+import CategoryList from "../category/CategoryList"
+import TaskManager from "../../modules/TaskManager"
 
 
 export default class HomeTasks extends Component {
 
-  constructor(props) {
-    super(props);
+  state = {
+    taskId: "",
+    id: "",
+    categoryId: "",
+    taskName: "",
+    contact: "",
+    expectedCompDate: "",
+    homeId: "",
+    statusId: ""
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      dropdownOpen: false
-    };
+
   }
 
-  toggle() {
-    this.setState(prevState => ({
-      dropdownOpen: !prevState.dropdownOpen
-    }));
+  componentDidMount() {
+    TaskManager.getTasks(this.props.match.params.taskId).then(task => {
+      console.log(task)
+      this.setState({
+        taskId: task.taskId,
+        categoryId: 1,
+        taskName: task.taskName,
+        contact: task.contact,
+        expectedCompDate: task.expectedCompDate,
+        homeId: parseInt(task.homeId),
+        statusId: this.statusId
+      });
+    });
   }
 
   render() {
@@ -43,26 +58,7 @@ export default class HomeTasks extends Component {
               className="card-link">Delete</a>
 
 
-             <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle caret>
-          What needs to be done
-        </DropdownToggle>
-        <DropdownMenu>
-
-
-          <DropdownItem divider />
-          <DropdownItem onClick={() => this.props.history.push("/homes/category") }>flooring</DropdownItem>
-          <DropdownItem divider />
-          <DropdownItem onClick={() => this.props.history.push("/homes/category") }>roofing</DropdownItem>
-          <DropdownItem divider />
-          <DropdownItem onClick={() => this.props.history.push("/homes/category") }>bathrooms</DropdownItem>
-          <DropdownItem divider />
-          <DropdownItem onClick={() => this.props.history.push("/homes/category") }>kitchen</DropdownItem>
-
-
-
-        </DropdownMenu>
-      </Dropdown>
+            <CategoryList />
           </div>
         </div>
       </section>

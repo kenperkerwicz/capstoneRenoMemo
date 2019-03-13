@@ -18,12 +18,6 @@
   ],
   "homes": [
     {
-      "userId": 1,
-      "id": 2,
-      "homeAddress": "123444  ",
-      "dateOfEntry": 1552331863
-    },
-    {
       "userId": 2,
       "id": 3,
       "homeAddress": "12223 Hamblen Blvd Madison TN ",
@@ -46,19 +40,31 @@
       "dateOfEntry": 1552337564,
       "homeAddress": "123",
       "userId": 3
+    },
+    {
+      "id": 7,
+      "dateOfEntry": 1552437405,
+      "homeAddress": "122 Hamblen Blvd Madison TN ",
+      "userId": 1
+    },
+    {
+      "userId": 1,
+      "id": 8,
+      "homeAddress": "12334 Hamblen Blvd Madison TN",
+      "dateOfEntry": 1552441804
     }
   ],
   "tasks": [
     {
-    "id": "",
-    "userId": "",
-    "categoryId": "",
-    "taskName": "",
-    "contact": "",
-    "expectedCompDate": "",
-    "homeId": ""
-  }
-],
+      "id": 1,
+      "categoryId": 1,
+      "taskName": "taskName 1",
+      "contact": 1,
+      "expectedCompDate": "",
+      "homeId": 1,
+      "statusId": 1
+    }
+  ],
   "categories": [
     {
       "id": 1,
