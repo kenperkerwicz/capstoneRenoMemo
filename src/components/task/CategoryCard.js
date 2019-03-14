@@ -4,50 +4,67 @@ import React, { Component } from "react";
 export default class TaskCategoryCard extends Component {
 
 
+ state = {
+   filteredVar: []
+ }
 
-  ConfirmDelete ()
-  {
-    let x = window.confirm("Are you sure you want to delete?");
-    if (x)
-        return true;
-    else
-      return false;
+ componentDidMount() {
+  let tasksList = this.props.tasks || []
+
+    let newState = {}
+
+    let filteredVar =  this.props.tasks
+    .filter(task => task.homeId === this.props.match.params.homeId && task.catId === this.props.match.params.categoryId)
+
+   newState.filteredVar = filteredVar
+
+   this.setState(newState)
+
+
+   console.log(this.props.match.params.homeId)
+
+   console.log(tasksList)
+
+  console.log(this.props.match.params.categoryId)
+
+    console.log(this.props.tasks)
+
   }
 
 
-  render () {
- return (
+    render () {
+      return (
+
+
    <React.Fragment>
 
-   <div className="cardDisplay"> <h1> indivTask Cards</h1>
-   <h3>will go here</h3>
+     {
+
+    this.state.filteredVar.map(task =>
+<div>
+     <h1> indivTask Cards</h1>
+   <h3>f</h3>1
 
 
-   <h5> {this.props.task.taskName}</h5>
+    <h5> {this.filteredVar.taskName}</h5>
     <h6> contractor:
-    </h6>
-    <h6> start date: {this.props.task.startDate}
-    </h6>
-    <h6> expected completion date: {this.props.task.expectedCompDate}
-    </h6>
-    <h6> contact info: {this.props.task.contact}
-    </h6>
+     </h6>
+     <h6> start date: {task.startDate}
+     </h6>
+     <h6> expected completion date: {task.expectedCompDate}
+     </h6>
+     <h6> contact info: {task.contact}
+     </h6>
 
 
-
-
-
-   <button type="button"
-    onClick={() => {this.props.deleteTask(this.props.task.id)}}>ERASE</button>
-<button type="button"
-   className="btn btn-success"onClick={() => {window.alert('hello DOING')}}>doing</button>
-<button type="button"
-   className="btn btn-success"onClick={() => {this.ConfirmDelete()}}>done</button>
     </div>
+    )
+   }
 
-  </React.Fragment>
- )
-  }
+
+</React.Fragment>
+)
+}
 
 
 }

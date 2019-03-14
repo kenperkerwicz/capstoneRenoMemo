@@ -136,21 +136,22 @@ class ApplicationViews extends Component {
             {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
             categories={this.state.categories}
             tasks={this.state.tasks}
+            key={this.state.categories.id}
             />
         }} />
         <Route exact path="/homes/:homeId(\d+)/:categoryId(\d+)" render={(props) => {
           return <TaskCategoryList
-          {...props} delete={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
+          {...props}
+          delete={this.deleteHome}
+          homes={this.state.homes}
+          userId={this.state.userId}
           categories={this.state.categories}
           tasks={this.state.tasks}
           deleteTask = {this.deleteTask}
           categoryId={this.state.categoryId}
-        taskName={this.state.taskName}
-        contact={this.state.contact}
-        expectedCompDate= {this.state.tuesday}
-
-
-
+          taskName={this.state.taskName}
+          contact={this.state.contact}
+          taskCatId={this.state.tasks.catId}
         />
         }} />
 
@@ -165,9 +166,10 @@ class ApplicationViews extends Component {
             {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
             categories={this.state.categories}
             tasks={this.state.tasks}
+            key={this.state.categories.id}
           />
         }} />
-        <Route exact path="/tasks" render={(props) => {
+        {/* <Route exact path="/tasks" render={(props) => {
           return <TaskCategoryList
             {...props} delete={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
             categories={this.state.categories}
@@ -180,7 +182,7 @@ class ApplicationViews extends Component {
 
 
           />
-        }} />
+        }} /> */}
         <Route exact path="/tasks/new" render={(props) => {
           return <TaskForm {...props}
             addtask={this.addTask}

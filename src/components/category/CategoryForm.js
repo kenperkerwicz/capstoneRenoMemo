@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './category.css'
-import CategoryList from "./CategoryList"
-import CategoryCard from "./CategoryCard"
+// import CategoryList from "./CategoryList"
+// import CategoryCard from "./CategoryCard"
 
 export default class CategoryForm extends Component {
 

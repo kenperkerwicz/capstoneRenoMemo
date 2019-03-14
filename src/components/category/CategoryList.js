@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CategoryCard from "./CategoryCard"
+// import CategoryCard from "./CategoryCard"
 import { Link } from "react-router-dom"
 
 
@@ -11,11 +11,11 @@ export default class CategoryList extends Component {
 
 
   render () {
-    return <React.Fragment key={this.props.categories}>
+    return <React.Fragment >
 
   {  this.props.categories.map(cat =>
-<div>
-<Link  to={`/homes/${this.props.match.params.homeId}/${cat.id}`}>{cat.categoryName}</Link>
+<div >
+<Link key={this.props.categories.id}  to={`/homes/${this.props.match.params.homeId}/${cat.id}`}>{cat.categoryName}</Link>
 </div>
 
   )

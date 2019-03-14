@@ -5,11 +5,7 @@ import TaskManager from "../../modules/TaskManager"
 export default class TaskCategoryList extends Component {
 
 
-  state = {
 
-    tasks: []
-
-  }
   // componentdid mount
 
   // get tasks with home id and cat id //
@@ -20,19 +16,19 @@ export default class TaskCategoryList extends Component {
 
 
   componentDidMount() {
+
     const homeId = this.props.match.params.homeId
     const catId = this.props.match.params.categoryId
 
-    TaskManager.getTasks(homeId, catId).then(tasks =>
 
-      this.setState({
-        tasks
-      })
-    )
+    console.log(homeId)
+    console.log(catId)
+    console.log(this.props.tasks)
   }
+
   render() {
-    console.log(this.props.match.params)
-    return <React.Fragment>
+
+    return <React.Fragment key={this.props.catId}>
       <button
         type="submit"
         className="addToDoButton"
@@ -42,15 +38,14 @@ export default class TaskCategoryList extends Component {
         }>
         add task.
           </button>
-      {
-          this.state.tasks.map(task => console.log(task) ||
+
+
         <TaskCategoryCard
-          task ={task}
+          tasks={this.props.tasks}
           {...this.props}
-        />)
-
-      }
-
+          taskName={this.props.taskName}
+          taskCatId={this.props.tasks.catId}
+        />
 
 
 
