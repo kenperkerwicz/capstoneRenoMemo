@@ -23,7 +23,7 @@ export default class TaskCategoryList extends Component {
 
     console.log(homeId)
     console.log(catId)
-    console.log(this.props.tasks)
+    console.log('CATEGORY LIST', this.props.tasks)
   }
 
   render() {
