@@ -42,40 +42,49 @@
       "userId": 3
     },
     {
-      "id": 8,
-      "dateOfEntry": 1552441804,
-      "homeAddress": "1233 Hamblen Blvd Madison TN",
-      "userId": 1
-    },
-    {
-      "userId": 1,
-      "id": 9,
-      "homeAddress": "1 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1552501126
-    },
-    {
       "id": 10,
       "dateOfEntry": 1552504908,
       "homeAddress": "2111111",
       "userId": 1
+    },
+    {
+      "userId": 1,
+      "id": 11,
+      "homeAddress": "123444",
+      "dateOfEntry": 1552516228
     }
   ],
   "tasks": [
     {
-
-    "id": 1,
-    "categoryId": 1,
-    "taskName": "no",
-    "contact": "763",
-    "expectedCompDate": "tuesday",
-    "homeId": 1,
-   "statusId": 1
+      "catId": 1,
+      "taskName": "taskName 1",
+      "contact": "615",
+      "expectedCompDate": "tuesday",
+      "homeId": 1,
+      "status": "1"
+    },
+    {
+      "catId": 2,
+      "taskName": "taskName 1",
+      "contact": "615",
+      "expectedCompDate": "tuesday",
+      "homeId": 10,
+      "status": "1"
     }
+
   ],
   "categories": [
     {
       "id": 1,
       "categoryName": "flooring"
+    },
+    {
+      "id": 2,
+      "categoryName": "drywall"
+    },
+    {
+      "id": 3,
+      "categoryName": "tile"
     }
   ]
 }

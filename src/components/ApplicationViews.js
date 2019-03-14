@@ -7,6 +7,7 @@ import HomeForm from "./home/HomeForm"
 import HomeManager from "../modules/HomeManager"
 import HomeEditForm from "./home/HomeEditForm"
 import TaskManager from "../modules/TaskManager"
+import CategoryManager from "../modules/CategoryManager"
 import HomeTasks from "./home/HomeTasks"
 import TaskCategoryForm from "./task/TaskForm";
 import CategoryList from "./category/CategoryList"
@@ -93,10 +94,11 @@ class ApplicationViews extends Component {
 
     const newState = {}
 
-    HomeManager.getAll().then(homes => newState.homes = homes).then(() => {
-      this.setState(newState)
-    }).then(() => TaskManager.getAll())
+    HomeManager.getAll().then(homes => newState.homes = homes).then(() => TaskManager.getAll())
     .then(tasks => newState.tasks = tasks)
+    .then(()=> CategoryManager.getAll())
+    .then(categories => newState.categories = categories)
+    .then(()=> this.setState(newState))
 
   }
 
@@ -133,12 +135,23 @@ class ApplicationViews extends Component {
           return <CategoryList
             {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
             categories={this.state.categories}
-            tasks={this.state.tasks} />
+            tasks={this.state.tasks}
+            />
         }} />
         <Route exact path="/homes/:homeId(\d+)/:categoryId(\d+)" render={(props) => {
-          return <HomeTasks {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
-            homeId={this.state.homeId} task={this.state.taskId}
-            taskName={this.state.taskName} />
+          return <TaskCategoryList
+          {...props} delete={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
+          categories={this.state.categories}
+          tasks={this.state.tasks}
+          deleteTask = {this.deleteTask}
+          categoryId={this.state.categoryId}
+        taskName={this.state.taskName}
+        contact={this.state.contact}
+        expectedCompDate= {this.state.tuesday}
+
+
+
+        />
         }} />
 
         <Route exact path="/category/new" render={(props) => {

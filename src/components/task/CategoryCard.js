@@ -23,14 +23,14 @@ export default class TaskCategoryCard extends Component {
    <h3>will go here</h3>
 
 
-   <h5> shingles</h5>
+   <h5> {this.props.task.taskName}</h5>
     <h6> contractor:
     </h6>
-    <h6> start date:
+    <h6> start date: {this.props.task.startDate}
     </h6>
-    <h6> expected completion date:
+    <h6> expected completion date: {this.props.task.expectedCompDate}
     </h6>
-    <h6> contact info:
+    <h6> contact info: {this.props.task.contact}
     </h6>
 
 
