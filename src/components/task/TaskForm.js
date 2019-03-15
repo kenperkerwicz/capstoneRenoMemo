@@ -7,11 +7,12 @@ export default class CategoryForm extends Component {
 
   state = {
     catId: "",
-    taskName: "",
+    name: "",
     contact: "",
     expectedCompDate: "",
     homeId: "",
-    status: ""
+    status: "",
+    id: ""
   };
 
 
@@ -36,15 +37,15 @@ export default class CategoryForm extends Component {
       id: this.state.id,
     userId: parseInt(sessionStorage.getItem('credentials')),
     catId: this.state.catId,
-    taskName: this.state.taskName,
+    name: this.state.name,
     contact: this.state.contact,
     expectedCompDate: this.state.expectedCompDate,
     homeId: this.state.homeId
 
-
       };
 
       // Create the home and redirect user to the home list
+
       this.props
         .addTask(card)
         .then(() => this.props.history.push("/tasks"));
@@ -54,18 +55,21 @@ export default class CategoryForm extends Component {
 
   render () {
     return <div className="mainDiv">
-    {console.log('hello')}
-    {this.state.taskName}
+
+
       <div className="header">
+      <div>
       <input
               type="text"
               required
               className="form-control"
               onChange={this.handleFieldChange}
-              id="taskName"
-              placeholder="taskName"
+              id="name"
+              placeholder="TaskName"
             />
+      </div>
 
+            <div>
             <input
               type="text"
               required
@@ -74,6 +78,8 @@ export default class CategoryForm extends Component {
               id="contact"
               placeholder="contact"
             />
+             </div>
+       <div>
             <input
               type="text"
               required
@@ -82,6 +88,8 @@ export default class CategoryForm extends Component {
               id="expectedCompDate"
               placeholder="expectedCompDate"
             />
+        </div>
+
 
 
 
@@ -93,9 +101,6 @@ export default class CategoryForm extends Component {
             Save Card.
           </button>
       </div>
-      <br></br>
-
-      {/* <div className="cardDisplay">{<CategoryList/>}</div> */}
 
     </div>
 

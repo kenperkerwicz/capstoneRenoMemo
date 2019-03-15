@@ -28,7 +28,7 @@ export default class TaskCategoryList extends Component {
 
 
 
-    TaskManager.getTasks(2, 5).then(tasks => newState.tasks = tasks).then(()=> this.setState(newState)).then( console.log(this.state.tasks)).then(console.log(newState))
+    TaskManager.getTasks(homeId , catId).then(tasks => newState.tasks = tasks).then(()=> this.setState(newState)).then( console.log(this.state.tasks)).then(console.log(newState))
 
 
 
@@ -49,15 +49,15 @@ export default class TaskCategoryList extends Component {
  return (
 <React.Fragment>
 
-  {/* <button
+   <button
     type="submit"
    className="addToDoButton"
     onClick={() =>
      this.props.history.push("/tasks/new")
      }
-     }>
+     >
     add task.
-    </button> */}
+    </button>
 
 {/* .filter(
       task =>
@@ -73,7 +73,7 @@ export default class TaskCategoryList extends Component {
        {...this.props}
         taskName={task.taskName}
         catId={task.catId}
-        key={task.catId}
+        key={this.state.id}
       />
       )
     }

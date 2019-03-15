@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ModalExample from "./editModal.js"
 
 
 
@@ -42,12 +43,13 @@ export default class TaskCategoryCard extends Component {
 
         {
             <div className="categorycard" >
-              <h1 >{this.props.taskName}</h1>
+           <h2>TaskName</h2>
+              <h4 >{this.props.task.name}</h4>
 
-              <h6> expected completion date: {this.props.expectedCompDate}
+              <h6> expected completion date: {this.props.task.expectedCompDate}
               </h6>
-              {/* <h6> contact info: {this.props.task.contact}
-              </h6> */}
+              { <h6> contact info: {this.props.task.contact}
+              </h6> }
 
               <button
                 type="button"
@@ -67,7 +69,7 @@ export default class TaskCategoryCard extends Component {
               >
                 Delete
                             </button>
-
+                          <button onClick={() => ModalExample}>edit</button>
             </div>
 
         }

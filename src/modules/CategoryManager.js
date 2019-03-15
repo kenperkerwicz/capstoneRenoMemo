@@ -2,7 +2,7 @@ const remoteURL = "http://localhost:8088"
 
 export default {
   get(id) {
-    return fetch(`${remoteURL}/homes/${id}`).then(e => e.json())
+    return fetch(`${remoteURL}/categories/${id}`).then(e => e.json())
   },
 
   getTasks(id) {
@@ -22,7 +22,7 @@ export default {
         .then(e => e.json())
   },
   post(newTask) {
-    return fetch(`${remoteURL}/homes`, {
+    return fetch(`${remoteURL}/categories`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

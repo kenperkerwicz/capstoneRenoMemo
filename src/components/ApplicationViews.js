@@ -153,6 +153,7 @@ class ApplicationViews extends Component {
           // catId={this.state.catId}
           taskName={this.state.taskName}
           contact={this.state.contact}
+          key={this.state.id}
 
         />
         }} />
@@ -187,7 +188,7 @@ class ApplicationViews extends Component {
         }} /> */}
         <Route exact path="/tasks/new" render={(props) => {
           return <TaskForm {...props}
-            addtask={this.addTask}
+            addTask={this.addTask}
            tasks={this.state.tasks}
             userId={this.state.userId}
             names={this.state.names}
