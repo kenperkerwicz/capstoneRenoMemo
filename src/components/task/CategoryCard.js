@@ -1,75 +1,81 @@
 import React, { Component } from "react";
 
 
+
 export default class TaskCategoryCard extends Component {
 
 
- state = {
-   filteredVar: []
- }
 
- componentDidMount() {
-  // let tasksList = this.props.tasks || []
+  componentDidMount() {
 
-    let newState = {}
-
-    let filteredVar =  this.props.tasks
-      .filter(task =>
-        task.homeId === Number(this.props.match.params.homeId)
-
-        // task.catId === this.props.match.params.categoryId
-        )
-
-   newState.filteredVar = filteredVar
-
-   this.setState(newState)
+    // let tasksList = this.props.tasks || []
 
 
-   console.log('PARAMS', typeof this.props.match.params.homeId)
+    // console.log('HOME ID NUMB', homeIdNumb)
+    // console.log(this.props.match.params.categoryId)
+    // console.table('TASKS IN CAT', this.props.tasks)
 
-  //  console.log(tasksList)
 
-  // console.log(this.props.match.params.categoryId)
+    // // console.log('Filtered VAR', filteredVar)
+    // console.log('task catId', this.props.task.catId)
 
-    console.table('TASKS IN CAT', this.props.tasks)
-    console.log('State', this.state)
-    console.log('Filtered VAR', filteredVar)
 
   }
 
 
-    render () {
-      return (
-
-
-   <React.Fragment>
-
-     {
-
-    this.state.filteredVar.map(task =>
-<div>
-     <h1> indivTask Cards</h1>
+  render() {
 
 
 
-    <h5> {task.taskName}</h5>
-    <h6> contractor:</h6>
-     <h6> start date: {task.startDate}
-     </h6>
-     <h6> expected completion date: {task.expectedCompDate}
-     </h6>
-     <h6> contact info: {task.contact}
-     </h6>
+        // let filteredVar = this.props.task
+        //  .filter(task =>
+        //  task.homeId === homeIdNumb
+        // && task.catId === this.props.match.params.categoryId
+        //   )
+      // console.log(this.props.task)
 
 
-    </div>
+
+    return (
+
+      <React.Fragment>
+
+        {
+            <div className="categorycard" >
+              <h1 >{this.props.taskName}</h1>
+
+              <h6> expected completion date: {this.props.expectedCompDate}
+              </h6>
+              {/* <h6> contact info: {this.props.task.contact}
+              </h6> */}
+
+              <button
+                type="button"
+                className="btn btn-success"
+                onClick={() => {
+                  window.alert('hi EDIT button')
+                }}
+              >
+                Edit
+                            </button>
+              <button
+                type="button"
+                className="btn btn-success"
+                onClick={() => {
+                  window.alert('hi DELETE button')
+                }}
+              >
+                Delete
+                            </button>
+
+            </div>
+
+        }
+
+
+      </React.Fragment>
     )
-   }
-
-
-</React.Fragment>
-)
-}
+  }
 
 
 }

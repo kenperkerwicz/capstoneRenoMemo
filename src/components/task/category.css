@@ -36,3 +36,18 @@
 .addToDoButton {
   border-radius:  5px;
 }
+
+.categorycard {
+  padding: 25px;
+ text-align: left;
+ width: 250px;
+ box-shadow: 25px;
+  display: flexbox;
+  width: 250px;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 7px 7px 5px #aaaaaa;
+  border-radius:  10px
+
+}

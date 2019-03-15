@@ -5,8 +5,11 @@ import TaskManager from "../../modules/TaskManager"
 export default class TaskCategoryList extends Component {
 
 
+  state = {
+    tasks: []
+  }
 
-  // componentdid mount
+
 
   // get tasks with home id and cat id //
 
@@ -15,40 +18,66 @@ export default class TaskCategoryList extends Component {
   // map over tasks and implement taskCatCard //
 
 
-  componentDidMount() {
+   componentDidMount() {
 
-    const homeId = this.props.match.params.homeId
-    const catId = this.props.match.params.categoryId
+    const newState = {}
+
+     const homeId = this.props.match.params.homeId
+
+     const catId = this.props.match.params.categoryId
 
 
-    console.log(homeId)
-    console.log(catId)
-    console.log('CATEGORY LIST', this.props.tasks)
-  }
+
+    TaskManager.getTasks(2, 5).then(tasks => newState.tasks = tasks).then(()=> this.setState(newState)).then( console.log(this.state.tasks)).then(console.log(newState))
+
+
+
+   console.log(this.props.tasks)
+   console.log('CATEGORY LIST', this.props.tasks)
+  console.log(this.props.categories)
+    console.log(this.props.tasks)
+
+   }
+
 
   render() {
 
-    return <React.Fragment key={this.props.catId}>
-      <button
-        type="submit"
-        className="addToDoButton"
-        onClick={() => {
-          this.props.history.push("/tasks/new")
-        }
-        }>
-        add task.
-          </button>
+    let homeIdNumb = Number(this.props.match.params.homeId)
+    console.log(homeIdNumb)
 
 
-        <TaskCategoryCard
-          tasks={this.props.tasks}
-          {...this.props}
-          taskName={this.props.taskName}
-          taskCatId={this.props.tasks.catId}
-        />
+ return (
+<React.Fragment>
+
+  {/* <button
+    type="submit"
+   className="addToDoButton"
+    onClick={() =>
+     this.props.history.push("/tasks/new")
+     }
+     }>
+    add task.
+    </button> */}
+
+{/* .filter(
+      task =>
+       task.homeId === this.props.match.params.homeId
+       && task.catId === this.props.match.params.categoryId */}
 
 
+     {
+    this.state.tasks
+     .map(task =>
+       <TaskCategoryCard
+         task={task}
+       {...this.props}
+        taskName={task.taskName}
+        catId={task.catId}
+        key={task.catId}
+      />
+      )
+    }
+    </React.Fragment>)
+}
 
-    </React.Fragment>
-  }
 }

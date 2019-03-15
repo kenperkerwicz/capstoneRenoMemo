@@ -101,22 +101,24 @@ class ApplicationViews extends Component {
     .then(()=> this.setState(newState))
 
   }
-
   render() {
     return (
+
+
       <React.Fragment>
         <Route exact path="/homes" render={(props) => {
           return <HomeList
-            {...props}
-            homes={this.state.homes}
-            deleteHome={this.deleteHome}
-            loadHomes={this.getAllHomes}
-            name={this.state.homeName}
-            userId={this.state.userId}
-            dateofEntry={this.state.dateofEntry}
+          {...props}
+          homes={this.state.homes}
+          deleteHome={this.deleteHome}
+          loadHomes={this.getAllHomes}
+          name={this.state.homeName}
+          userId={this.state.userId}
+          dateofEntry={this.state.dateofEntry}
 
           />
         }} />
+
         <Route exact path="/homes/new" render={(props) => {
           return <HomeForm {...props}
             addHome={this.addHome}
@@ -148,24 +150,24 @@ class ApplicationViews extends Component {
           categories={this.state.categories}
           tasks={this.state.tasks}
           deleteTask = {this.deleteTask}
-          categoryId={this.state.categoryId}
+          // catId={this.state.catId}
           taskName={this.state.taskName}
           contact={this.state.contact}
-          taskCatId={this.state.tasks.catId}
+
         />
         }} />
 
         <Route exact path="/category/new" render={(props) => {
           return <TaskCategoryForm
             {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
-            tasks= {this.state.tasks}
+            name= {this.state.name}
           />
         }} />
         <Route exact path="/category" render={(props) => {
           return <CategoryList
             {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
             categories={this.state.categories}
-            tasks={this.state.tasks}
+            names={this.state.names}
             key={this.state.categories.id}
           />
         }} />
@@ -188,6 +190,7 @@ class ApplicationViews extends Component {
             addtask={this.addTask}
            tasks={this.state.tasks}
             userId={this.state.userId}
+            names={this.state.names}
 
           />
         }} />

@@ -6,7 +6,8 @@ export default {
   },
 
   getTasks(homeId, categoryId) {
-      return fetch (`http://localhost:8088/tasks?homeId=${homeId}&categoryId=${categoryId}`).then(e => e.json())
+
+      return fetch (`${remoteURL}/tasks?homeId=${homeId}&catId=${categoryId}`).then(e => e.json())
     },
     // posts?title=json-server&author=typicode)
 
