@@ -20,91 +20,55 @@
     {
       "userId": 2,
       "id": 3,
-      "homeAddress": "12223 Hamblen Blvd Madison TN ",
+      "homeAddress": "homeId 3 Hamblen Blvd Madison TN ",
       "dateOfEntry": 1552332009
     },
     {
-      "userId": 1,
       "id": 2,
-      "homeAddress": "12223 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1552332009
+      "dateOfEntry": 1552332009,
+      "homeAddress": "homeId 2 Hamblen Blvd Madison TN ",
+      "userId": 1
     },
     {
       "userId": 2,
       "id": 1,
-      "homeAddress": "12223 Hamblen Blvd Madison TN ",
+      "homeAddress": "homeId 2 Hamblen Blvd Madison TN ",
       "dateOfEntry": 1552332009
     },
     {
       "userId": 2,
       "id": 5,
-      "homeAddress": "12223 Hamblen Blvd Madison TN ",
+      "homeAddress": "homeId 2 Blvd Madison TN ",
       "dateOfEntry": 1552332009
     },
     {
       "userId": 1,
       "id": 4,
-      "homeAddress": "12223 Hamblen Blvd Madison TN ",
+      "homeAddress": "homeId 4 Blvd Madison TN ",
       "dateOfEntry": 1552332009
     },
     {
       "userId": 2,
       "id": 6,
-      "homeAddress": "12223 Hamblen Blvd Madison TN ",
+      "homeAddress": "homeId 6 Hamblen Blvd Madison TN ",
       "dateOfEntry": 1552332009
     },
     {
       "userId": 2,
       "id": 7,
-      "homeAddress": "12223 Hamblen Blvd Madison TN ",
+      "homeAddress": "homeId 7 Hamblen Blvd Madison TN ",
       "dateOfEntry": 1552332009
     },
     {
       "userId": 2,
       "id": 8,
-      "homeAddress": "12223 Hamblen Blvd Madison TN ",
+      "homeAddress": "homeId 8 Hamblen Blvd Madison TN ",
       "dateOfEntry": 1552332009
     },
     {
       "userId": 1,
       "id": 9,
-      "homeAddress": "12223 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1552332009
-    },
-    {
-      "userId": 1,
-      "id": 10,
-      "homeAddress": "12223 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1552332009
-    },
-    {
-      "userId": 1,
-      "id": 11,
-      "homeAddress": "12223 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1552332009
-    },
-    {
-      "userId": 1,
-      "id": 12,
-      "homeAddress": "12223 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1552332009
-    },
-    {
-      "userId": 1,
-      "id": 13,
-      "homeAddress": "12223 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1552332009
-    },
-    {
-      "userId": 1,
-      "id": 14,
-      "homeAddress": "12223 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1552332009
-    },
-    {
-      "userId": 1,
-      "id": 15,
-      "homeAddress": "12223 Hamblen Blvd Madison TN ",
+      "homeAddress": "homeId 9 Hamblen Blvd Madison TN ",
       "dateOfEntry": 1552332009
     }
   ],
