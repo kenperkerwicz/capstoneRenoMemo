@@ -31,13 +31,12 @@ export default {
       body: JSON.stringify(newTask)
     }).then(data => data.json())
   },
-  // put(editedHome) {
-  //   return fetch(`${remoteURL}/homes/${editedTask.id}`, {
-  //     method: "PUT",
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify(editedTask)
-  //   }).then(data => data.json());
-  // }
+  put(editedTask) {
+    return fetch(`${remoteURL}/tasks/${editedTask.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedTask)}).then(data => data.json());
+  }
 }

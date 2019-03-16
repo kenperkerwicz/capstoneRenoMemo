@@ -7,27 +7,6 @@ import { throws } from "assert";
 export default class TaskCategoryCard extends Component {
 
 
-  state = {
-    show: false,
-    id: this.props.task.id
-  };
-
-  showModal = (e, taskId) => {
-      console.log(e)
-      console.log(taskId)
-      if (this.state.show === true) {
-
-        this.setState({
-          show: true
-        });
-      } else {
-        this.setState({
-          show: false
-        })
-      }
-
-  };
-
 
 
   componentDidMount() {
@@ -49,8 +28,6 @@ export default class TaskCategoryCard extends Component {
 
   render() {
 
-
-
     // let filteredVar = this.props.task
     //  .filter(task =>
     //  task.homeId === homeIdNumb
@@ -66,13 +43,17 @@ export default class TaskCategoryCard extends Component {
 
         {
           <div className="categorycard" key={this.props.task.id}>
-            <h2 >TaskName</h2>
-            <h4 >{this.props.task.name}</h4>
+            {/* <h2 >TaskName</h2> */}
+            {/* <h4 >{this.props.task.name}</h4> */}
+            <h4>taskId :{this.props.task.id}</h4>
+            <h4>catId: {this.props.task.catId}</h4>
+            <h4>homeId: {this.props.task.homeId}</h4>
 
-            <h6> expected completion date: {this.props.task.expectedCompDate}
+
+            {/* <h6> expected completion date: {this.props.task.expectedCompDate}
             </h6>
             {<h6> contact info: {this.props.task.contact}
-            </h6>}
+            </h6>} */}
 
             {/* <button
               type="button"
@@ -92,17 +73,17 @@ export default class TaskCategoryCard extends Component {
             >
               Delete
              </button>
-                            <div >
-                            <ModalExample
+                            <div id={this.props.id}>
+                            {/* <ModalExample
                             showModal ={this.showModal}
                             key={this.props.task.id}
                             name ={this.props.task.name}
-                            show={this.state.show}>edit</ModalExample>
+                            show={this.props.show}>edit</ModalExample> */}
                             </div>
 
 
             <button onClick={e => {
-              this.showModal(e, this.props.task.id);
+              this.props.showModal(e, this.props.task.id);
 
             }}
             > show Modal </button>
