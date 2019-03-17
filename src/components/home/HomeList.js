@@ -10,6 +10,7 @@ export default class HomeList extends Component {
           <React.Fragment>
               <div className="HomeButton">
                   <button type="button"
+                  id="editButton"
                           className="btn btn-success"
                           onClick={() => {
                               this.props.history.push("/homes/new")}

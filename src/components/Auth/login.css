@@ -1,3 +1,32 @@
 .loginForm {
   padding: 0 25px;
 }
+
+ #loginBackground {
+  background: url(renovation.jpg);
+}
+
+#Welcome {
+  text-align: center;
+  color: white;
+
+}
+
+#loginButtonOne {
+  background-color: #47526d;
+}
+
+
+#loginButtonTwo {
+   background-color:  #47526d;
+}
+
+.inputUsername{
+  border-radius: 3px;
+  background-color:  #e6eeef
+}
+
+.inputPassword{
+  border-radius: 3px;
+  background-color:  #e6eeef
+}

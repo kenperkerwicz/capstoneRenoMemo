@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import "./login.css"
 import UserManager from "../../modules/UserManager"
+// import renovation from "../Auth/renovation.jpg"
 
 export default class Login extends Component {
   // Set initial state
@@ -58,29 +59,45 @@ export default class Login extends Component {
 
   render() {
     return (
-      <form className="loginForm">
-        <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <label htmlFor="inputUsername">Username</label>
+
+      <form className="loginForm"
+      id="loginBackground">
+
+      {/* <img src={renovation} className="icon--reno" /> */}
+
+        <h1 className="h1 mb-3 font-weight-bold " id="Welcome">Welcome to RenoMemo.</h1>
+       <h3 className="h3 mb-3 font-weight-bold"> </h3>
+        <label htmlFor="inputUsername"
+        ></label>
         <input
+        className="inputUsername"
           onChange={this.handleFieldChange}
           type="username"
           id="username"
-          placeholder={` Something Cool`}
+          placeholder={`Username`}
           required=""
           autoFocus=""
         />
-        <label htmlFor="inputPassword">Password</label>
+        <label htmlFor="inputPassword"
+         ></label>
         <input
+        className="inputPassword"
           onChange={this.handleFieldChange}
           type="password"
           id="password"
-          placeholder={` Don't tell!`}
+          placeholder={`Password`}
           required=""
         />
-        <button type="submit" onClick={this.handleLogin}>
+        <button type="submit"
+        className="btn btn-success"
+        id="loginButtonOne"
+        onClick={this.handleLogin}>
           Sign in
         </button>
-        <button type="submit" onClick={this.handleRegister}>
+        <button type="submit"
+        className="btn btn-success"
+        id="loginButtonTwo"
+        onClick={this.handleRegister}>
           Register
         </button>
       </form>

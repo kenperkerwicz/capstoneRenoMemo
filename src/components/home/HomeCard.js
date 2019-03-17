@@ -20,6 +20,7 @@ export default class HomeCard extends Component {
                         {/* <Link className="nav-link" to={`/movies/${this.props.movie.id}`}>Edit</Link> */}
                         <button
                             type="button"
+                            id="editButton"
                             className="btn btn-success"
                             onClick={() => {
                                 this.props.history.push(`/homes/${this.props.home.id}/edit`);
@@ -28,6 +29,7 @@ export default class HomeCard extends Component {
                             Edit
                             </button>
                         <a href="#"
+                        id="deleteButton"
                             onClick={() => this.props.deleteHome(this.props.home.id)}
                             className="btn btn-success">Delete</a>
 
