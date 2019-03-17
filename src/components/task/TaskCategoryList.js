@@ -13,20 +13,26 @@ export default class TaskCategoryList extends Component {
 
   showModal = (e, taskId) => {
     // console.log(e.target.parentNode)
-    // console.log(taskId)
+    console.log(`SHOW MODAL`,taskId)
+    // console.log(`task.id`, this.task.id)
+
     if (this.state.show === true) {
       this.setState({
         show: false
       });
     } else {
       this.setState({
+
         show: true,
         currentModalData: this.state.tasks.find(task => {
           return task.id === taskId;
+
         })
       });
+
     }
   };
+
 
   // get tasks with home id and cat id //
 
@@ -49,13 +55,17 @@ export default class TaskCategoryList extends Component {
   };
 
   componentDidMount() {
+
     this.populateData();
 
-    console.log("TASKS", this.props.tasks);
-    console.log("CATEGORIES", this.props.categories);
+
   }
 
   render() {
+    // console.log(`STATE TASKS`, this.state.tasks)
+    // console.log("TASKS", this.props.tasks);
+    // console.log("CATEGORIES", this.props.categories);
+    // console.log(`CURRENT MODAL DATA`, this.currentModalData);
     // let homeIdNumb = Number(this.props.match.params.homeId);
     // console.log(homeIdNumb)
 

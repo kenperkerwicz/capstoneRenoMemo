@@ -22,23 +22,28 @@ export default class CategoryForm extends Component {
   };
 
   constructNewCard = evt => {
-    const homeId = this.props.match.params.homeId;
+    // const homeId = this.props.match.params.homeId;
 
-    const catId = this.props.match.params.categoryId;
+    // const catId = this.props.match.params.categoryId;
+console.log(`STATE CAT ID`, this.state.catId)
 
     evt.preventDefault();
     if (this.state.taskName === "") {
       window.alert("Please fill in information");
     } else {
       const card = {
-        id: this.state.id,
-        userId: parseInt(sessionStorage.getItem("credentials")),
         catId: this.state.catId,
         name: this.state.name,
         contact: this.state.contact,
+
         expectedCompDate: this.state.expectedCompDate,
-        homeId: this.state.homeId
+         homeId: this.state.homeId,
+        status: this.state.status,
+        id: this.state.id,
+
       };
+
+      console.log(`CARD`, card)
 
       // Create the task and redirect user to the task list
 
@@ -90,17 +95,6 @@ export default class CategoryForm extends Component {
               onChange={this.handleFieldChange}
               id="homeId"
               placeholder="homeId"
-            />
-          </div>
-
-          <div>
-            <input
-              type="hidden"
-              required
-              className="form-control"
-              onChange={this.handleFieldChange}
-              id="catId"
-              placeholder="catId"
             />
           </div>
 

@@ -11,8 +11,10 @@ export default class TaskCategoryCard extends Component {
     //   )
     // console.log(this.props.task)
 
-    console.log(`CAT CARD ID`, this.props.id);
+
     // console.log(`Cat card key`, this.props.task.key);
+    console.log(`INDEX`, this.props.id)
+    console.log(`TASK ID`, this.props.task.id)
 
     return (
       <React.Fragment>
