@@ -1,33 +1,9 @@
 import React, { Component } from "react";
-import ModalExample from "./editModal.js"
+import ModalExample from "./editModal.js";
 import { throws } from "assert";
 
-
-
 export default class TaskCategoryCard extends Component {
-
-
-
-
-  componentDidMount() {
-
-    // let tasksList = this.props.tasks || []
-
-
-    // console.log('HOME ID NUMB', homeIdNumb)
-    // console.log(this.props.match.params.categoryId)
-    // console.table('TASKS IN CAT', this.props.tasks)
-
-
-    // // console.log('Filtered VAR', filteredVar)
-    // console.log('task catId', this.props.task.catId)
-
-
-  }
-
-
   render() {
-
     // let filteredVar = this.props.task
     //  .filter(task =>
     //  task.homeId === homeIdNumb
@@ -35,12 +11,11 @@ export default class TaskCategoryCard extends Component {
     //   )
     // console.log(this.props.task)
 
-
+    console.log(`CAT CARD ID`, this.props.id);
+    // console.log(`Cat card key`, this.props.task.key);
 
     return (
-
       <React.Fragment>
-
         {
           <div className="categorycard" key={this.props.task.id}>
             {/* <h2 >TaskName</h2> */}
@@ -48,7 +23,6 @@ export default class TaskCategoryCard extends Component {
             <h4>taskId :{this.props.task.id}</h4>
             <h4>catId: {this.props.task.catId}</h4>
             <h4>homeId: {this.props.task.homeId}</h4>
-
 
             {/* <h6> expected completion date: {this.props.task.expectedCompDate}
             </h6>
@@ -64,42 +38,32 @@ export default class TaskCategoryCard extends Component {
             >
               Edit
                             </button> */}
-                            <div className="buttonGroup">
-            <button
-              type="button"
-              className="btn btn-success"
-              id="buttonOne"
-              onClick={() => {
-               this.props.deleteTask(this.props.task.id)
-              }}>
-              Delete
-             </button>
-                            <div id={this.props.id}>
-                            {/* <ModalExample
-                            showModal ={this.showModal}
-                            key={this.props.task.id}
-                            name ={this.props.task.name}
-                            show={this.props.show}>edit</ModalExample> */}
-                            </div>
-
-
-            <button
-            className="btn btn-success"
-            id="buttonTwo"
-            onClick={e => {
-              this.props.showModal(e, this.props.task.id);
-
-            }}
-            > Edit </button>
+            <div className="buttonGroup">
+              <button
+                type="button"
+                className="btn btn-success"
+                id="buttonOne"
+                onClick={() => {
+                  this.props.deleteTask(this.props.task.id);
+                }}
+              >
+                Delete
+              </button>
+              <div id={this.props.id} />
+              <button
+                className="btn btn-success"
+                id="buttonTwo"
+                onClick={e => {
+                  this.props.showModal(e, this.props.task.id);
+                }}
+              >
+                {" "}
+                Edit{" "}
+              </button>
+            </div>
           </div>
-          </div>
-
         }
-
-
       </React.Fragment>
-    )
+    );
   }
-
-
 }

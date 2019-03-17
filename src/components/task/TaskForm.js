@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import './category.css'
-import TaskCategoryList from "./TaskCategoryList"
-import TaskCategoryCard from "./CategoryCard"
+import "./category.css";
+import TaskCategoryList from "./TaskCategoryList";
+import TaskCategoryCard from "./CategoryCard";
 
 export default class CategoryForm extends Component {
-
   state = {
     catId: "",
     name: "",
@@ -15,90 +14,75 @@ export default class CategoryForm extends Component {
     id: ""
   };
 
-
   // Update state whenever an input field is edited
   handleFieldChange = evt => {
     const stateToChange = {};
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
-
   };
 
-
-
   constructNewCard = evt => {
-    const homeId = this.props.match.params.homeId
+    const homeId = this.props.match.params.homeId;
 
-    const catId = this.props.match.params.categoryId
-
+    const catId = this.props.match.params.categoryId;
 
     evt.preventDefault();
     if (this.state.taskName === "") {
       window.alert("Please fill in information");
     } else {
       const card = {
-        // userId:parseInt(sessionStorage.getItem('credentials')),
-        // id: this.state.id,
-        // homeAddress: this.state.homeAddress,
-        // dateOfEntry:  Math.floor(Date.now() / 1000)
-
-      id: this.state.id,
-    userId: parseInt(sessionStorage.getItem('credentials')),
-    catId: this.state.catId,
-    name: this.state.name,
-    contact: this.state.contact,
-    expectedCompDate: this.state.expectedCompDate,
-    homeId: this.state.homeId
-
+        id: this.state.id,
+        userId: parseInt(sessionStorage.getItem("credentials")),
+        catId: this.state.catId,
+        name: this.state.name,
+        contact: this.state.contact,
+        expectedCompDate: this.state.expectedCompDate,
+        homeId: this.state.homeId
       };
 
-      // Create the home and redirect user to the home list
+      // Create the task and redirect user to the task list
 
-      this.props
-        .addTask(card)
-        .then(() => this.props.history.push(`/homes/`));
+      this.props.addTask(card).then(() => this.props.history.push(`/homes/`));
     }
   };
 
-
-  render () {
-    return (<div className="mainDiv">
-
-
-      <div className="header">
-      <div>
-      <input
+  render() {
+    return (
+      <div className="mainDiv">
+        <div className="header">
+          <div>
+            <label>task name</label>
+            <input
               type="text"
               required
               className="form-control"
               onChange={this.handleFieldChange}
               id="name"
-              placeholder="TaskName"
             />
-      </div>
+          </div>
 
-            <div>
+          <div>
+            <label>contact information</label>
             <input
               type="text"
               required
               className="form-control"
               onChange={this.handleFieldChange}
               id="contact"
-              placeholder="contact"
             />
-             </div>
-       <div>
+          </div>
+          <div>
+            <label>expected completion date</label>
             <input
               type="text"
               required
               className="form-control"
               onChange={this.handleFieldChange}
               id="expectedCompDate"
-              placeholder="expectedCompDate"
             />
-        </div>
+          </div>
 
-        <div>
+          <div>
             <input
               type="hidden"
               required
@@ -107,10 +91,9 @@ export default class CategoryForm extends Component {
               id="homeId"
               placeholder="homeId"
             />
-        </div>
+          </div>
 
-
-        <div>
+          <div>
             <input
               type="hidden"
               required
@@ -119,22 +102,17 @@ export default class CategoryForm extends Component {
               id="catId"
               placeholder="catId"
             />
-        </div>
+          </div>
 
-
-
-              <button
+          <button
             type="submit"
             onClick={this.constructNewCard}
             className="btn btn-primary"
           >
             Save Card.
           </button>
+        </div>
       </div>
-
-    </div>)
-
-    }
-
-
+    );
+  }
 }
