@@ -31,12 +31,13 @@ export default {
       body: JSON.stringify(newTask)
     }).then(data => data.json())
   },
-  put(editedTask) {
-    return fetch(`${remoteURL}/tasks/${editedTask.id}`, {
+  put(task) {
+    return fetch(`${remoteURL}/tasks/${task.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(editedTask)}).then(data => data.json());
+      // body: JSON.stringify(editedTask)})
+    }).then(data => data.text()).then(data => console.log(data))
   }
 }

@@ -68,9 +68,8 @@ export default class TaskCategoryCard extends Component {
               type="button"
               className="btn btn-success"
               onClick={() => {
-                window.alert('hi DELETE button')
-              }}
-            >
+               this.props.deleteTask(this.props.task.id)
+              }}>
               Delete
              </button>
                             <div id={this.props.id}>

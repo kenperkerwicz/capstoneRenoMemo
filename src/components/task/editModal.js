@@ -56,7 +56,7 @@ class ModalExample extends React.Component {
 
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.saveEditForm}>Do Something</Button>{' '}
+            <Button color="primary" onClick={this.saveEditForm}>Save</Button>{' '}
             <Button color="secondary" onClick={this.toggle}>Cancel</Button>
           </ModalFooter>
         </Modal>

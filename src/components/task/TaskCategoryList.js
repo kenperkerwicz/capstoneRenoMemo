@@ -52,20 +52,22 @@ populateData = () => {
   })
 
 }
+deleteTask = (id) => {
+  return TaskManager.removeAndList(id)
+    .then(tasks => this.setState({
+      tasks: tasks
+    })
+    )
+}
 
 
 
    componentDidMount() {
 
-
-
      this.populateData()
 
-
-   console.log(this.props.tasks)
-   console.log('CATEGORY LIST', this.props.tasks)
-  console.log(this.props.categories)
-    console.log(this.props.tasks)
+   console.log('TASKS', this.props.tasks)
+  console.log('CATEGORIES', this.props.categories)
 
    }
 
@@ -74,7 +76,6 @@ populateData = () => {
 
     let homeIdNumb = Number(this.props.match.params.homeId)
     console.log(homeIdNumb)
-
 
  return (
 <React.Fragment>
@@ -116,6 +117,7 @@ populateData = () => {
         showModal={this.showModal}
         homeId={this.homeId}
         show={this.state.show}
+        deleteTask= {this.deleteTask}
 
       />
       )

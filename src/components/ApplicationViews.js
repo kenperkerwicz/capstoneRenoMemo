@@ -13,6 +13,7 @@ import TaskCategoryForm from "./task/TaskForm";
 import CategoryList from "./category/CategoryList"
 import TaskCategoryList from "./task/TaskCategoryList"
 import TaskForm from "./task/TaskForm"
+import ModalExample from "./task/editModal"
 
 class ApplicationViews extends Component {
 
@@ -70,13 +71,7 @@ class ApplicationViews extends Component {
       }
     ))
   }
-  deleteTask = (id) => {
-    return TaskManager.removeAndList(id)
-      .then(tasks => this.setState({
-        tasks: tasks
-      })
-      )
-  }
+  
   addTask = task =>
     TaskManager.post(task)
       .then(() => TaskManager.getAll())
@@ -195,6 +190,22 @@ class ApplicationViews extends Component {
 
           />
         }} />
+
+<Route exact path="/tasks/new" render={(props) => {
+          return <TaskForm {...props}
+            addTask={this.addTask}
+           tasks={this.state.tasks}
+            userId={this.state.userId}
+            names={this.state.names}
+
+          />
+        }} />
+
+<Route
+          path="/homes/:taskId(\d+)/edit" render={props => {
+            return <ModalExample {...props} tasks={this.state.tasks} updateTask={this.updateMovie} getMovieToEdit={this.getMovieToEdit} edit={this.editMovie} />
+          }}
+        />
 
       </React.Fragment>
     )
