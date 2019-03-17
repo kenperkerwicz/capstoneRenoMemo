@@ -38,7 +38,7 @@
 }
 
 .categorycard {
-  padding: 25px;
+ padding: 25px;
  text-align: left;
  width: 250px;
  box-shadow: 25px;
@@ -50,4 +50,19 @@
   box-shadow: 7px 7px 5px #aaaaaa;
   border-radius:  10px
 
+}
+.buttonGroup {
+   text-align: center;
+   margin-top: 10px;
+    overflow: hidden;
+
+}
+
+#buttonOne {
+  background-color: tomato;
+  float: left;
+}
+
+#buttonTwo {
+  background-color: turquoise
 }

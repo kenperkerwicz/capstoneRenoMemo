@@ -21,9 +21,17 @@ export default class CategoryForm extends Component {
     const stateToChange = {};
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
+
   };
 
+
+
   constructNewCard = evt => {
+    const homeId = this.props.match.params.homeId
+
+    const catId = this.props.match.params.categoryId
+
+
     evt.preventDefault();
     if (this.state.taskName === "") {
       window.alert("Please fill in information");
@@ -48,13 +56,13 @@ export default class CategoryForm extends Component {
 
       this.props
         .addTask(card)
-        .then(() => this.props.history.push("/tasks"));
+        .then(() => this.props.history.push(`/homes/`));
     }
   };
 
 
   render () {
-    return <div className="mainDiv">
+    return (<div className="mainDiv">
 
 
       <div className="header">
@@ -90,6 +98,28 @@ export default class CategoryForm extends Component {
             />
         </div>
 
+        <div>
+            <input
+              type="hidden"
+              required
+              className="form-control"
+              onChange={this.handleFieldChange}
+              id="homeId"
+              placeholder="homeId"
+            />
+        </div>
+
+
+        <div>
+            <input
+              type="hidden"
+              required
+              className="form-control"
+              onChange={this.handleFieldChange}
+              id="catId"
+              placeholder="catId"
+            />
+        </div>
 
 
 
@@ -102,7 +132,7 @@ export default class CategoryForm extends Component {
           </button>
       </div>
 
-    </div>
+    </div>)
 
     }
 

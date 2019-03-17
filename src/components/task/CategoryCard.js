@@ -64,9 +64,11 @@ export default class TaskCategoryCard extends Component {
             >
               Edit
                             </button> */}
+                            <div className="buttonGroup">
             <button
               type="button"
               className="btn btn-success"
+              id="buttonOne"
               onClick={() => {
                this.props.deleteTask(this.props.task.id)
               }}>
@@ -81,11 +83,15 @@ export default class TaskCategoryCard extends Component {
                             </div>
 
 
-            <button onClick={e => {
+            <button
+            className="btn btn-success"
+            id="buttonTwo"
+            onClick={e => {
               this.props.showModal(e, this.props.task.id);
 
             }}
-            > show Modal </button>
+            > Edit </button>
+          </div>
           </div>
 
         }

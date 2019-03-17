@@ -75,7 +75,7 @@ deleteTask = (id) => {
   render() {
 
     let homeIdNumb = Number(this.props.match.params.homeId)
-    console.log(homeIdNumb)
+    // console.log(homeIdNumb)
 
  return (
 <React.Fragment>
@@ -99,6 +99,7 @@ deleteTask = (id) => {
                             showModal ={this.showModal}
                             populateData={this.populateData}
                             // key={this.state.task.id}
+                            handleFieldChange= {this.state.handleFieldChange}
                             task ={this.state.currentModalData}
                             show={this.state.show}>edit</ModalExample>
                         : null}

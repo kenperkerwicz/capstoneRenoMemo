@@ -71,7 +71,7 @@ class ApplicationViews extends Component {
       }
     ))
   }
-  
+
   addTask = task =>
     TaskManager.post(task)
       .then(() => TaskManager.getAll())
@@ -191,7 +191,7 @@ class ApplicationViews extends Component {
           />
         }} />
 
-<Route exact path="/tasks/new" render={(props) => {
+{/* <Route exact path="/tasks/new" render={(props) => {
           return <TaskForm {...props}
             addTask={this.addTask}
            tasks={this.state.tasks}
@@ -199,7 +199,7 @@ class ApplicationViews extends Component {
             names={this.state.names}
 
           />
-        }} />
+        }} /> */}
 
 <Route
           path="/homes/:taskId(\d+)/edit" render={props => {
