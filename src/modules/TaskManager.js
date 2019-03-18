@@ -31,14 +31,14 @@ export default {
       body: JSON.stringify(newTask)
     }).then(data => data.json())
   },
-  put(task) {
-    return fetch(`${remoteURL}/tasks/${task.id}`, {
+  put(editedTask) {
+    return fetch(`${remoteURL}/tasks/${editedTask.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },
-      // body: JSON.stringify(editedTask)})
-    }).then(data => data.text()).then(data => console.log(data))
+       body: JSON.stringify(editedTask)
+    }).then(data => data.json());
   },
   remove(id) {
     return fetch(`http://localhost:8088/tasks/${id}`, {

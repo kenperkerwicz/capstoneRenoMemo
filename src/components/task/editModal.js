@@ -13,16 +13,20 @@ class ModalExample extends React.Component {
       modal: false,
       task: this.props.task,
 
-      // catId: "",
-      // name: "",
-      // contact: "",
-      // expectedCompDate: "",
-      // homeId: "",
-      // status: "",
-      // id: ""
+      catId: this.props.task.catId,
+      name: this.props.task.name,
+     contact: this.props.task.contact,
+     expectedCompDate: this.props.task.expectedCompDate,
+     homeId: this.props.task.homeId,
+      status: this.props.task.status,
+      id: this.props.task.id
     };
 
-    console.log(this.state.task)
+    // this.handleFieldChange = this.handleFieldChange.bind(this);
+  this.saveEditForm = this.saveEditForm.bind(this);
+    // console.log(`CATid`,this.state.catId),
+
+console.log(this.state.name)
 
     this.toggle = this.toggle.bind(this);
   }
@@ -62,17 +66,22 @@ return {task: this.props.task}
   saveEditForm = evt => {
 
     evt.preventDefault()
-    if (this.state.task.name === "")
+    if (this.state.name === "")
     { window.alert("Please write something");}
       else {
         const editedTask = {
-            task: this.props.task
+
+           catId: this.state.catId,
+           name: this.state.name,
+          contact: this.state.contact,
+          expectedCompDate: this.state.expectedCompDate,
+          homeId: this.state.homeId,
+          status: this.state.status,
+          id: this.state.id
+
         }
 
-        // const taskId = this.state.task.id;
-
          TaskManager.put(editedTask).then(() => this.props.populateData());
-
 
       }
  // code above needs to push history
@@ -91,7 +100,7 @@ return {task: this.props.task}
         >
           <ModalHeader
             toggle={this.toggle}
-            value={this.state.task.name}
+            value={this.state.name}
             onChange={this.handleFieldChange}
           />
 
@@ -103,7 +112,7 @@ return {task: this.props.task}
                 name="name"
                 onChange={this.handleFieldChange}
                 id="name"
-                value={this.state.task.name}
+                value={this.state.name}
               />
 
               <Label for="compDate">Expected Completion Date</Label>
@@ -111,8 +120,8 @@ return {task: this.props.task}
                 type="text"
                 name="compDate"
                 onChange={this.handleFieldChange}
-                id=" expectedCompDate"
-                value={this.state.task.expectedCompDate}
+                id="expectedCompDate"
+                value={this.state.expectedCompDate}
               />
 
               <Label for="contact">contact</Label>
@@ -121,7 +130,7 @@ return {task: this.props.task}
                 name="contact"
                 onChange={this.handleFieldChange}
                 id="contact"
-                value={this.state.task.contact}
+                value={this.state.contact}
               />
 
               <Label
@@ -133,10 +142,10 @@ return {task: this.props.task}
               <Label
                 type="text"
                 name="homeId"
-                id={this.state.task.homeId}
+                id={this.state.homeId}
                 onChange={this.handleFieldChange}
               />
-              <Label type="id" name="id" id={this.state.task.id} />
+              <Label type="id" name="id" id={this.state.id} />
             </FormGroup>
           </ModalBody>
           <ModalFooter>
