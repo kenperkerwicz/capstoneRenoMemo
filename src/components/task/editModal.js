@@ -13,14 +13,16 @@ class ModalExample extends React.Component {
       modal: false,
       task: this.props.task,
 
-      catId: "",
-      name: "",
-      contact: "",
-      expectedCompDate: "",
-      homeId: "",
-      status: "",
-      id: ""
+      // catId: "",
+      // name: "",
+      // contact: "",
+      // expectedCompDate: "",
+      // homeId: "",
+      // status: "",
+      // id: ""
     };
+
+    console.log(this.state.task)
 
     this.toggle = this.toggle.bind(this);
   }
@@ -35,19 +37,19 @@ class ModalExample extends React.Component {
     this.setState(stateToChange);
   };
 
-  componentDidMount(){
-    TaskManager.getTasks().then(task => {
-      this.setState({
-        catId: task.catId,
-      name: task.name,
-      contact: task.contact,
-      expectedCompDate: task.expectedCompDate,
-      homeId: task.homeId,
-      status: task.status,
-      id: task.id
-      })
-    })
-  }
+  // componentDidMount(){
+  //   TaskManager.getTasks().then(task => {
+  //     this.setState({
+  //       catId: task.catId,
+  //     name: task.name,
+  //     contact: task.contact,
+  //     expectedCompDate: task.expectedCompDate,
+  //     homeId: task.homeId,
+  //     status: task.status,
+  //     id: task.id
+  //     })
+  //   })
+  // }
 
 
 
@@ -104,7 +106,7 @@ class ModalExample extends React.Component {
                 type="text"
                 name="compDate"
                 onChange={this.handleFieldChange}
-                id="compDate"
+                id=" expectedCompDate"
                 value={this.state.task.expectedCompDate}
               />
 
@@ -124,7 +126,7 @@ class ModalExample extends React.Component {
                 onChange={this.handleFieldChange}
               />
               <Label
-                type="homeId"
+                type="text"
                 name="homeId"
                 id={this.state.task.homeId}
                 onChange={this.handleFieldChange}

@@ -38,7 +38,7 @@
     {
       "id": 4,
       "dateOfEntry": 1552332009,
-      "homeAddress": "homeId 4 Blv=d Madison TB",
+      "homeAddress": "homeId 4 Blvd Madison TB",
       "userId": 1
     },
     {
@@ -64,12 +64,6 @@
       "id": 9,
       "homeAddress": "homeId 9 Hamblen Blvd Madison TN ",
       "dateOfEntry": 1552332009
-    },
-    {
-      "userId": 1,
-      "id": 10,
-      "homeAddress": "123444",
-      "dateOfEntry": 1552874938
     }
   ],
   "tasks": [
@@ -126,6 +120,42 @@
       "status": "",
       "homeId": 4,
       "catId": 2
+    },
+    {
+      "name": "buy shingles",
+      "contact": "615-223-6868",
+      "expectedCompDate": "end of day",
+      "id": 7,
+      "status": "",
+      "homeId": 4,
+      "catId": 4
+    },
+    {
+      "name": "cut tile to form ",
+      "contact": "n/a",
+      "expectedCompDate": "by mid-day",
+      "id": 8,
+      "status": "",
+      "homeId": 4,
+      "catId": 3
+    },
+    {
+      "name": "purchase more stucco",
+      "contact": "615-333-4545",
+      "expectedCompDate": "end of week",
+      "id": 9,
+      "status": "",
+      "homeId": 4,
+      "catId": 3
+    },
+    {
+      "name": "floors need to be cut",
+      "contact": "n/a",
+      "expectedCompDate": "2 weeks time",
+      "id": 10,
+      "status": "",
+      "homeId": 9,
+      "catId": 1
     }
   ],
   "categories": [

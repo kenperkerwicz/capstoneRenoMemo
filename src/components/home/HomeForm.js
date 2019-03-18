@@ -47,7 +47,7 @@ export default class HomeForm extends Component {
     return (
       <React.Fragment>
 
-        {console.log('hello')}
+       
         {this.state.dateOfEntry}
         <form className="homeAddress">
           <div className="form-group">

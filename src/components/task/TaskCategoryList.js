@@ -13,7 +13,7 @@ export default class TaskCategoryList extends Component {
 
   showModal = (e, taskId) => {
     // console.log(e.target.parentNode)
-    console.log(`SHOW MODAL`,taskId)
+    // console.log(`SHOW MODAL`,taskId)
     // console.log(`task.id`, this.task.id)
 
     if (this.state.show === true) {
@@ -70,8 +70,7 @@ export default class TaskCategoryList extends Component {
    let catIdNumb = this.props.match.params.categoryId;
 
   //  console.log(`CAT ID`, this.props.catId)
-
-    console.log(catIdNumb)
+    // console.log(catIdNumb)
 
     return (
 
