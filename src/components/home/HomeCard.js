@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
 import download from "./home-512.png"
+import download2 from "./output-onlinepngtools.png"
+import download3 from "./output-onlinepngtools--RESIZED.png"
 
 
 
@@ -13,11 +15,12 @@ export default class HomeCard extends Component {
 
 
 
-                        <div> address: {this.props.home.homeAddress}</div>
-                        <div> date of entry: {this.props.home.dateOfEntry}</div>
-                        {/* <img src={download} alt="home"className="icon--home" /> */}
 
-                        {/* <Link className="nav-link" to={`/movies/${this.props.movie.id}`}>Edit</Link> */}
+                        <div> address: {this.props.home.homeAddress}</div>
+                        {/* <div> date of entry: {this.props.home.dateOfEntry}</div> */}
+                        { <img src={download3} alt="home"className="icon--home" /> }
+
+
                         <button
                             type="button"
                             id="editButton"
@@ -33,7 +36,9 @@ export default class HomeCard extends Component {
                             onClick={() => this.props.deleteHome(this.props.home.id)}
                             className="btn btn-success">Delete</a>
 
-                            <Link className="nav-link" to={`/homes/${this.props.home.id}`}>Tasks to Complete</Link>
+                            <Link className="nav-link"
+
+                            to={`/homes/${this.props.home.id}`}>Categories</Link>
 
                     </h5>
                 </div>

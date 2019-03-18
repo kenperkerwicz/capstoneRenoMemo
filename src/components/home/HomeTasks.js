@@ -16,7 +16,7 @@ export default class HomeTasks extends Component {
     contact: "",
     expectedCompDate: "",
     homeId: "",
-    statusId: ""
+    status: ""
 
 
   }

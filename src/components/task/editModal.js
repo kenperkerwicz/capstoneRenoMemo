@@ -35,6 +35,24 @@ class ModalExample extends React.Component {
     this.setState(stateToChange);
   };
 
+  componentDidMount(){
+    TaskManager.getTasks().then(task => {
+      this.setState({
+        catId: task.catId,
+      name: task.name,
+      contact: task.contact,
+      expectedCompDate: task.expectedCompDate,
+      homeId: task.homeId,
+      status: task.status,
+      id: task.id
+      })
+    })
+  }
+
+
+
+
+
   saveEditForm = evt => {
 
     evt.preventDefault()
@@ -47,11 +65,14 @@ class ModalExample extends React.Component {
 
         // const taskId = this.state.task.id;
 
-        TaskManager.put(editedTask).then(() => this.props.populateData());
-      }
+         TaskManager.put(editedTask).then(() => this.props.populateData());
 
-    // code above needs to push history
+
+      }
+ // code above needs to push history
   };
+
+
 
   render() {
     return (
@@ -71,7 +92,7 @@ class ModalExample extends React.Component {
             <FormGroup>
               <Label for="name">Name</Label>
               <Input
-                type="email"
+                type="text"
                 name="name"
                 onChange={this.handleFieldChange}
                 id="name"
@@ -80,7 +101,7 @@ class ModalExample extends React.Component {
 
               <Label for="compDate">Expected Completion Date</Label>
               <Input
-                type="compDate"
+                type="text"
                 name="compDate"
                 onChange={this.handleFieldChange}
                 id="compDate"
@@ -89,7 +110,7 @@ class ModalExample extends React.Component {
 
               <Label for="contact">contact</Label>
               <Input
-                type="contact"
+                type="text"
                 name="contact"
                 onChange={this.handleFieldChange}
                 id="contact"
@@ -97,7 +118,7 @@ class ModalExample extends React.Component {
               />
 
               <Label
-                type="catId"
+                type="text"
                 name="catId"
                 id={this.state.task.catId}
                 onChange={this.handleFieldChange}

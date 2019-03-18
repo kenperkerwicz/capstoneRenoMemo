@@ -66,15 +66,18 @@ export default class TaskCategoryList extends Component {
     // console.log("TASKS", this.props.tasks);
     // console.log("CATEGORIES", this.props.categories);
     // console.log(`CURRENT MODAL DATA`, this.currentModalData);
-    // let homeIdNumb = Number(this.props.match.params.homeId);
+   let homeIdNumb = this.props.match.params.homeId;
+   let catIdNumb = this.props.match.params.catId;
     // console.log(homeIdNumb)
 
     return (
+
       <React.Fragment>
         <button
+        homeId ={this.state.homeId}
           type="submit"
           className="addToDoButton"
-          onClick={() => this.props.history.push("/tasks/new")}
+          onClick={() => this.props.history.push(`/homes/${homeIdNumb}/tasks/new`)}
         >
           add task.
         </button>

@@ -167,45 +167,40 @@ class ApplicationViews extends Component {
             key={this.state.categories.id}
           />
         }} />
-        {/* <Route exact path="/tasks" render={(props) => {
-          return <TaskCategoryList
-            {...props} delete={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
-            categories={this.state.categories}
-            tasks={this.state.tasks}
-            deleteTask = {this.deleteTask}
-            categoryId={this.state.categoryId}
-          taskName={this.state.taskName}
-          contact={this.state.contact}
-          expectedCompDate= {this.state.tuesday}
-
-
-          />
-        }} /> */}
-        <Route exact path="/tasks/new" render={(props) => {
+        <Route exact path="/homes/:homeId(\d+)/tasks/new" render={(props) => {
           return <TaskForm {...props}
-            addTask={this.addTask}
-           tasks={this.state.tasks}
-            userId={this.state.userId}
-            names={this.state.names}
+          addTask={this.addTask}
+          tasks={this.state.tasks}
+          userId={this.state.userId}
+          names={this.state.names}
+          status= {this.state.status}
+          catId={this.state.catId}
+          homeId={this.props.homeId}
 
           />
+            {/* <Route exact path="/tasks" render={(props) => {
+              return <TaskCategoryList
+                {...props} delete={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
+                categories={this.state.categories}
+                tasks={this.state.tasks}
+                deleteTask = {this.deleteTask}
+                categoryId={this.state.categoryId}
+              taskName={this.state.taskName}
+              contact={this.state.contact}
+              expectedCompDate= {this.state.tuesday}
+
+
+              />
+            }} /> */}
         }} />
 
-{/* <Route exact path="/tasks/new" render={(props) => {
-          return <TaskForm {...props}
-            addTask={this.addTask}
-           tasks={this.state.tasks}
-            userId={this.state.userId}
-            names={this.state.names}
 
-          />
-        }} /> */}
 
-<Route
-          path="/homes/:taskId(\d+)/edit" render={props => {
+{/* <Route
+        exact path="/homes/:taskId(\d+)/edit" render={props => {
             return <ModalExample {...props} tasks={this.state.tasks} updateTask={this.updateMovie} getMovieToEdit={this.getMovieToEdit} edit={this.editMovie} />
           }}
-        />
+        /> */}
 
       </React.Fragment>
     )

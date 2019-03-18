@@ -63,7 +63,7 @@ export default class HomeForm extends Component {
           </div>
 
           <div className="form-group">
-            <label htmlFor="year released">Year Released</label>
+            {/* <label htmlFor="year released">Year Released</label> */}
 
 
 

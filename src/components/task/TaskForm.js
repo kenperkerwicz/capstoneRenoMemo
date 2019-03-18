@@ -27,27 +27,33 @@ export default class CategoryForm extends Component {
     // const catId = this.props.match.params.categoryId;
 console.log(`STATE CAT ID`, this.state.catId)
 
+ let paramHomeId = this.props.match.params.homeId
+ let paramCatId = this.props.match.params.catId
+
+console.log(`PARAM CAT ID`, paramCatId)
+
+
     evt.preventDefault();
     if (this.state.taskName === "") {
       window.alert("Please fill in information");
     } else {
+
       const card = {
-        catId: this.state.catId,
+
         name: this.state.name,
         contact: this.state.contact,
-
         expectedCompDate: this.state.expectedCompDate,
-         homeId: this.state.homeId,
-        status: this.state.status,
         id: this.state.id,
-
+        status: this.state.status,
+        homeId: Number(this.props.match.params.homeId),
+        catId: Number(this.props.match.params.catId)
       };
 
       console.log(`CARD`, card)
 
       // Create the task and redirect user to the task list
 
-      this.props.addTask(card).then(() => this.props.history.push(`/homes/`));
+      this.props.addTask(card).then(() => this.props.history.push(`/homes/tasks`));
     }
   };
 
