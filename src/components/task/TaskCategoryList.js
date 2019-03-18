@@ -47,18 +47,14 @@ export default class TaskCategoryList extends Component {
   };
 
   deleteTask = id => {
-    return TaskManager.removeAndList(id).then(tasks =>
-      this.setState({
-        tasks: tasks
-      })
-    );
+
+    return TaskManager.remove(id).then(() => this.populateData())
+
   };
 
   componentDidMount() {
 
     this.populateData();
-
-
   }
 
   render() {
@@ -76,7 +72,7 @@ export default class TaskCategoryList extends Component {
 
       <React.Fragment>
         <button
-        homeId ={this.state.homeId}
+        //  homeId ={this.state.homeId}
           type="submit"
           className="addToDoButton"
           onClick={() => this.props.history.push(`/homes/${homeIdNumb}/${catIdNumb}/tasks/new`)}
@@ -106,7 +102,7 @@ export default class TaskCategoryList extends Component {
             // key={task.id}
             id={i}
             showModal={this.showModal}
-            homeId={this.homeId}
+            // homeId={this.homeId}
             show={this.state.show}
             deleteTask={this.deleteTask}
           />

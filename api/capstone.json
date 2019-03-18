@@ -95,66 +95,48 @@
       "id": 3
     },
     {
-      "name": "pick up flooring",
-      "contact": "home depot",
-      "expectedCompDate": "SUNDAY 2",
-      "id": 4,
-      "status": "",
-      "homeId": 4,
-      "catId": 1
-    },
-    {
-      "name": "decide what stain to get ",
+      "name": "kenperkerwicz@gmail.com",
       "contact": "763-226-6909",
-      "expectedCompDate": "SUNDAY",
-      "id": 5,
-      "status": "",
-      "homeId": 4,
-      "catId": 1
-    },
-    {
-      "name": "buy drywall",
-      "contact": "go to lowes",
-      "expectedCompDate": "end of day",
-      "id": 6,
+      "expectedCompDate": "friday",
+      "id": 8,
       "status": "",
       "homeId": 4,
       "catId": 2
     },
     {
-      "name": "buy shingles",
-      "contact": "615-223-6868",
-      "expectedCompDate": "end of day",
-      "id": 7,
-      "status": "",
-      "homeId": 4,
-      "catId": 4
-    },
-    {
-      "name": "cut tile to form ",
-      "contact": "n/a",
-      "expectedCompDate": "by mid-day",
-      "id": 8,
-      "status": "",
-      "homeId": 4,
-      "catId": 3
-    },
-    {
-      "name": "purchase more stucco",
-      "contact": "615-333-4545",
-      "expectedCompDate": "end of week",
+      "name": "kenperkerwicz",
+      "contact": "763-226-6909",
+      "expectedCompDate": "SUNDAY 2",
       "id": 9,
       "status": "",
       "homeId": 4,
-      "catId": 3
+      "catId": 2
     },
     {
-      "name": "floors need to be cut",
-      "contact": "n/a",
-      "expectedCompDate": "2 weeks time",
-      "id": 10,
+      "name": "kenperkerwicz@gmail.com",
+      "contact": "763-226-6909",
+      "expectedCompDate": "end of day",
+      "id": 11,
       "status": "",
-      "homeId": 9,
+      "homeId": 4,
+      "catId": 6
+    },
+    {
+      "name": "kenperkerwicz@gmail.com",
+      "contact": "s",
+      "expectedCompDate": "friday",
+      "id": 12,
+      "status": "",
+      "homeId": 4,
+      "catId": 5
+    },
+    {
+      "name": "finish staining ",
+      "contact": "763-226-6909",
+      "expectedCompDate": "friday",
+      "id": 13,
+      "status": "",
+      "homeId": 4,
       "catId": 1
     }
   ],

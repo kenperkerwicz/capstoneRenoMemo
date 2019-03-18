@@ -37,7 +37,7 @@ class ModalExample extends React.Component {
     this.setState(stateToChange);
   };
 
-  // componentDidMount(){
+  //  componentDidMount(){
   //   TaskManager.getTasks().then(task => {
   //     this.setState({
   //       catId: task.catId,
@@ -53,6 +53,10 @@ class ModalExample extends React.Component {
 
 
 
+componentDidMount =() => {
+this.setState(() => {
+return {task: this.props.task}
+})}
 
 
   saveEditForm = evt => {
@@ -73,6 +77,7 @@ class ModalExample extends React.Component {
       }
  // code above needs to push history
   };
+
 
 
 

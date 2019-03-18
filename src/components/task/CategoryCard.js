@@ -31,15 +31,6 @@ export default class TaskCategoryCard extends Component {
             {<h6> contact info: {this.props.task.contact}
             </h6>} */}
 
-            {/* <button
-              type="button"
-              className="btn btn-success"
-              onClick={() => {
-                window.alert('hi EDIT button')
-              }}
-            >
-              Edit
-                            </button> */}
             <div className="buttonGroup">
               <button
                 type="button"

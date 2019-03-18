@@ -19,7 +19,7 @@ export default {
     return fetch(`http://localhost:8088/tasks/${id}`, {
             method: "DELETE"
         })
-        .then(() => fetch(`http://localhost:8088/tasks`))
+        .then(() => fetch(`http://localhost:8088/tasks/`))
         .then(e => e.json())
   },
   post(newTask) {
@@ -39,5 +39,10 @@ export default {
       },
       // body: JSON.stringify(editedTask)})
     }).then(data => data.text()).then(data => console.log(data))
+  },
+  remove(id) {
+    return fetch(`http://localhost:8088/tasks/${id}`, {
+            method: "DELETE"
+        })
   }
 }
