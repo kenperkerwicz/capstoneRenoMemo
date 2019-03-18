@@ -3,7 +3,7 @@ import "./category.css";
 import TaskCategoryList from "./TaskCategoryList";
 import TaskCategoryCard from "./CategoryCard";
 
-export default class CategoryForm extends Component {
+export default class TaskForm extends Component {
   state = {
     catId: "",
     name: "",
@@ -28,7 +28,7 @@ export default class CategoryForm extends Component {
 console.log(`STATE CAT ID`, this.state.catId)
 
  let paramHomeId = this.props.match.params.homeId
- let paramCatId = this.props.match.params.catId
+ let paramCatId = this.props.match.params.categoryId
 
 console.log(`PARAM CAT ID`, paramCatId)
 
@@ -46,14 +46,14 @@ console.log(`PARAM CAT ID`, paramCatId)
         id: this.state.id,
         status: this.state.status,
         homeId: Number(this.props.match.params.homeId),
-        catId: Number(this.props.match.params.catId)
+        catId: Number(this.props.match.params.categoryId)
       };
 
       console.log(`CARD`, card)
 
       // Create the task and redirect user to the task list
 
-      this.props.addTask(card).then(() => this.props.history.push(`/homes/tasks`));
+      this.props.addTask(card).then(() => this.props.history.push(`/homes/${paramHomeId}/${paramCatId}`));
     }
   };
 

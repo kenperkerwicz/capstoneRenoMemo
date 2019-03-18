@@ -167,7 +167,7 @@ class ApplicationViews extends Component {
             key={this.state.categories.id}
           />
         }} />
-        <Route exact path="/homes/:homeId(\d+)/tasks/new" render={(props) => {
+        <Route exact path="/homes/:homeId(\d+)/:categoryId(\d+)/tasks/new" render={(props) => {
           return <TaskForm {...props}
           addTask={this.addTask}
           tasks={this.state.tasks}
@@ -178,20 +178,7 @@ class ApplicationViews extends Component {
           homeId={this.props.homeId}
 
           />
-            {/* <Route exact path="/tasks" render={(props) => {
-              return <TaskCategoryList
-                {...props} delete={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
-                categories={this.state.categories}
-                tasks={this.state.tasks}
-                deleteTask = {this.deleteTask}
-                categoryId={this.state.categoryId}
-              taskName={this.state.taskName}
-              contact={this.state.contact}
-              expectedCompDate= {this.state.tuesday}
 
-
-              />
-            }} /> */}
         }} />
 
 

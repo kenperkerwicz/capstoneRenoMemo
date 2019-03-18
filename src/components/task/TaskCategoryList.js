@@ -67,8 +67,11 @@ export default class TaskCategoryList extends Component {
     // console.log("CATEGORIES", this.props.categories);
     // console.log(`CURRENT MODAL DATA`, this.currentModalData);
    let homeIdNumb = this.props.match.params.homeId;
-   let catIdNumb = this.props.match.params.catId;
-    // console.log(homeIdNumb)
+   let catIdNumb = this.props.match.params.categoryId;
+
+  //  console.log(`CAT ID`, this.props.catId)
+
+    console.log(catIdNumb)
 
     return (
 
@@ -77,7 +80,7 @@ export default class TaskCategoryList extends Component {
         homeId ={this.state.homeId}
           type="submit"
           className="addToDoButton"
-          onClick={() => this.props.history.push(`/homes/${homeIdNumb}/tasks/new`)}
+          onClick={() => this.props.history.push(`/homes/${homeIdNumb}/${catIdNumb}/tasks/new`)}
         >
           add task.
         </button>

@@ -101,24 +101,32 @@
       "id": 3
     },
     {
-      "name": "kenperkerwicz@gmail.com",
-      "contact": "763-226-6909",
-      "expectedCompDate": "SUNDAY as WELL",
+      "name": "pick up flooring",
+      "contact": "home depot",
+      "expectedCompDate": "SUNDAY 2",
       "id": 4,
       "status": "",
       "homeId": 4,
-      "catId": null
+      "catId": 1
     },
     {
-      "name": ".com",
-      "contact": "763-226",
+      "name": "decide what stain to get ",
+      "contact": "763-226-6909",
       "expectedCompDate": "SUNDAY",
       "id": 5,
       "status": "",
-      "homeId": 3,
-      "catId": null
+      "homeId": 4,
+      "catId": 1
+    },
+    {
+      "name": "buy drywall",
+      "contact": "go to lowes",
+      "expectedCompDate": "end of day",
+      "id": 6,
+      "status": "",
+      "homeId": 4,
+      "catId": 2
     }
-
   ],
   "categories": [
     {
