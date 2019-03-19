@@ -7,12 +7,12 @@ import "./Nav.css"
 class NavBar extends Component {
   render () {
     return (
-      <nav className="navbar-light flex-wrap light-blue p-0 shadow">
+      <nav className="navbar-flex-wrap p-0 shadow" id="navButton" >
                 <ul className="nav nav-pills">
                     <li className="nav-item">
-                        <Link className="nav-link" to="/homes">Homes</Link>
+                        <Link className="nav-link" id="linkId" to="/homes">Homes</Link>
                     </li>
-                    
+
                     </ul>
                     </nav>
     )

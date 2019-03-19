@@ -27,19 +27,21 @@
 .individualCats {
   text-align: center;
   font-size: 22px;
-  padding: 25px;
   word-wrap: break-word;
   box-shadow: 25px;
   display: flexbox;
   max-width: 450px;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 10px 10px;
   border: 1px solid #BFBFBF;
   background-color: white;
-  height: 70px;
+  height: 75px;
+  max-height: 100px;
   box-shadow: 3px 3px 3px #aaaaaa;
   border-radius:  10px
 }
 
-.entireCatList {
- display: block;
+
+
+#catImg {
+  height: 30px;
 }

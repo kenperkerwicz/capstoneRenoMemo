@@ -15,6 +15,8 @@ import TaskCategoryList from "./task/TaskCategoryList"
 import TaskForm from "./task/TaskForm"
 import ModalExample from "./task/editModal"
 import CategoryForm from "./category/CategoryForm"
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button } from 'reactstrap'
 
 class ApplicationViews extends Component {
 

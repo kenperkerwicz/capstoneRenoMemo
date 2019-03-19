@@ -1,6 +1,6 @@
 .nav-link {
 
-  background-color :#93a7c6;
+  background-color: #cee1ff;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -10,7 +10,7 @@
 }
 
 .nav-pills {
-  background-color: #93a7c6;
+  background-color: whitesmoke;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -19,6 +19,14 @@
   border-radius: 5px;
 
 }
-.nav-item {
-  background-color: white;
+#navButton {
+  background-color: whitesmoke;
+}
+
+.navId {
+  background-color: whitesmoke;
+}
+
+#linkId {
+  background-color: whitesmoke;
 }

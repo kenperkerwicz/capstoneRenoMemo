@@ -18,3 +18,11 @@
 #deleteButton {
   background-color: #47526d;
 }
+
+.card {
+  border-radius: 10px;
+}
+
+#cardBodyId {
+ background-color: whitesmoke
+}

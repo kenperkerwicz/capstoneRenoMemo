@@ -26,8 +26,11 @@ export default class CategoryList extends Component {
 
 <div className="entireCatList">
   {  this.props.categories.map(cat =>
-<div className="individualCats" >
-{/* // {<img src={cat.img} />} */}
+<div className="individualCats"
+id="imgBox"
+>
+
+
 <Link
  key={cat.id}  to={`/homes/${this.props.match.params.homeId}/${cat.id}`}>{cat.categoryName}</Link>
 </div>

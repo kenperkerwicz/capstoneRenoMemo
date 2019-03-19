@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from "react-router-dom"
 import Capstone from './Capstone'
 
+
 ReactDOM.render(<Router>
  <Capstone />
 </Router>, document.getElementById('root'));
