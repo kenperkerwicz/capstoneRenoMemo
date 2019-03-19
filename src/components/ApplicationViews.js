@@ -14,6 +14,7 @@ import CategoryList from "./category/CategoryList"
 import TaskCategoryList from "./task/TaskCategoryList"
 import TaskForm from "./task/TaskForm"
 import ModalExample from "./task/editModal"
+import CategoryForm from "./category/CategoryForm"
 
 class ApplicationViews extends Component {
 
@@ -81,6 +82,14 @@ class ApplicationViews extends Component {
         })
       );
 
+      addCategory= category =>
+    CategoryManager.post(category)
+      .then(() => CategoryManager.getAll())
+      .then(categories =>
+        this.setState({
+          categories: categories
+        })
+      );
 
 
 
@@ -179,6 +188,14 @@ class ApplicationViews extends Component {
 
           />
 
+        }} />
+
+<Route exact path="/categoryList/new" render={(props) => {
+          return <CategoryForm
+            {...props} deleteHome={this.deleteHome} homes={this.state.homes} userId={this.state.userId}
+            name= {this.state.name}
+            addCategory={this.addCategory}
+          />
         }} />
 
 

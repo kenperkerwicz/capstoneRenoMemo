@@ -6,13 +6,9 @@ import './category.css'
 export default class CategoryForm extends Component {
 
   state = {
-    id: "",
-    userId: "",
-    catId: "",
-    taskName: "",
-    contact: "",
-    expectedCompDate: "",
-    homeId: ""
+    categoryName: "",
+    id: ""
+
   };
 
 
@@ -24,21 +20,55 @@ export default class CategoryForm extends Component {
   };
 
 
+  constructNewCategory = evt => {
+    evt.preventDefault();
+    // if (this.state.categoryName === "") {
+    //   window.alert("Please select a category");
+    // } else {
+      const editedCategory = {
+
+      categoryName: this.state.categoryName,
+       id: this.state.id
+
+
+      };
+
+      // Create the home and redirect user to the home list
+      this.props
+        .addCategory(editedCategory)
+        .then(() => this.props.history.push("/homes"));
+
+    // }
+
+  };
+
+
   render () {
     return <div className="mainDiv">
       <div className="header">
       <h1>category name goes here</h1>
+
+      <div className="form-group">
+            <label htmlFor="homeAddress">category name</label>
+            <input
+              type="text"
+              required
+              className="form-control"
+              onChange={this.handleFieldChange}
+              id="categoryName"
+              placeholder="cat goes here"
+            />
+          </div>
+
       <button
-            type="submit"
-            onClick={() => {window.alert('hi')}}
             className="btn btn-primary"
-          >
-            add to do note:
+            type="submit"
+            onClick={this.constructNewCategory}>
+            save.
+
           </button>
       </div>
-      <br></br>
 
-      {/* <div className="cardDisplay">{<CategoryCard/>}</div> */}
 
     </div>
 

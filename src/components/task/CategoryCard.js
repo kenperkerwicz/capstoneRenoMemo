@@ -20,16 +20,19 @@ export default class TaskCategoryCard extends Component {
       <React.Fragment>
         {
           <div className="categorycard" key={this.props.task.id}>
-            {/* <h2 >TaskName</h2> */}
-            {/* <h4 >{this.props.task.name}</h4> */}
-            <h4>taskId :{this.props.task.id}</h4>
-            <h4>catId: {this.props.task.catId}</h4>
-            <h4>homeId: {this.props.task.homeId}</h4>
+            {/* { <h2 >TaskName</h2> } */}
 
-            {/* <h6> expected completion date: {this.props.task.expectedCompDate}
+            { <h5 >{this.props.task.name}</h5> }
+
+
+            {/* {<h4>taskId :{this.props.task.id}</h4>
+            <h4>catId: {this.props.task.catId}</h4>
+            <h4>homeId: {this.props.task.homeId}</h4> } */}
+
+            {<h6> expected completion date: {this.props.task.expectedCompDate}
+            </h6>}
+            <h6> contact info: {this.props.task.contact}
             </h6>
-            {<h6> contact info: {this.props.task.contact}
-            </h6>} */}
 
             <div className="buttonGroup">
               <button

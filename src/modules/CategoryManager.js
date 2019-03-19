@@ -30,13 +30,14 @@ export default {
       body: JSON.stringify(newTask)
     }).then(data => data.json())
   },
-  // put(editedHome) {
-  //   return fetch(`${remoteURL}/homes/${editedTask.id}`, {
-  //     method: "PUT",
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify(editedTask)
-  //   }).then(data => data.json());
-  // }
+  
+  put(editedCategory) {
+  return fetch(`${remoteURL}/categories/${editedCategory.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedCategory)
+    }).then(data => data.json());
+  }
 }
