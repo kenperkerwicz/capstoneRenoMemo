@@ -79,6 +79,15 @@ export default class HomeForm extends Component {
           >
             Save Home
           </button>
+
+          <button
+            type="submit"
+            onClick={() => {window.alert("THIS IS A STRETCH GOAL FOR AN API FETCH")}}
+            className="btn btn-primary"
+            id="SaveHomeBTN"
+          >
+            Find a Home.
+          </button>
         </form>
       </React.Fragment>
     );

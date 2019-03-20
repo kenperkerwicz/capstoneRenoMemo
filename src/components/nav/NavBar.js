@@ -15,6 +15,7 @@ class NavBar extends Component {
                     <div className="nav-item" id="NavId">
                         <Link className="nav-link" id="linkId" to="/homes">Homes</Link>
                         <Link className="nav-link" id="linkId" to="/homes/10">Categories</Link>
+                        
                     </div>
                     </section>
                     </nav>
