@@ -36,12 +36,6 @@
       "dateOfEntry": 1552332009
     },
     {
-      "id": 4,
-      "dateOfEntry": 1552332009,
-      "homeAddress": "homeId 4 Blvd Madison TB",
-      "userId": 1
-    },
-    {
       "userId": 2,
       "id": 6,
       "homeAddress": "homeId 6 Hamblen Blvd Madison TN ",
@@ -61,9 +55,21 @@
     },
     {
       "userId": 1,
-      "id": 9,
-      "homeAddress": "homeId 9 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1552332009
+      "id": 10,
+      "homeAddress": "123 Hamblen Blvd Madison TN ",
+      "dateOfEntry": 1553103992
+    },
+    {
+      "userId": 1,
+      "id": 11,
+      "homeAddress": "615 north street Nashville TN 37206",
+      "dateOfEntry": 1553109173
+    },
+    {
+      "userId": 1,
+      "id": 12,
+      "homeAddress": "456 7th street Minneapolis MN 55434",
+      "dateOfEntry": 1553118733
     }
   ],
   "tasks": [
@@ -86,103 +92,103 @@
       "id": 2
     },
     {
-      "name": "kenperkerwicz@gmail.com",
-      "contact": "763-226-6909",
+      "name": "Finish Flooring",
+      "contact": "Home Depot ",
       "expectedCompDate": "friday",
-      "id": 8,
+      "id": 22,
       "status": "",
-      "homeId": 4,
-      "catId": 2
-    },
-    {
-      "name": "kenperkerwicz",
-      "contact": "763-226-6909",
-      "expectedCompDate": "SUNDAY 2",
-      "id": 9,
-      "status": "",
-      "homeId": 4,
-      "catId": 2
-    },
-    {
-      "name": "kenperkerwicz@gmail.com",
-      "contact": "763-226-6909",
-      "expectedCompDate": "end of day",
-      "id": 11,
-      "status": "",
-      "homeId": 4,
-      "catId": 6
-    },
-    {
-      "name": "finish staining ",
-      "contact": "763-226-6909",
-      "expectedCompDate": "friday",
-      "id": 13,
-      "status": "",
-      "homeId": 4,
+      "homeId": 11,
       "catId": 1
-    },
-    {
-      "name": "kenperkerwicz@gmail.com",
-      "contact": "763-226-6909",
-      "expectedCompDate": "a",
-      "id": 14,
-      "status": "",
-      "homeId": 4,
-      "catId": 1
-    },
-    {
-      "catId": 3,
-      "name": "ssssshhh",
-      "contact": "763-226-6909",
-      "expectedCompDate": "friday",
-      "homeId": 4,
-      "status": "",
-      "id": 15
     },
     {
       "catId": 1,
-      "name": "kenperkerwicz@gmail.com",
+      "name": "Pick sizes ",
       "contact": "763-226-6909",
-      "expectedCompDate": "SATURDAY",
-      "homeId": 9,
+      "expectedCompDate": "end of day ",
+      "homeId": 11,
       "status": "",
-      "id": 16
+      "id": 23
     },
     {
-      "catId": 5,
-      "name": "kenperkerwicz@gmail.c",
-      "contact": "763-226-6909",
-      "expectedCompDate": "SUNDAY 2",
-      "homeId": 4,
-      "status": "",
-      "id": 17
-    },
-    {
-      "name": "get something",
-      "contact": "763-226-6909",
-      "expectedCompDate": "SUNDAY 2",
-      "id": 18,
-      "status": "",
-      "homeId": 4,
-      "catId": 5
-    },
-    {
-      "name": "dont get something",
+      "name": "pick out samples ",
       "contact": "763-226-6909",
       "expectedCompDate": "friday",
-      "id": 19,
+      "id": 25,
       "status": "",
-      "homeId": 4,
-      "catId": 5
+      "homeId": 10,
+      "catId": 1
     },
     {
-      "name": "get felt underlay",
-      "contact": "763-226-6909",
-      "expectedCompDate": "SUNDAY 2",
-      "id": 20,
+      "name": "buy more nails ",
+      "contact": "n/a",
+      "expectedCompDate": "friday",
+      "id": 26,
       "status": "",
-      "homeId": 4,
+      "homeId": 10,
       "catId": 1
+    },
+    {
+      "name": "rent sander ",
+      "contact": "n/a",
+      "expectedCompDate": "tuesday",
+      "id": 27,
+      "status": "",
+      "homeId": 10,
+      "catId": 1
+    },
+    {
+      "name": "cut out vents ",
+      "contact": "n/a",
+      "expectedCompDate": "mid-day 04/01",
+      "id": 28,
+      "status": "",
+      "homeId": 10,
+      "catId": 1
+    },
+    {
+      "name": "shop prices",
+      "contact": "615-223-0909",
+      "expectedCompDate": "today",
+      "id": 29,
+      "status": "",
+      "homeId": 10,
+      "catId": 2
+    },
+    {
+      "name": "decide on correct drywall size",
+      "contact": "n/a",
+      "expectedCompDate": "today",
+      "id": 30,
+      "status": "",
+      "homeId": 10,
+      "catId": 2
+    },
+    {
+      "name": "shop at floor and decor ",
+      "contact": "n/a",
+      "expectedCompDate": "today ",
+      "id": 31,
+      "status": "",
+      "homeId": 10,
+      "catId": 3
+    },
+    {
+      "name": "drywall pickup ",
+      "contact": "n/a",
+      "expectedCompDate": "thursday 04/09",
+      "id": 32,
+      "status": "",
+      "homeId": 10,
+      "catId": 3
+    },
+    {
+      "name": "measure for bathroom tile required",
+      "contact": "763-226-6909",
+      "expectedCompDate": "today",
+      "id": 33,
+      "status": "",
+      "homeId": 10,
+      "catId": 3
     }
   ],
   "categories": [

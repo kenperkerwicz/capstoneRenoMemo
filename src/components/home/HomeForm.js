@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import {Card,
+  CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button} from 'reactstrap';
 
 
 export default class HomeForm extends Component {
@@ -47,11 +50,11 @@ export default class HomeForm extends Component {
     return (
       <React.Fragment>
 
-       
+
         {this.state.dateOfEntry}
         <form className="homeAddress">
           <div className="form-group">
-            <label htmlFor="homeAddress">home address</label>
+            <label className="labelInput" htmlFor="homeAddress">home address</label>
             <input
               type="text"
               required
@@ -72,6 +75,7 @@ export default class HomeForm extends Component {
             type="submit"
             onClick={this.constructNewHome}
             className="btn btn-primary"
+            id="SaveHomeBTN"
           >
             Save Home
           </button>

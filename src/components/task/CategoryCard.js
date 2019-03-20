@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import ModalExample from "./editModal.js";
 import { throws } from "assert";
+import {Card,
+  CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button, } from 'reactstrap';
 
 export default class TaskCategoryCard extends Component {
   render() {
@@ -17,21 +20,23 @@ export default class TaskCategoryCard extends Component {
     // console.log(`TASK ID`, this.props.task.id)
 
     return (
-      <React.Fragment>
+      <Card className="fullCatCardList">
         {
-          <div className="categorycard" key={this.props.task.id}>
+          <CardBody
+          className="categorycard"
+          key={this.props.task.id}>
             {/* { <h2 >TaskName</h2> } */}
 
-            { <h5 >{this.props.task.name}</h5> }
+            { <CardTitle id="CardTitle">{this.props.task.name}</CardTitle> }
 
 
             {/* {<h4>taskId :{this.props.task.id}</h4>
             <h4>catId: {this.props.task.catId}</h4>
             <h4>homeId: {this.props.task.homeId}</h4> } */}
 
-            {<h6> expected completion date: {this.props.task.expectedCompDate}
+            {<h6> done by: {this.props.task.expectedCompDate}
             </h6>}
-            <h6> contact info: {this.props.task.contact}
+            <h6> contact: {this.props.task.contact}
             </h6>
 
             <div className="buttonGroup">
@@ -57,9 +62,9 @@ export default class TaskCategoryCard extends Component {
                 Edit{" "}
               </button>
             </div>
-          </div>
+          </CardBody>
         }
-      </React.Fragment>
+      </Card>
     );
   }
 }

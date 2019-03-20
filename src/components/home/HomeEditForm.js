@@ -1,5 +1,9 @@
 import React, { Component } from "react"
 import HomeManager from "../../modules/HomeManager"
+import {Card,
+  CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button,
+InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
 
 export default class HomeEditForm extends Component {
     // Set initial state
@@ -64,8 +68,8 @@ export default class HomeEditForm extends Component {
 
     render() {
       return (
-        <React.Fragment>
-          <form className="homeForm">
+        <Card>
+          <form id="homeForm">
             <div className="form-group">
               <label htmlFor="homeAddress">home address</label>
               <input
@@ -85,11 +89,12 @@ export default class HomeEditForm extends Component {
               type="submit"
               onClick={this.updateExistingHome}
               className="btn btn-primary"
+              id="submitButton"
             >
               Submit
             </button>
           </form>
-        </React.Fragment>
+        </Card>
       );
     }
 }

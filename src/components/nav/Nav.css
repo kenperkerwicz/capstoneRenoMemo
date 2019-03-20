@@ -1,12 +1,13 @@
 .nav-link {
 
-  background-color: #cee1ff;
-  display: block;
+  background-color: #cfd1d3;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
   width: 30%;
   text-align: center;
   border-radius: 5px;
+  justify-content: center;
 }
 
 .nav-pills {
@@ -17,10 +18,17 @@
   width: 50%;
   text-align: center;
   border-radius: 5px;
+  display:inline-block;
 
 }
 #navButton {
-  background-color: whitesmoke;
+  background-color: #cfd1d3;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  text-align: center;
+
+
 }
 
 .navId {
@@ -28,5 +36,9 @@
 }
 
 #linkId {
-  background-color: whitesmoke;
+  background-color: #cfd1d3;
+}
+
+#NavId {
+  background-color: #cfd1d3;
 }

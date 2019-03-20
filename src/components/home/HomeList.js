@@ -2,15 +2,20 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom";
  import HomeCard from "./HomeCard";
  import './home.css'
+ import {Card,
+  CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button} from 'reactstrap';
 
 export default class HomeList extends Component {
   render () {
     let user = Number(sessionStorage.getItem("credentials"))
       return (
           <React.Fragment>
-              <div className="HomeButton">
+              <div
+               className="HomeButton"
+              >
                   <button type="button"
-                  id="editButton"
+                  id="AddAHomeButton"
                           className="btn btn-success"
                           onClick={() => {
                               this.props.history.push("/homes/new")}
@@ -19,7 +24,7 @@ export default class HomeList extends Component {
                   </button>
 
               </div>
-      <section className="homes">
+      <div >
 
         {
           // this.props.homes.sort((a,b) => {return b.dateofEntry - a.dateofEntry})
@@ -30,7 +35,7 @@ export default class HomeList extends Component {
             <HomeCard key={home.id} home={home} {...this.props} userId={home.userId}/>
         )
         }
-      </section>
+      </div>
       </React.Fragment>
     )
   }

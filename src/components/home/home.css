@@ -13,16 +13,80 @@
 
 #editButton {
   background-color: #47526d;
+  margin-left: 10px;
 }
 
 #deleteButton {
   background-color: #47526d;
+  margin-left: 10px;
+
 }
 
-.card {
+
+
+/* .homes {
+  background-color:
+} */
+#AddAHomeButton {
+  background-color: #47526d;
+
+}
+
+#SaveHomeBTN {
+  background-color: #47526d;
+  border: 1px solid black;
+}
+
+.form-control {
+
+  max-width: 400px;
+
+}
+.labelInput {
+  text-align: center;
+}
+
+.CardTitle
+{
+  font-size: 30px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+
+.editAndDeleteGroup {
+  text-align: center;
+}
+.thingsToDo {
+  margin-left: 110px;
+}
+
+.cardBodyHomeCard {
+  border-radius: 20px;
+  border: 3px solid #e3e4e5;
+  background-color: #efefef;
+  box-shadow: 3px 3px #dce3ef
+}
+
+.icon--home {
   border-radius: 10px;
+  margin-left: 50px;
+  box-shadow: 3px 3px #dce3ef
 }
 
-#cardBodyId {
- background-color: whitesmoke
+#homeForm {
+  padding-block-start: 100px;
+  display: flexbox;
+  justify-content: center;
+
 }
+
+#homeAddress {
+  display: flex;
+
+}
+#submitButton {
+  background-color: #47526d;
+  border: 1px solid black;
+}
+

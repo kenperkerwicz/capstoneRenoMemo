@@ -3,6 +3,7 @@ import TaskCategoryCard from "./CategoryCard";
 import TaskManager from "../../modules/TaskManager";
 import ModalExample from "../task/editModal";
 
+
 export default class TaskCategoryList extends Component {
   state = {
     tasks: [],
@@ -94,7 +95,7 @@ export default class TaskCategoryList extends Component {
         ) : null}
 
         {this.state.tasks.map((task, i) => (
-          <TaskCategoryCard
+          <TaskCategoryCard className="TaskCategoryCard"
             task={task}
             {...this.props}
             taskName={task.taskName}

@@ -2,6 +2,7 @@
 .mainDiv {
   text-align: center;
   display: flexbox;
+
 }
 
 .header {
@@ -20,7 +21,7 @@
   border: 1px solid #BFBFBF;
   background-color: white;
   box-shadow: 7px 7px 5px #aaaaaa;
-  border-radius:  10px
+  border-radius:  10px;
 
 }
 
@@ -36,26 +37,25 @@
 
 .addToDoButton {
   border-radius:  5px;
+
 }
 
 .categorycard {
  padding: 25px;
  word-wrap: break-word;
- width: 250px;
  box-shadow: 25px;
   display: flexbox;
-  width: 250px;
-  padding: 10px 10px 20px 10px;
-  border: 1px solid #BFBFBF;
-  background-color: white;
-  box-shadow: 7px 7px 5px #aaaaaa;
-  border-radius:  10px
+ padding: 10px 10px 20px 10px;
+background-color: #f2f5f9;
+border-radius:  10px;
+
 
 }
 .buttonGroup {
    text-align: center;
    margin-top: 10px;
     overflow: hidden;
+    column-count: 2;
 
 }
 
@@ -66,4 +66,12 @@
 
 #buttonTwo {
   background-color: #47526d;
+}
+
+#TaskCategoryCard {
+  column-count: 2;
+}
+
+#CardTitle {
+font-size: 30px;
 }

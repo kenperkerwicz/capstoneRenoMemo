@@ -6,15 +6,19 @@ import "./Nav.css"
 
 class NavBar extends Component {
   render () {
-    return (
-      <nav className="navbar-flex-wrap p-0 shadow" id="navButton" >
-                <ul className="nav nav-pills">
-                    <li className="nav-item">
-                        <Link className="nav-link" id="linkId" to="/homes">Homes</Link>
-                    </li>
 
-                    </ul>
+
+    return (
+
+      <nav className="navbar-flex-wrap p-0 shadow" id="navButton">
+                <section className="nav nav-pills">
+                    <div className="nav-item" id="NavId">
+                        <Link className="nav-link" id="linkId" to="/homes">Homes</Link>
+                        <Link className="nav-link" id="linkId" to="/homes/10">Categories</Link>
+                    </div>
+                    </section>
                     </nav>
+
     )
   }
 

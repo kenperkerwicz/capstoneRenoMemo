@@ -23,7 +23,7 @@ export default class CategoryList extends Component {
                           }>
                       add a new category.
                   </button>
-
+<h3 className="categories">Categories</h3>
 <div className="entireCatList">
   {  this.props.categories.map(cat =>
 <div className="individualCats"

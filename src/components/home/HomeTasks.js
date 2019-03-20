@@ -45,9 +45,15 @@ export default class HomeTasks extends Component {
     const home = this.props.homes.find(h => h.id === parseInt(this.props.match.params.homeId)) || {}
 
     return (
-      <section className="home">
-        <div key={home.id} className="card">
-          <div className="card-body">
+      <section
+       className="home"
+      >
+        <div key={home.id}
+         className="card"
+         >
+          <div
+          className="card-body"
+          >
             <h4 className="card-title">
               {home.homeAddress}
             </h4>
@@ -55,10 +61,12 @@ export default class HomeTasks extends Component {
             <a href="#"
               onClick={() => this.props.deleteHome(home.id)
                 .then(() => this.props.history.push("/homes"))}
-              className="card-link">Delete</a>
+
+              className="card-link"
+              >Delete</a>
 
 
-            {/* <CategoryList /> */}
+           
           </div>
         </div>
       </section>

@@ -8,7 +8,7 @@ import NavBar from "./nav/NavBar"
 class Tasks extends Component {
     render() {
         return (
-            <React.Fragment>
+            <React.Fragment className="appJsFolder">
                 <NavBar />
 
                 <ApplicationViews />
