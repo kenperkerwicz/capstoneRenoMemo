@@ -32,7 +32,7 @@ id="imgBox"
 
 
 <Link
- key={cat.id}  to={`/homes/${this.props.match.params.homeId}/${cat.id}`}>{cat.categoryName}</Link>
+ key={cat.id} className="catName" to={`/homes/${this.props.match.params.homeId}/${cat.id}`}>{cat.categoryName}</Link>
 </div>
 ) }
 </div>

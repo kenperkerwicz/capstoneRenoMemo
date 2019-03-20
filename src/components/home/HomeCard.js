@@ -38,7 +38,7 @@ export default class HomeCard extends Component {
                         >
                             Edit
                             </Button>
-                         
+
                         <a href="#"
                         id="deleteButton"
                             onClick={() => this.props.deleteHome(this.props.home.id)}
@@ -47,8 +47,8 @@ export default class HomeCard extends Component {
                             </div>
 
                         {/* <div> date of entry: {this.props.home.dateOfEntry}</div> */}
-                        <h5 className="thingsToDo"
-                        >things to do:</h5>
+                        <h4 className="thingsToDo"
+                        >things to do:</h4>
                         <Link className=""
 
 to={`/homes/${this.props.home.id}`}> { <img src={download2} alt="home"

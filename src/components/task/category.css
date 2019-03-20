@@ -9,7 +9,7 @@
   display: inline-block;
 }
 
-.cardDisplay {
+/* .cardDisplay {
   padding: 25px;
 
  text-align: left;
@@ -23,7 +23,7 @@
   box-shadow: 7px 7px 5px #aaaaaa;
   border-radius:  10px;
 
-}
+} */
 
 .h3 {
   padding: 15px;
@@ -49,7 +49,6 @@
 background-color: #f2f5f9;
 border-radius:  10px;
 
-
 }
 .buttonGroup {
    text-align: center;
@@ -74,4 +73,9 @@ border-radius:  10px;
 
 #CardTitle {
 font-size: 30px;
+}
+
+.SaveEditButton {
+  background-color: #47526d;
+  border: 1px solid black;
 }

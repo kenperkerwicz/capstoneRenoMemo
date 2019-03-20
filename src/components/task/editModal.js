@@ -149,7 +149,7 @@ return {task: this.props.task}
             </FormGroup>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.saveEditForm}>
+            <Button color="primary" className="SaveEditButton" onClick={this.saveEditForm}>
               Save
             </Button>
             <Button color="secondary" onClick={this.toggle}>

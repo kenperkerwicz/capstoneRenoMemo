@@ -27,7 +27,7 @@
   margin-right: auto;
   border-radius: 5px;
   text-align: center;
-
+  border: 1px black;
 
 }
 
@@ -37,6 +37,8 @@
 
 #linkId {
   background-color: #cfd1d3;
+color: black;
+
 }
 
 #NavId {
