@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import ModalExample from "./editModal.js";
 import { throws } from "assert";
-import {Card,
+import {Card, CardDeck,
   CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button, } from 'reactstrap';
+  CardTitle, CardSubtitle, Button, Row, Col } from 'reactstrap';
 
 export default class TaskCategoryCard extends Component {
   render() {
@@ -18,14 +18,19 @@ export default class TaskCategoryCard extends Component {
     // console.log(`Cat card key`, this.props.task.key);
     // console.log(`INDEX`, this.props.id)
     // console.log(`TASK ID`, this.props.task.id)
+    console.log(this.props.categories.categoryName)
 
     return (
+
+ <CardDeck
+ top width="100%">
+
       <Card className="fullCatCardList">
+
         {
           <CardBody
           className="categorycard"
           key={this.props.task.id}>
-            {/* { <h2 >TaskName</h2> } */}
 
             { <CardTitle id="CardTitle">{this.props.task.name}</CardTitle> }
 
@@ -65,6 +70,8 @@ export default class TaskCategoryCard extends Component {
           </CardBody>
         }
       </Card>
+
+      </CardDeck>
     );
   }
 }

@@ -1,9 +1,9 @@
 
-.mainDiv {
+/* .mainDiv {
   text-align: center;
   display: flexbox;
 
-}
+} */
 
 .header {
   display: inline-block;
@@ -41,15 +41,14 @@
 }
 
 .categorycard {
- padding: 25px;
+padding: 25px;
  word-wrap: break-word;
- box-shadow: 25px;
+
   display: flexbox;
  padding: 10px 10px 20px 10px;
-background-color: #f2f5f9;
-border-radius:  10px;
 
-}
+border-radius:  10px;}
+
 .buttonGroup {
    text-align: center;
    margin-top: 10px;
@@ -67,9 +66,7 @@ border-radius:  10px;
   background-color: #47526d;
 }
 
-#TaskCategoryCard {
-  column-count: 2;
-}
+
 
 #CardTitle {
 font-size: 30px;
@@ -79,3 +76,21 @@ font-size: 30px;
   background-color: #47526d;
   border: 1px solid black;
 }
+
+.categoryName {
+  display: flexbox;
+  justify-content: center;
+  text-align: center;
+}
+
+#SaveTaskForm {
+  background-color: #47526d;
+  border: 1px solid black;
+}
+
+.fullCatCardList {
+  display: flexbox;
+max-width: 275px;
+
+}
+

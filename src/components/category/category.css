@@ -28,12 +28,13 @@ border: black;
 }
 
 .individualCats {
+
   text-align: center;
-  font-size: 22px;
-  word-wrap: break-word;
+ font-size: 22px;
+
   box-shadow: 25px;
   display: flexbox;
-  max-width: 450px;
+  width: 350px;
   padding: 10px 10px 10px;
   border: .5px solid #293951;
   background-color: white;
@@ -42,6 +43,13 @@ border: black;
   box-shadow: 2px 2px 2px #aaaaaa;
   border-radius:  10px;
   background-color: #f2f5f9;
+
+  flex: 1 0 500px;
+  box-sizing: border-box;
+  margin: 1rem .25em;
+
+  /* float: left; */
+  width: 40%;
 
 
 }
@@ -64,9 +72,14 @@ border: black;
 .entireCatList {
   display: flexbox;
   justify-content: center;
+
+
 }
 .catName {
  color: black;
  font-family: 'Muli', sans-serif;
  padding-bottom: 40px;
+
+
+ flex-wrap: wrap;
 }

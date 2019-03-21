@@ -2,14 +2,18 @@ import React, { Component } from "react";
 import TaskCategoryCard from "./CategoryCard";
 import TaskManager from "../../modules/TaskManager";
 import ModalExample from "../task/editModal";
-
+import CategoryManager from "../../modules/CategoryManager";
+import {Card, CardDeck, Container,
+  CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button, Row, Col } from 'reactstrap';
 
 export default class TaskCategoryList extends Component {
   state = {
     tasks: [],
     modalTaskId: [],
     show: false,
-    currentModalData: {}
+    currentModalData: {},
+    categories: []
   };
 
   showModal = (e, taskId) => {
@@ -42,9 +46,18 @@ export default class TaskCategoryList extends Component {
 
     const catId = this.props.match.params.categoryId;
 
-    TaskManager.getTasks(homeId, catId).then(tasks => {
-      this.setState({ tasks: tasks, show: false });
-    });
+    this.newState = {}
+
+    // TaskManager.getTasks(homeId, catId).then(tasks => {
+    //   this.setState({ tasks: tasks, show: false });
+    // });
+
+   TaskManager.getTasks(homeId, catId)
+    .then(tasks => this.newState.tasks = tasks)
+    .then(()=> CategoryManager.get(catId))
+    .then(categories => this.newState.categories = categories)
+    .then(()=> this.setState(this.newState))
+
   };
 
   deleteTask = id => {
@@ -56,6 +69,8 @@ export default class TaskCategoryList extends Component {
   componentDidMount() {
 
     this.populateData();
+
+    // console.log(`categories`, this.state.categories)
   }
 
   render() {
@@ -66,10 +81,16 @@ export default class TaskCategoryList extends Component {
    let homeIdNumb = this.props.match.params.homeId;
    let catIdNumb = this.props.match.params.categoryId;
 
-  //  console.log(`CAT ID`, this.props.catId)
-    // console.log(catIdNumb)
+
+    let catName = this.state.categories.categoryName
+
+
+
+
 
     return (
+
+
 
       <React.Fragment>
         <button
@@ -80,6 +101,12 @@ export default class TaskCategoryList extends Component {
         >
           add task.
         </button>
+
+
+
+        <h2 className="categoryName">{catName}.</h2>
+
+
 
         {this.state.show ? (
           <ModalExample
@@ -93,9 +120,11 @@ export default class TaskCategoryList extends Component {
             edit
           </ModalExample>
         ) : null}
-
+<Container id="TaskCategoryCard">
+<Row>
         {this.state.tasks.map((task, i) => (
-          <TaskCategoryCard className="TaskCategoryCard"
+<Col>
+          <TaskCategoryCard
             task={task}
             {...this.props}
             taskName={task.taskName}
@@ -106,8 +135,12 @@ export default class TaskCategoryList extends Component {
             // homeId={this.homeId}
             show={this.state.show}
             deleteTask={this.deleteTask}
+           categories={this.state.categories}
           />
+          </Col>
         ))}
+        </Row>
+         </Container>
       </React.Fragment>
     );
   }

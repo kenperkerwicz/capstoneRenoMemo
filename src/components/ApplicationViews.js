@@ -160,7 +160,7 @@ class ApplicationViews extends Component {
           taskName={this.state.taskName}
           contact={this.state.contact}
           key={this.state.id}
-         
+
         />
         }} />
 

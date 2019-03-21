@@ -68,8 +68,8 @@
     {
       "userId": 1,
       "id": 12,
-      "homeAddress": "456 7th street Minneapolis MN 55434",
-      "dateOfEntry": 1553118733
+      "homeAddress": "1235 Hamblen Blvd Madison TN ",
+      "dateOfEntry": 1553174438
     }
   ],
   "tasks": [
@@ -110,37 +110,19 @@
       "id": 23
     },
     {
-      "name": "pick out samples ",
+      "catId": 1,
+      "name": "pick out stains",
       "contact": "763-226-6909",
       "expectedCompDate": "friday",
-      "id": 25,
-      "status": "",
       "homeId": 10,
-      "catId": 1
+      "status": "",
+      "id": 25
     },
     {
       "name": "buy more nails ",
       "contact": "n/a",
       "expectedCompDate": "friday",
       "id": 26,
-      "status": "",
-      "homeId": 10,
-      "catId": 1
-    },
-    {
-      "name": "rent sander ",
-      "contact": "n/a",
-      "expectedCompDate": "tuesday",
-      "id": 27,
-      "status": "",
-      "homeId": 10,
-      "catId": 1
-    },
-    {
-      "name": "cut out vents ",
-      "contact": "n/a",
-      "expectedCompDate": "mid-day 04/01",
-      "id": 28,
       "status": "",
       "homeId": 10,
       "catId": 1
@@ -189,6 +171,60 @@
       "status": "",
       "homeId": 10,
       "catId": 3
+    },
+    {
+      "catId": 1,
+      "name": "pick up stains",
+      "contact": "763-226-6909",
+      "expectedCompDate": "end of day",
+      "homeId": 10,
+      "status": "",
+      "id": 34
+    },
+    {
+      "name": "pick up flooring",
+      "contact": "763-226-6909",
+      "expectedCompDate": "SUNDAY 2",
+      "id": 35,
+      "status": "",
+      "homeId": 10,
+      "catId": 1
+    },
+    {
+      "name": "kenperkerwicz@gmail.com",
+      "contact": "763-226-6909",
+      "expectedCompDate": "friday",
+      "id": 36,
+      "status": "",
+      "homeId": 10,
+      "catId": 2
+    },
+    {
+      "name": "kenperkerwicz@gmail.com",
+      "contact": "763-226-6909",
+      "expectedCompDate": "friday",
+      "id": 37,
+      "status": "",
+      "homeId": 10,
+      "catId": 2
+    },
+    {
+      "name": "SAVE DAMNIT",
+      "contact": "763-226-6909",
+      "expectedCompDate": "SUNDAY 2",
+      "id": 38,
+      "status": "",
+      "homeId": 10,
+      "catId": 1
+    },
+    {
+      "name": "pick up flooring",
+      "contact": "763-226-6909",
+      "expectedCompDate": "friday",
+      "id": 39,
+      "status": "",
+      "homeId": 10,
+      "catId": 1
     }
   ],
   "categories": [
@@ -211,18 +247,18 @@
     },
     {
       "id": 5,
-      "categoryName": "ruf"
+      "categoryName": "framing"
     },
     {
       "id": 6,
-      "categoryName": "i dunno"
+      "categoryName": "design"
     },
     {
       "id": 7,
-      "categoryName": "yep"
+      "categoryName": "demolition"
     },
     {
-      "categoryName": "dddddd",
+      "categoryName": "HVAC",
       "id": 8
     }
   ]

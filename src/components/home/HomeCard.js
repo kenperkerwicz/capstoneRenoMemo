@@ -5,18 +5,18 @@ import download3 from "./output-onlinepngtools--RESIZED.png"
 
 import {Card,
     CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button, } from 'reactstrap';
+    CardTitle, CardSubtitle , Button, } from 'reactstrap';
 
 
 
 export default class HomeCard extends Component {
     render() {
         return (
-            <CardBody key={this.props.home.id}
+            <Card key={this.props.home.id}
 
             className="cardBodyHomeCard"
             >
-                <div
+                <CardBody
                 //  id="cardBodyId"
                 >
                     <CardText
@@ -25,7 +25,7 @@ export default class HomeCard extends Component {
 
 
 
-                            <div className="editAndDeleteGroup">
+                            <CardSubtitle className="editAndDeleteGroup">
 
                         <CardTitle className="CardTitle"> {this.props.home.homeAddress}</CardTitle>
                         <Button
@@ -44,7 +44,7 @@ export default class HomeCard extends Component {
                             onClick={() => this.props.deleteHome(this.props.home.id)}
                             className="btn btn-success">Delete</a>
 
-                            </div>
+                            </CardSubtitle>
 
                         {/* <div> date of entry: {this.props.home.dateOfEntry}</div> */}
                         <h4 className="thingsToDo"
@@ -61,8 +61,8 @@ className="icon--home"
 
 
                     </CardText>
-                </div>
-            </CardBody>
+                </CardBody>
+            </Card>
         )
     }
 }
