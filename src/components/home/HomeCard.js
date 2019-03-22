@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
 import download2 from "./eugen.png"
-import download3 from "./output-onlinepngtools--RESIZED.png"
+
 
 import {Card,
     CardImg, CardText, CardBody,

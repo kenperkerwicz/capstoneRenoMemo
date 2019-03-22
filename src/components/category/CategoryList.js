@@ -3,6 +3,11 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom"
 import CategoryCard from "./CategoryCard"
 import "./category.css"
+import {Card, CardDeck,
+  CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button, Row, Col } from 'reactstrap';
+
+// import download1 from "./output-onlinepngtools--RESIZED.png"
 
 
 export default class CategoryList extends Component {
@@ -24,18 +29,27 @@ export default class CategoryList extends Component {
                       add a new category.
                   </button>
 <h3 className="categories">Categories</h3>
-<div className="entireCatList">
+<Row className="entireCatList">
   {  this.props.categories.map(cat =>
-<div className="individualCats"
-id="imgBox"
+
+      <Col sm="6">
+<Card width="100%"
+className="individualCats"
+
 >
-
-
+<CardImg
+src={cat.img} 
+/>
+<CardBody>
 <Link
- key={cat.id} className="catName" to={`/homes/${this.props.match.params.homeId}/${cat.id}`}>{cat.categoryName}</Link>
-</div>
+ key={cat.id} className="catName" to={`/homes/${this.props.match.params.homeId}/${cat.id}`}>
+ <h3>{cat.categoryName}</h3>
+ </Link></CardBody>
+</Card>
+</Col>
+
 ) }
-</div>
+</Row>
 
           {/* {this.props.categories.filter(mv => mv.userId === user)
           .map(category =>

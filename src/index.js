@@ -5,6 +5,7 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from "react-router-dom"
 import Capstone from './Capstone'
+import ImageUpload from './components/ImageUpload'
 
 
 ReactDOM.render(<Router>

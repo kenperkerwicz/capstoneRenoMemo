@@ -3,7 +3,7 @@ import ModalExample from "./editModal.js";
 import { throws } from "assert";
 import {Card, CardDeck,
   CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button, Row, Col } from 'reactstrap';
+  CardTitle, CardSubtitle, Button, Row, Col, Container,} from 'reactstrap';
 
 export default class TaskCategoryCard extends Component {
   render() {
@@ -22,17 +22,20 @@ export default class TaskCategoryCard extends Component {
 
     return (
 
- <CardDeck
+ <Container
  top width="100%">
-
-      <Card className="fullCatCardList">
-
+<Row>
+      <Card
+      // className="fullCatCardList"
+      >
+<CardImg  />
         {
           <CardBody
-          className="categorycard"
+          // className="categorycard"
           key={this.props.task.id}>
 
-            { <CardTitle id="CardTitle">{this.props.task.name}</CardTitle> }
+
+            { <CardTitle >{this.props.task.name}</CardTitle> }
 
 
             {/* {<h4>taskId :{this.props.task.id}</h4>
@@ -70,8 +73,8 @@ export default class TaskCategoryCard extends Component {
           </CardBody>
         }
       </Card>
-
-      </CardDeck>
+      </Row>
+      </Container>
     );
   }
 }
