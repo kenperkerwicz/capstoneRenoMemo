@@ -14,24 +14,23 @@ export default class TaskCategoryCard extends Component {
     //   )
     // console.log(this.props.task)
 
-
     // console.log(`Cat card key`, this.props.task.key);
     // console.log(`INDEX`, this.props.id)
     // console.log(`TASK ID`, this.props.task.id)
-    console.log(this.props.categories.categoryName)
+    // console.log(this.props.categories.categoryName)
 
     return (
 
  <Container
- top width="100%">
+ >
 <Row>
-      <Card
+      <Card width="10%"
       // className="fullCatCardList"
       >
 <CardImg  />
         {
           <CardBody
-          // className="categorycard"
+          className="categorycard"
           key={this.props.task.id}>
 
 

@@ -1,0 +1,25 @@
+#img {
+  display: flexbox;
+  width: 110px;
+}
+
+.cardImageClassName{
+  max-Height: 85px;
+  max-Width: 85px;
+  border: 5px;
+ display: flexbox;
+ margin-left: 45px;
+}
+
+.articleNameClassName {
+  border-top: 1px solid grey;
+}
+
+.cardImageBackgroundColor {
+  background-color: #d9d9db
+}
+
+.articleButton {
+  
+  max-height: 54px;
+}

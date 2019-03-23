@@ -41,13 +41,26 @@
 }
 
 .categorycard {
-padding: 25px;
+
+/*
  word-wrap: break-word;
 
-  display: flexbox;
  padding: 10px 10px 20px 10px;
+border-radius:  10px; */
 
-border-radius:  10px;}
+text-align: center;
+ font-size: 22px;
+  background-color: white;
+  box-shadow: 2px 2px 2px #aaaaaa;
+  background-color: #f2f5f9;
+  width: 200px;
+  height: 250px;
+  display: flexbox;
+  padding: 25px;
+
+}
+
+
 
 .buttonGroup {
    text-align: center;
@@ -92,5 +105,5 @@ font-size: 30px;
   display: flexbox;
 max-width: 275px;
 
-} 
+}
 

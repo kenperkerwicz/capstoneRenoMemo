@@ -225,41 +225,70 @@
       "status": "",
       "homeId": 10,
       "catId": 1
+    },
+    {
+      "name": "kenperkerwicz@gmail.com",
+      "contact": "763-226-6909",
+      "expectedCompDate": "SUNDAY 2",
+      "id": 40,
+      "status": "",
+      "homeId": 10,
+      "catId": 2
     }
   ],
   "categories": [
     {
       "id": 1,
       "categoryName": "flooring",
-      "img": ""
+      "img": "http://www.grandflooring.com/images/woodflooring1.jpg"
     },
     {
       "id": 2,
-      "categoryName": "drywall"
+      "categoryName": "drywall",
+      "img": ""
+
     },
     {
       "id": 3,
-      "categoryName": "tile"
+      "categoryName": "tile",
+      "img": ""
     },
     {
       "id": 4,
-      "categoryName": "roofing"
+      "categoryName": "roofing",
+      "img": ""
     },
     {
       "id": 5,
-      "categoryName": "framing"
+      "categoryName": "framing",
+      "img": ""
     },
     {
       "id": 6,
-      "categoryName": "design"
+      "categoryName": "design",
+      "img": ""
     },
     {
       "id": 7,
-      "categoryName": "demolition"
+      "categoryName": "demolition",
+      "img": ""
     },
     {
       "categoryName": "HVAC",
-      "id": 8
+      "id": 8,
+      "img": ""
+    }
+  ],
+  "advice": [
+    {
+      "id": 1,
+      "link": "https://www.thisoldhouse.com/ideas/21-ways-to-save-your-remodel",
+      "articleName" : "21 ways to save your remodel"
+    },
+    {
+      "id": 2,
+      "link": "https://www.familyhandyman.com/smart-homeowner/20-tips-for-planning-a-successful-house-remodel/",
+      "articleName" : "20 tips for planning a successful house remodel"
     }
   ]
 }

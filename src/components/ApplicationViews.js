@@ -15,15 +15,18 @@ import TaskCategoryList from "./task/TaskCategoryList"
 import TaskForm from "./task/TaskForm"
 import ModalExample from "./task/editModal"
 import CategoryForm from "./category/CategoryForm"
+import AdviceManager from "../modules/AdviceManager"
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap'
+  import AdviceList from './advice/AdviceList'
 
 class ApplicationViews extends Component {
 
   state = {
     homes: [],
     categories: [],
-    tasks: []
+    tasks: [],
+    advice: []
   }
 
   addHome = home =>
@@ -42,6 +45,7 @@ class ApplicationViews extends Component {
       })
       )
   }
+
 
   getAllHomesAgain = () => {
     fetch("http://localhost:8088/Homes")
@@ -93,6 +97,13 @@ class ApplicationViews extends Component {
         })
       );
 
+      getAdvice= () =>
+      AdviceManager.getAll().then(advice =>
+        this.setState({
+          advice: advice
+        })
+      );
+
 
 
 
@@ -103,7 +114,7 @@ class ApplicationViews extends Component {
     HomeManager.getAll().then(homes => newState.homes = homes).then(() => TaskManager.getAll())
     .then(tasks => newState.tasks = tasks)
     .then(()=> CategoryManager.getAll())
-    .then(categories => newState.categories = categories)
+    .then(categories => newState.categories = categories).then(() => AdviceManager.getAll().then(advice => newState.advice = advice))
     .then(()=> this.setState(newState))
 
   }
@@ -198,6 +209,14 @@ class ApplicationViews extends Component {
             name= {this.state.name}
             addCategory={this.addCategory}
           />
+        }} />
+
+<Route exact path="/advice" render={(props) => {
+          return <AdviceList
+         advice={this.state.advice}
+         
+         {...props}
+/>
         }} />
 
 

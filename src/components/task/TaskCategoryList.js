@@ -120,10 +120,11 @@ export default class TaskCategoryList extends Component {
             edit
           </ModalExample>
         ) : null}
+
 <Container id="TaskCategoryCard">
-<Row>
+<Row >
         {this.state.tasks.map((task, i) => (
-<Col>
+<Col sm="4" >
           <TaskCategoryCard
             task={task}
             {...this.props}

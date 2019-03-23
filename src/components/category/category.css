@@ -35,8 +35,8 @@ border: black;
   box-shadow: 2px 2px 2px #aaaaaa;
   background-color: #f2f5f9;
   min-width: 200px;
-  min-height: 130px;
-  
+  height: 250px;
+
   /* padding: 29px; */
 }
 
