@@ -31,19 +31,20 @@ export default class CategoryList extends Component {
                   </button>
 <h3 className="categories">Categories</h3>
 <Row className="entireCatList">
+
   {  this.props.categories.map(cat =>
 
       <Col sm="4" >
 <Card width="10%"
-className="individualCats"
-
->
+className="individualCats">
 
 <CardBody>
-{/* <div
->
-</div> */}
-<CardImg  className="col-xs-3 col-sm-1 rounded" src={cat.img}/>
+
+<CardImg
+className="rounded" sm="4"
+src={cat.img}
+
+/>
 <Link
  key={cat.id} className="catName" to={`/homes/${this.props.match.params.homeId}/${cat.id}`}>
  <h3>{cat.categoryName}</h3>

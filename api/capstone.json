@@ -245,38 +245,38 @@
     {
       "id": 2,
       "categoryName": "drywall",
-      "img": ""
+      "img": "https://images.unsplash.com/photo-1481277542470-605612bd2d61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=995&q=80"
 
     },
     {
       "id": 3,
       "categoryName": "tile",
-      "img": ""
+      "img": "https://images.unsplash.com/photo-1522061541612-28ef361a3045?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1065&q=80"
     },
     {
       "id": 4,
       "categoryName": "roofing",
-      "img": ""
+      "img": "https://images.unsplash.com/photo-1546202736-97b71dd7771b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
     },
     {
       "id": 5,
       "categoryName": "framing",
-      "img": ""
+      "img": "https://images.unsplash.com/photo-1469389129974-57d1740a01a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=966&q=80"
     },
     {
       "id": 6,
       "categoryName": "design",
-      "img": ""
+      "img": "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
     },
     {
       "id": 7,
       "categoryName": "demolition",
-      "img": ""
+      "img": "https://images.unsplash.com/photo-1545497044-1efb836387e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
     },
     {
       "categoryName": "HVAC",
       "id": 8,
-      "img": ""
+      "img": "https://images.unsplash.com/photo-1550998251-1e18917c975c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
     }
   ],
   "advice": [
