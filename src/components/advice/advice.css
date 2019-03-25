@@ -7,19 +7,32 @@
   max-Height: 85px;
   max-Width: 85px;
   border: 5px;
- display: flexbox;
- margin-left: 45px;
+ display: flex;
+ justify-content: center;
+ padding-bottom: 5px;
+
 }
 
 .articleNameClassName {
-  border-top: 1px solid grey;
+ 
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .cardImageBackgroundColor {
-  background-color: #d9d9db
+
+  display: flex;
+  justify-content: center;
 }
 
 .articleButton {
-  
   max-height: 54px;
+}
+
+.Advice {
+  text-align: center;
+  padding-bottom: 40px;
+  font-family: 'Muli', sans-serif;
+  color: black;
+  padding-top: 30px;
 }

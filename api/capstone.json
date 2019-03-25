@@ -200,15 +200,6 @@
       "catId": 2
     },
     {
-      "name": "kenperkerwicz@gmail.com",
-      "contact": "763-226-6909",
-      "expectedCompDate": "friday",
-      "id": 37,
-      "status": "",
-      "homeId": 10,
-      "catId": 2
-    },
-    {
       "name": "SAVE DAMNIT",
       "contact": "763-226-6909",
       "expectedCompDate": "SUNDAY 2",
@@ -246,7 +237,6 @@
       "id": 2,
       "categoryName": "drywall",
       "img": "https://images.unsplash.com/photo-1481277542470-605612bd2d61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=995&q=80"
-
     },
     {
       "id": 3,
@@ -283,12 +273,12 @@
     {
       "id": 1,
       "link": "https://www.thisoldhouse.com/ideas/21-ways-to-save-your-remodel",
-      "articleName" : "21 ways to save your remodel"
+      "articleName": "21 ways to save your remodel"
     },
     {
       "id": 2,
       "link": "https://www.familyhandyman.com/smart-homeowner/20-tips-for-planning-a-successful-house-remodel/",
-      "articleName" : "20 tips for planning a successful house remodel"
+      "articleName": "20 tips for planning a successful house remodel"
     }
   ]
 }

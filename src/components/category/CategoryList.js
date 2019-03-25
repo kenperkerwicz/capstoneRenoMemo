@@ -20,16 +20,17 @@ export default class CategoryList extends Component {
   render () {
     let user = Number(sessionStorage.getItem("credentials"))
     return <React.Fragment >
-
+<h1 className="categories">Categories.</h1>
+<div className="catButtonDiv">
 <button type="button"
-                  id="editButton"
+                  id="AddCatButton"
                           className="btn btn-success"
                           onClick={() => {
                               this.props.history.push("/categoryList/new")}
                           }>
                       add a new category.
                   </button>
-<h3 className="categories">Categories</h3>
+                  </div>
 <Row className="entireCatList">
 
   {  this.props.categories.map(cat =>
@@ -44,10 +45,11 @@ className="individualCats">
 className="rounded" sm="4"
 src={cat.img}
 
+
 />
 <Link
  key={cat.id} className="catName" to={`/homes/${this.props.match.params.homeId}/${cat.id}`}>
- <h3>{cat.categoryName}</h3>
+ <h3 className="catNameEntry">{cat.categoryName}</h3>
  </Link></CardBody>
 </Card>
 </Col>

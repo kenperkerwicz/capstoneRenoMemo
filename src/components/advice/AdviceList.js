@@ -20,7 +20,7 @@ export default class AdviceList extends Component {
     console.log(`Advice List ART NAME`, this.props.advice)
     return (
       <div>
-        <h1>Advice.</h1>
+        <h1 className="Advice">Advice.</h1>
      {
        this.props.advice.map((advice) =>
 

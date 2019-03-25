@@ -5,13 +5,16 @@ import download2 from "./eugen.png"
 
 import {Card,
     CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle , Button, } from 'reactstrap';
+    CardTitle, CardSubtitle , Button, Row, Col} from 'reactstrap';
 
 
 
 export default class HomeCard extends Component {
     render() {
         return (
+
+
+
             <Card key={this.props.home.id}
 
             className="cardBodyHomeCard"
@@ -48,18 +51,12 @@ export default class HomeCard extends Component {
 
                         {/* <div> date of entry: {this.props.home.dateOfEntry}</div> */}
                         <h4 className="thingsToDo"
-                        >things to do:</h4>
+                        ></h4>
                         <Link className=""
 
 to={`/homes/${this.props.home.id}`}> { <img src={download2} alt="home"
 className="icon--home"
   /> }</Link>
-
-
-
-
-
-
                     </CardText>
                 </CardBody>
             </Card>

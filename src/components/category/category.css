@@ -15,8 +15,6 @@
  width: 250px;
 border: black;
  border-style: double;
-
-
 }
 
 .h3 {
@@ -35,24 +33,20 @@ border: black;
   box-shadow: 2px 2px 2px #aaaaaa;
   background-color: #f2f5f9;
   min-width: 200px;
-  height: 250px;
-
-  /* padding: 29px; */
+  height: 280px;
+  padding-bottom: 50px;
 }
 
 
 
-#catImg {
-  height: 30px;
-}
 
 
 .categories {
   text-align: center;
-  padding-bottom: 40px;
+  padding-top: 40px;
   font-family: 'Muli', sans-serif;
   color: black;
-
+  padding-bottom: 50px;
 }
 
 .entireCatList {
@@ -65,9 +59,8 @@ border: black;
  color: black;
  font-family: 'Muli', sans-serif;
  padding-bottom: 40px;
-
-
  flex-wrap: wrap;
+
 }
 
 .rounded {
@@ -76,3 +69,26 @@ height: 150px;
 width: 200px;
 border-radius: 80px;
 }
+
+.catNameEntry {
+  padding-top: 35px;
+
+
+}
+
+#AddCatButton {
+  background-color: #47526d;
+  margin-left: 10px;
+  justify-content: center;
+  display: center;
+
+}
+
+.catButtonDiv {
+  justify-content: center;
+  padding-bottom: 10px;
+  display: inline-block;
+  justify-content: space-evenly;
+  padding: 5px;
+}
+

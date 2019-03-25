@@ -1,5 +1,6 @@
 .HomeButton {
   text-align: center;
+  padding-bottom: 10px;
 }
 .btn-success {
   display: flexbox;
@@ -40,10 +41,11 @@
 }
 
 .form-control {
-
   max-width: 400px;
 
+
 }
+
 .labelInput {
   text-align: center;
 }
@@ -55,25 +57,30 @@
   border-radius: 20px;
 }
 
-
 .editAndDeleteGroup {
   text-align: center;
 }
+
 .thingsToDo {
   margin-left: 110px;
+  padding-top: 55px;
 }
 
 .cardBodyHomeCard {
   border-radius: 20px;
   border: 1px solid black;
   background-color: #efefef;
+  display: flex;
+
+max-width: 450px;
 
 }
 
 .icon--home {
   border-radius: 10px;
   margin-left: 50px;
-  box-shadow: 3px 3px #dce3ef
+  box-shadow: 3px 3px #dce3ef;
+  max-width: 120px;
 }
 
 #homeForm {
@@ -92,3 +99,21 @@
   border: 1px solid black;
 }
 
+
+.homesTitle {
+  text-align: center;
+  padding-bottom: 40px;
+  font-family: 'Muli', sans-serif;
+  color: black;
+  padding-top: 50px;
+}
+
+.homeImage {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 5px;
+  padding-top: 50px;
+}
