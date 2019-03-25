@@ -15,30 +15,27 @@ export default class AdviceCard extends Component {
 
     return <React.Fragment >
 
+<Card width="40%"
 
-
-<Row className="Advi">
-
-
-      <Col sm="4" >
-<Card width="20%"
-// className="individualCats"
+className="adviceCards"
 >
 
 
 <CardBody>
 <div className="cardImageBackgroundColor">
-<CardImg  className="cardImageClassName" id="img" src="https://s.hdnux.com/photos/35/63/32/7812764/3/rawImage.jpg" alt="Card image cap"/>
+<CardImg  className="cardImageClassName" id="img"
+src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
+alt="Card image cap"/>
 </div>
 <CardText className="articleNameClassName">{this.props.a.articleName}
 </CardText>
 <Button className="articleButton" onClick={() => {
-  window.alert('hi')
+ window.alert(this.props.a.link)
 }}>take me to the article</Button>
 </CardBody>
 </Card>
-</Col>
-</Row>
+
+
         </React.Fragment>
   }
 }

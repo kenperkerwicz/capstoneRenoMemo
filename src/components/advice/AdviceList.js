@@ -19,21 +19,18 @@ export default class AdviceList extends Component {
   render () {
     console.log(`Advice List ART NAME`, this.props.advice)
     return (
-      <div>
-        <h1 className="Advice">Advice.</h1>
+<div>
+      <h1 className="Advice">Advice.</h1>
+      <Row>
      {
        this.props.advice.map((advice) =>
-
+<Col sm="4">
 <AdviceCard
 articleName={this.articleName}
 a={advice}
 />
-
-       )
-
-
-       }
-
+</Col> )  }
+      </Row>
       </div>
     )
   }

@@ -37,7 +37,12 @@
 
 .addToDoButton {
   border-radius:  5px;
-
+  background-color: #47526d;
+  color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 12%;
 }
 
 .categorycard {

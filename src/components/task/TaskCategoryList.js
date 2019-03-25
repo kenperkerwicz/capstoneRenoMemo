@@ -93,6 +93,11 @@ export default class TaskCategoryList extends Component {
 
 
       <React.Fragment>
+
+
+
+        <h2 className="categoryName">{catName}.</h2>
+
         <button
         //  homeId ={this.state.homeId}
           type="submit"
@@ -101,10 +106,6 @@ export default class TaskCategoryList extends Component {
         >
           add task.
         </button>
-
-
-
-        <h2 className="categoryName">{catName}.</h2>
 
 
 

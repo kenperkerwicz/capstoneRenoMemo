@@ -67,9 +67,21 @@
     },
     {
       "userId": 1,
-      "id": 12,
-      "homeAddress": "1235 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1553174438
+      "id": 13,
+      "homeAddress": "717 129th Ave Ne Blaine MN 55434",
+      "dateOfEntry": 1553529268
+    },
+    {
+      "userId": 1,
+      "id": 14,
+      "homeAddress": "717 128th Ave NE Blaine MN 55434",
+      "dateOfEntry": 1553529358
+    },
+    {
+      "userId": 1,
+      "id": 15,
+      "homeAddress": "2621 Airpark Drive Nashville TN 37206",
+      "dateOfEntry": 1553533104
     }
   ],
   "tasks": [
@@ -279,6 +291,11 @@
       "id": 2,
       "link": "https://www.familyhandyman.com/smart-homeowner/20-tips-for-planning-a-successful-house-remodel/",
       "articleName": "20 tips for planning a successful house remodel"
+    },
+    {
+      "id": 3,
+      "link": "https://www.forbes.com/sites/amandalauren/2019/01/29/designers-and-experts-share-the-best-home-renovation-tips-for-maximum-resale-value/#14a6e483b316",
+      "articleName": "Designers And Experts Share The Best Home Renovation Tips For Maximum Resale Value"
     }
   ]
 }
