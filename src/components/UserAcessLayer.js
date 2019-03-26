@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import NavBar from "./nav/NavBar"
 import ApplicationViews from "./ApplicationViews"
 import UserManager from "../modules/UserManager"
+import Footer from "./footer/Footer"
+
 
 export default class UserAccessLayer extends Component {
   state = {
@@ -23,6 +25,7 @@ export default class UserAccessLayer extends Component {
           activeUserId={this.activeUserId}
           activeUser={this.state.activeUser}
         />
+         <Footer />
       </React.Fragment>
     )
   }

@@ -19,6 +19,7 @@ import AdviceManager from "../modules/AdviceManager"
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap'
   import AdviceList from './advice/AdviceList'
+  import ContactList from "./contact/ContactList"
 
 class ApplicationViews extends Component {
 
@@ -214,7 +215,15 @@ class ApplicationViews extends Component {
 <Route exact path="/advice" render={(props) => {
           return <AdviceList
          advice={this.state.advice}
-         
+
+         {...props}
+/>
+        }} />
+
+<Route exact path="/contact" render={(props) => {
+          return <ContactList
+         advice={this.state.advice}
+
          {...props}
 />
         }} />
