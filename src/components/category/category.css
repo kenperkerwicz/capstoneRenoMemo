@@ -35,6 +35,7 @@ border: black;
   min-width: 200px;
   height: 280px;
   padding-bottom: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
 }
 
 

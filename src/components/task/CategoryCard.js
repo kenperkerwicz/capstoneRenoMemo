@@ -18,6 +18,7 @@ export default class TaskCategoryCard extends Component {
     // console.log(`INDEX`, this.props.id)
     // console.log(`TASK ID`, this.props.task.id)
     // console.log(this.props.categories.categoryName)
+    console.log(this.props.task.cost)
 
     return (
 
@@ -45,7 +46,8 @@ export default class TaskCategoryCard extends Component {
             </h6>}
             <h6> contact: {this.props.task.contact}
             </h6>
-
+            <h6> approx cost: ${this.props.task.cost}
+            </h6>
             <div className="buttonGroup">
               <button
                 type="button"
@@ -73,6 +75,8 @@ export default class TaskCategoryCard extends Component {
         }
       </Card>
       </Row>
+
+     
       </Container>
     );
   }

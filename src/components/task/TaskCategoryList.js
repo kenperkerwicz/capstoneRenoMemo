@@ -13,7 +13,8 @@ export default class TaskCategoryList extends Component {
     modalTaskId: [],
     show: false,
     currentModalData: {},
-    categories: []
+    categories: [],
+    costs: []
   };
 
   showModal = (e, taskId) => {
@@ -65,6 +66,16 @@ export default class TaskCategoryList extends Component {
     return TaskManager.remove(id).then(() => this.populateData())
 
   };
+
+ sumValues = () => {
+
+
+
+    let num1= Number(document.formcalc.txtnum1.value);
+    let num2= Number(document.formcalc.txtnum2.value);
+   let  res=num1+num2;
+    document.formcalc.txtres.value=res
+  }
 
   componentDidMount() {
 
@@ -138,11 +149,31 @@ export default class TaskCategoryList extends Component {
             show={this.state.show}
             deleteTask={this.deleteTask}
            categories={this.state.categories}
+           cost={task.cost}
           />
           </Col>
         ))}
         </Row>
          </Container>
+
+         <h2>approx total: </h2>
+          <form name="formcalc">
+          Number 1 <input type="text" name="txtnum1"
+
+          // value={this.props.task[0].cost}
+
+          ></input><br></br>
+          Number 2 <input type="text" name="txtnum2"></input>
+           Result: <input type="text" name="txtres"></input>
+
+            <input type="button" value="Calculate" onClick={() => this.sumValues()}></input>
+          </form>
+
+          <script type="text/javascript">
+
+
+          </script>
+
       </React.Fragment>
     );
   }

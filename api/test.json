@@ -1,0 +1,312 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "ken",
+      "password": "12"
+    },
+    {
+      "username": "randy",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "username": "charles",
+      "password": "12",
+      "id": 3
+    }
+  ],
+  "homes": [
+    {
+      "userId": 2,
+      "id": 3,
+      "homeAddress": "homeId 3 Hamblen Blvd Madison TN ",
+      "dateOfEntry": 1552332009
+    },
+    {
+      "userId": 2,
+      "id": 1,
+      "homeAddress": "homeId 2 Hamblen Blvd Madison TN ",
+      "dateOfEntry": 1552332009
+    },
+    {
+      "userId": 2,
+      "id": 5,
+      "homeAddress": "homeId 2 Blvd Madison TN ",
+      "dateOfEntry": 1552332009
+    },
+    {
+      "userId": 2,
+      "id": 6,
+      "homeAddress": "homeId 6 Hamblen Blvd Madison TN ",
+      "dateOfEntry": 1552332009
+    },
+    {
+      "userId": 2,
+      "id": 7,
+      "homeAddress": "homeId 7 Hamblen Blvd Madison TN ",
+      "dateOfEntry": 1552332009
+    },
+    {
+      "userId": 2,
+      "id": 8,
+      "homeAddress": "homeId 8 Hamblen Blvd Madison TN ",
+      "dateOfEntry": 1552332009
+    },
+    {
+      "id": 10,
+      "dateOfEntry": 1553103992,
+      "homeAddress": "123 Hamblen Blvd Mison TN ",
+      "userId": 1
+    },
+    {
+      "userId": 1,
+      "id": 11,
+      "homeAddress": "615 north street Nashville TN 37206",
+      "dateOfEntry": 1553109173
+    },
+    {
+      "userId": 1,
+      "id": 13,
+      "homeAddress": "717 129th Ave Ne Blaine MN 55434",
+      "dateOfEntry": 1553529268
+    },
+    {
+      "userId": 1,
+      "id": 14,
+      "homeAddress": "12333 Hamblen Blvd Madison TN ",
+      "dateOfEntry": 1553554385
+    }
+  ],
+  "tasks": [
+    {
+      "catId": 4,
+      "name": "get something",
+      "contact": "78",
+      "expectedCompDate": "wednesday",
+      "homeId": 1,
+      "status": 1,
+      "id": 1,
+      "cost": "2"
+    },
+    {
+      "catId": 4,
+      "name": "this is another card",
+      "contact": "catid 4 home id 5",
+      "expectedCompDate": "friday",
+      "homeId": 5,
+      "status": 1,
+      "id": 2,
+      "cost": "4"
+    },
+    {
+      "name": "Finish Flooring",
+      "contact": "Home Depot ",
+      "expectedCompDate": "friday",
+      "id": 22,
+      "status": "",
+      "homeId": 11,
+      "catId": 1,
+      "cost": "4"
+    },
+    {
+      "catId": 1,
+      "name": "Pick sizes ",
+      "contact": "763-226-6909",
+      "expectedCompDate": "end of day ",
+      "homeId": 11,
+      "status": "",
+      "id": 23,
+      "cost": "4"
+    },
+    {
+      "catId": 1,
+      "name": "pick out stains",
+      "contact": "763-226-6909",
+      "expectedCompDate": "friday",
+      "homeId": 10,
+      "status": "",
+      "id": 25,
+      "cost": "4"
+    },
+    {
+      "name": "buy more nails ",
+      "contact": "n/a",
+      "expectedCompDate": "friday",
+      "id": 26,
+      "status": "",
+      "homeId": 10,
+      "catId": 1,
+      "cost": "4"
+    },
+    {
+      "name": "shop prices",
+      "contact": "615-223-0909",
+      "expectedCompDate": "today",
+      "id": 29,
+      "status": "",
+      "homeId": 10,
+      "catId": 2,
+      "cost": "4"
+    },
+    {
+      "name": "decide on correct drywall size",
+      "contact": "n/a",
+      "expectedCompDate": "today",
+      "id": 30,
+      "status": "",
+      "homeId": 10,
+      "catId": 2,
+      "cost": "5"
+    },
+    {
+      "name": "shop at floor and decor ",
+      "contact": "n/a",
+      "expectedCompDate": "today ",
+      "id": 31,
+      "status": "",
+      "homeId": 10,
+      "catId": 3,
+      "cost": "7"
+    },
+    {
+      "name": "drywall pickup ",
+      "contact": "n/a",
+      "expectedCompDate": "thursday 04/09",
+      "id": 32,
+      "status": "",
+      "homeId": 10,
+      "catId": 3,
+      "cost": "9"
+    },
+    {
+      "name": "measure for bathroom tile required",
+      "contact": "763-226-6909",
+      "expectedCompDate": "today",
+      "id": 33,
+      "status": "",
+      "homeId": 10,
+      "catId": 3,
+      "cost": "41"
+    },
+    {
+      "catId": 1,
+      "name": "pick up stains",
+      "contact": "763-226-6909",
+      "expectedCompDate": "end of day",
+      "homeId": 10,
+      "status": "",
+      "id": 34,
+      "cost": "40"
+    },
+    {
+      "name": "pick up flooring",
+      "contact": "763-226-6909",
+      "expectedCompDate": "SUNDAY 2",
+      "id": 35,
+      "status": "",
+      "homeId": 10,
+      "catId": 1,
+      "cost": "40"
+    },
+    {
+      "name": "kenperkerwicz@gmail.com",
+      "contact": "763-226-6909",
+      "expectedCompDate": "friday",
+      "id": 36,
+      "status": "",
+      "homeId": 10,
+      "catId": 2,
+      "cost": "80"
+    },
+    {
+      "name": "SAVE DAMNIT",
+      "contact": "763-226-6909",
+      "expectedCompDate": "SUNDAY 2",
+      "id": 38,
+      "status": "",
+      "homeId": 10,
+      "catId": 1,
+      "cost": "400"
+    },
+    {
+      "name": "pick up flooring",
+      "contact": "763-226-6909",
+      "expectedCompDate": "friday",
+      "id": 39,
+      "status": "",
+      "homeId": 10,
+      "catId": 1,
+      "cost": "350"
+    },
+    {
+      "name": "kenperkerwicz@gmail.com",
+      "contact": "763-226-6909",
+      "expectedCompDate": "SUNDAY 2",
+      "id": 40,
+      "status": "",
+      "homeId": 10,
+      "catId": 2,
+      "cost": "250"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "categoryName": "flooring",
+      "img": "http://www.grandflooring.com/images/woodflooring1.jpg"
+    },
+    {
+      "id": 2,
+      "categoryName": "drywall",
+      "img": "https://images.unsplash.com/photo-1481277542470-605612bd2d61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=995&q=80"
+    },
+    {
+      "id": 3,
+      "categoryName": "tile",
+      "img": "https://images.unsplash.com/photo-1522061541612-28ef361a3045?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1065&q=80"
+    },
+    {
+      "id": 4,
+      "categoryName": "roofing",
+      "img": "https://images.unsplash.com/photo-1546202736-97b71dd7771b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+    },
+    {
+      "id": 5,
+      "categoryName": "framing",
+      "img": "https://images.unsplash.com/photo-1469389129974-57d1740a01a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=966&q=80"
+    },
+    {
+      "id": 6,
+      "categoryName": "design",
+      "img": "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+    },
+    {
+      "id": 7,
+      "categoryName": "demolition",
+      "img": "https://images.unsplash.com/photo-1545497044-1efb836387e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+    },
+    {
+      "categoryName": "HVAC",
+      "id": 8,
+      "img": "https://images.unsplash.com/photo-1550998251-1e18917c975c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+    }
+  ],
+  "advice": [
+    {
+      "id": 1,
+      "link": "https://www.thisoldhouse.com/ideas/21-ways-to-save-your-remodel",
+      "articleName": "21 ways to save your remodel"
+    },
+    {
+      "id": 2,
+      "link": "https://www.familyhandyman.com/smart-homeowner/20-tips-for-planning-a-successful-house-remodel/",
+      "articleName": "20 tips for planning a successful house remodel"
+    },
+    {
+      "id": 3,
+      "link": "https://www.forbes.com/sites/amandalauren/2019/01/29/designers-and-experts-share-the-best-home-renovation-tips-for-maximum-resale-value/#14a6e483b316",
+      "articleName": "Designers And Experts Share The Best Home Renovation Tips For Maximum Resale Value"
+    }
+  ]
+}
