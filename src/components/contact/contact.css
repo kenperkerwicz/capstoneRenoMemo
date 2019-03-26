@@ -8,15 +8,30 @@
 
 
 .emailContact {
- color: white;
+ color: black;
  font-family: sans-seriff;
  justify-content: center;
  text-align: center;
  margin-bottom: 20px;
+
 }
 
 .indivContact {
   padding-top: 50px;
   display: inline-block;
-  font-size: 30px;
+  font-size: 40px;
+
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.Contact {
+  text-align: center;
+  padding-bottom: 60px;
+  padding-top: 40px;
+
+  color: black;
+  padding-top: 30px;
+  font-family: 'Roboto', sans-serif;
+  
 }

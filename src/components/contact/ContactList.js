@@ -22,7 +22,7 @@ export default class ContactList extends Component {
     console.log(`Advice List ART NAME`, this.props.advice)
     return (
 <div className="contactListBackgroundImg">
-      <h1 className="Advice">Contact.</h1>
+      <h1 className="Contact">Contact.</h1>
       <div className="emailContact">
       <Col className="indivContact">email: kenperkerwicz@gmail.com</Col>
       <Col className="indivContact">linkedIn: kenperkerwicz</Col>

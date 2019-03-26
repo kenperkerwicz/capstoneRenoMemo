@@ -23,8 +23,12 @@ class Footer extends Component {
           <div className="nav-item" id="footerBody">
           <Link className="footerLink" id="" to="/contact">Contact</Link>
 
-          <Link className="footerLink" id="" to="/contact">Task Management</Link>
-          <Link className="footerLink" id="" to="/contact">Motivation</Link>
+          {/* <link >Inspiration</link> */}
+
+          <a href="https://www.instagram.com/fixer_upper_before_and_after/" class="button" id="inspirationFooter">Inspiration</a>
+
+
+          {/* <Link className="footerLink" id="" to="/contact">Motivation</Link> */}
           </div>
           <div className="entirebottomFooter">
           <img id="houseImgFooter" src={download} height="40"></img>

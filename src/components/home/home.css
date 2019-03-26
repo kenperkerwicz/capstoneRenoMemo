@@ -149,3 +149,63 @@ padding-top: 1px;
 .imageRow {
   width: 80%
 }
+
+.form-group {
+  display: block;
+  /* margin-left: auto;
+  margin-right: auto; */
+  padding: 8px;
+  text-align: center;
+  border-radius: 5px;
+  justify-content: center;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-control {
+
+display: block;
+  /* margin-left: auto;
+  margin-right: auto; */
+  padding: 8px;
+  text-align: center;
+  border-radius: 5px;
+  justify-content: center;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#homeForm {
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+.homeEdit {
+  display: block;
+  /* margin-left: auto;
+  margin-right: auto; */
+  padding: 8px;
+  text-align: center;
+  border-radius: 5px;
+  justify-content: center;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#submitButtonEdit {
+  background-color: #47526d;
+  border: 1px solid black;
+  display: block;
+  /* margin-left: auto;
+  margin-right: auto; */
+  padding: 8px;
+  text-align: center;
+  border-radius: 5px;
+  justify-content: center;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+}

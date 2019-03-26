@@ -70,14 +70,14 @@ export default class HomeEditForm extends Component {
       return (
         <Card>
           <form id="homeForm">
-            <div className="form-group">
+            <div className="homeEdit">
               <label htmlFor="homeAddress">home address</label>
               <input
                 type="text"
                 required
                 className="form-control"
                 onChange={this.handleFieldChange}
-                id="homeAddress"
+
                 value = {this.state.homeAddress}
               />
             </div>
@@ -89,7 +89,7 @@ export default class HomeEditForm extends Component {
               type="submit"
               onClick={this.updateExistingHome}
               className="btn btn-primary"
-              id="submitButton"
+              id="submitButtonEdit"
             >
               Submit
             </button>

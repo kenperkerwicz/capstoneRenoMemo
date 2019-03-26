@@ -54,10 +54,10 @@
       "dateOfEntry": 1552332009
     },
     {
-      "userId": 1,
       "id": 10,
-      "homeAddress": "123 Hamblen Blvd Madison TN ",
-      "dateOfEntry": 1553103992
+      "dateOfEntry": 1553103992,
+      "homeAddress": "123 Hamblen Blvd Mison TN ",
+      "userId": 1
     },
     {
       "userId": 1,
