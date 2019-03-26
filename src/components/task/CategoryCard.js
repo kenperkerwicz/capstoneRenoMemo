@@ -34,7 +34,7 @@ export default class TaskCategoryCard extends Component {
           key={this.props.task.id}>
 
 
-            { <CardTitle >{this.props.task.name}</CardTitle> }
+            { <h4 >{this.props.task.name}</h4> }
 
 
             {/* {<h4>taskId :{this.props.task.id}</h4>

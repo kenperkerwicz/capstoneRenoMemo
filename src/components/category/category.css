@@ -68,12 +68,11 @@ border: black;
 height: 150px;
 width: 200px;
 border-radius: 80px;
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 .catNameEntry {
   padding-top: 35px;
-
-
 }
 
 #AddCatButton {
