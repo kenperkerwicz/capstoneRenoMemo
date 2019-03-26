@@ -23,9 +23,10 @@ export default class ContactList extends Component {
     return (
 <div className="contactListBackgroundImg">
       <h1 className="Advice">Contact.</h1>
-      <h6>email: kenperkerwicz@gmail.com</h6>
-      <h6>linkedIn: kenperkerwicz</h6>
-
+      <div className="emailContact">
+      <Col className="indivContact">email: kenperkerwicz@gmail.com</Col>
+      <Col className="indivContact">linkedIn: kenperkerwicz</Col>
+      </div>
       </div>
     )
   }

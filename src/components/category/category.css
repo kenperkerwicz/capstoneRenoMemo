@@ -77,17 +77,19 @@ box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 
 #AddCatButton {
   background-color: #47526d;
-  margin-left: 10px;
+  margin-left: auto;
   justify-content: center;
-  display: center;
+  display: block;
+  margin-right: auto;
 
+  margin-bottom: 20px;
 }
 
-.catButtonDiv {
+/* .catButtonDiv {
   justify-content: center;
   padding-bottom: 10px;
   display: inline-block;
   justify-content: space-evenly;
   padding: 5px;
 }
-
+ */

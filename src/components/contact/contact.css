@@ -1,6 +1,22 @@
 .contactListBackgroundImg {
- 
+
   min-height: 700px;
   margin-top: 10px;
   background-image: url("https://images.unsplash.com/photo-1457092716468-97352752b749?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=986&q=80");
+  border-radius: 5px;
+}
+
+
+.emailContact {
+ color: white;
+ font-family: sans-seriff;
+ justify-content: center;
+ text-align: center;
+ margin-bottom: 20px;
+}
+
+.indivContact {
+  padding-top: 50px;
+  display: inline-block;
+  font-size: 30px;
 }
