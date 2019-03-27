@@ -19,16 +19,14 @@ class ModalExample extends React.Component {
      expectedCompDate: this.props.task.expectedCompDate,
      homeId: this.props.task.homeId,
       status: this.props.task.status,
-      id: this.props.task.id
+      id: this.props.task.id,
+      cost: this.props.task.cost
     };
 
     // this.handleFieldChange = this.handleFieldChange.bind(this);
   this.saveEditForm = this.saveEditForm.bind(this);
-    // console.log(`CATid`,this.state.catId),
 
-console.log(this.state.name)
-
-    this.toggle = this.toggle.bind(this);
+this.toggle = this.toggle.bind(this);
   }
 
   toggle() {
@@ -40,21 +38,6 @@ console.log(this.state.name)
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
   };
-
-  //  componentDidMount(){
-  //   TaskManager.getTasks().then(task => {
-  //     this.setState({
-  //       catId: task.catId,
-  //     name: task.name,
-  //     contact: task.contact,
-  //     expectedCompDate: task.expectedCompDate,
-  //     homeId: task.homeId,
-  //     status: task.status,
-  //     id: task.id
-  //     })
-  //   })
-  // }
-
 
 
 componentDidMount =() => {
@@ -77,12 +60,13 @@ return {task: this.props.task}
           expectedCompDate: this.state.expectedCompDate,
           homeId: this.state.homeId,
           status: this.state.status,
-          id: this.state.id
-
+          id: this.state.id,
+          cost: this.state.cost
         }
 
          TaskManager.put(editedTask).then(() => this.props.populateData());
-
+         this.props.showModal();
+        this.props.clearCosts();
       }
  // code above needs to push history
   };
@@ -94,6 +78,7 @@ return {task: this.props.task}
     return (
       <div>
         <Modal
+
           isOpen={this.props.show}
           toggle={this.toggle}
           className={this.props.className}
@@ -102,6 +87,7 @@ return {task: this.props.task}
             toggle={this.toggle}
             value={this.state.name}
             onChange={this.handleFieldChange}
+            className="modalTop"
           />
 
           <ModalBody>
@@ -131,6 +117,14 @@ return {task: this.props.task}
                 onChange={this.handleFieldChange}
                 id="contact"
                 value={this.state.contact}
+              />
+              <Label for="cost">cost</Label>
+              <Input
+                type="text"
+                name="cost"
+                onChange={this.handleFieldChange}
+                id="cost"
+                value={this.state.cost}
               />
 
               <Label

@@ -3,9 +3,19 @@ import TaskCategoryCard from "./CategoryCard";
 import TaskManager from "../../modules/TaskManager";
 import ModalExample from "../task/editModal";
 import CategoryManager from "../../modules/CategoryManager";
-import {Card, CardDeck, Container,
-  CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button, Row, Col } from 'reactstrap';
+import {
+  Card,
+  CardDeck,
+  Container,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
+  Row,
+  Col
+} from "reactstrap";
 
 export default class TaskCategoryList extends Component {
   state = {
@@ -28,50 +38,43 @@ export default class TaskCategoryList extends Component {
       });
     } else {
       this.setState({
-
         show: true,
         currentModalData: this.state.tasks.find(task => {
           return task.id === taskId;
-
         })
       });
-
     }
   };
 
 
-
-  newArray = []
-
   getCosts = () => {
 
+    let newArray = [];
+
     this.state.tasks.forEach(task => {
+      let costNum = Number(task.cost);
 
- let costNum = Number(task.cost);
+     newArray.push(costNum);
+    });
+    let arrayToAdd = newArray;
 
-this.newArray.push(costNum);
+    console.log(typeof(parseInt(arrayToAdd)))
 
-});
+    console.log(this.newArray)
+    console.log()
 
+    let sum = 0;
 
-let arrayToAdd = this.newArray
+    for (var i = 0; i < arrayToAdd.length; i++) {
+      sum = sum + arrayToAdd[i];
+    }
 
-console.log(typeof(parseInt(arrayToAdd)))
+    console.log(sum);
 
-console.log(this.newArray)
-
-let sum = 0;
-
- for (var i = 0; i < arrayToAdd.length; i++) {
-sum = sum + arrayToAdd[i];
-}
-
-console.log(sum)
-
-this.setState({
-  cost: sum
-})
-}
+    this.setState({
+      cost: sum
+    });
+  };
 
 
 
@@ -82,72 +85,55 @@ this.setState({
 
     const catId = this.props.match.params.categoryId;
 
-    this.newState = {}
+    this.newState = {};
 
-    // TaskManager.getTasks(homeId, catId).then(tasks => {
-    //   this.setState({ tasks: tasks, show: false });
-    // });
-
-   TaskManager.getTasks(homeId, catId)
-    .then(tasks => this.newState.tasks = tasks)
-    .then(()=> CategoryManager.get(catId))
-    .then(categories => this.newState.categories = categories)
-    .then(()=> this.setState(this.newState))
-
+    TaskManager.getTasks(homeId, catId)
+      .then(tasks => (this.newState.tasks = tasks))
+      .then(() => CategoryManager.get(catId))
+      .then(categories => (this.newState.categories = categories))
+      .then(() => this.setState(this.newState));
   };
 
   deleteTask = id => {
-
-    return TaskManager.remove(id).then(() => this.populateData())
-
+    return TaskManager.remove(id).then(() => this.populateData());
   };
 
- sumValues = () => {
-
-    let num1= Number(document.formcalc.txtnum1.value);
-    let num2= Number(document.formcalc.txtnum2.value);
-   let  res=num1+num2;
-    document.formcalc.txtres.value=res
-  }
+  clearCosts = () => {
+    this.setState({
+      cost: 0
+    });
+    console.log(`STATE COST`, this.state.cost)
+  };
 
   componentDidMount() {
-
     this.populateData();
 
-    // console.log(`categories`, this.state.categories)
+    //  this.getCosts();
 
-   this.getCosts();
+    // this.clearCosts();
   }
 
-
   render() {
-
-   let homeIdNumb = this.props.match.params.homeId;
-   let catIdNumb = this.props.match.params.categoryId;
-
-
-    let catName = this.state.categories.categoryName
-
-
-    // console.log(`costs`, this.state.tasks)
-
+    let homeIdNumb = this.props.match.params.homeId;
+    let catIdNumb = this.props.match.params.categoryId;
+    let catName = this.state.categories.categoryName;
 
     return (
-
       <React.Fragment>
-
-        <h2 className="categoryName">{catName}.</h2>
+        <h1 className="categoryName">{catName}.</h1>
 
         <button
-        //  homeId ={this.state.homeId}
+          //  homeId ={this.state.homeId}
           type="submit"
           className="addToDoButton"
-          onClick={() => this.props.history.push(`/homes/${homeIdNumb}/${catIdNumb}/tasks/new`)}
+          onClick={() =>
+            this.props.history.push(
+              `/homes/${homeIdNumb}/${catIdNumb}/tasks/new`
+            )
+          }
         >
           add task.
         </button>
-
-
 
         {this.state.show ? (
           <ModalExample
@@ -157,51 +143,54 @@ this.setState({
             handleFieldChange={this.state.handleFieldChange}
             task={this.state.currentModalData}
             show={this.state.show}
+            clearCosts={this.clearCosts}
           >
             edit
           </ModalExample>
         ) : null}
 
-<Container id="TaskCategoryCard">
-<Row >
-        {this.state.tasks.map((task, i) => (
-<Col sm="4" >
+        <Container id="TaskCategoryCard">
+          <Row>
+            {this.state.tasks.map((task, i) => (
+              <Col sm="4">
+                <TaskCategoryCard
+                  task={task}
+                  {...this.props}
+                  taskName={task.taskName}
+                  catId={task.catId}
+                  // key={task.id}
+                  id={i}
+                  showModal={this.showModal}
+                  // homeId={this.homeId}
+                  show={this.state.show}
+                  deleteTask={this.deleteTask}
+                  categories={this.state.categories}
+                  cost={task.cost}
+                />
+              </Col>
+            ))}
+            </Row>
+             <div className="cost">
+            <h2>approx total: </h2>
+            <form name="formcalc">
+              <input className="calcButton"
+                type="button"
+                value="Calculate"
+                onClick={() => this.getCosts()}
+              />
+              <input className="clearButton"
+                type="button"
+                value="Clear"
+                onClick={() => this.clearCosts()}
+              />
+            </form>
+            <br></br>
 
-          <TaskCategoryCard
-            task={task}
-            {...this.props}
-            taskName={task.taskName}
-            catId={task.catId}
-            // key={task.id}
-            id={i}
-            showModal={this.showModal}
-            // homeId={this.homeId}
-            show={this.state.show}
-            deleteTask={this.deleteTask}
-           categories={this.state.categories}
-           cost={task.cost}
-          />
-          </Col>
-        ))}
-         <h2>approx total: </h2>
-          <form name="formcalc">
-          {/* Number 1 <input type="text" name="txtnum1"
-            value={this.cost}
-         /><br></br>
-          Number 2 <input type="text" name="txtnum2"></input>
-           Result: <input type="text" name="txtres"></input> */}
-
-            <input type="button" value="Calculate" onClick={() => this.getCosts()}></input>
-          </form>
             <h3>{this.state.cost}</h3>
-          <script type="text/javascript">
+            </div>
+            <script type="text/javascript" />
 
-
-          </script>
-        </Row>
-         </Container>
-
-
+        </Container>
       </React.Fragment>
     );
   }

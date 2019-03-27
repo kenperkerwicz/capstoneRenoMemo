@@ -47,6 +47,7 @@
    box-shadow: 2px 2px 2px #aaaaaa;
    background-color: #f2f5f9;
    min-width: 200px;
-   
+
    padding-bottom: 50px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
 }

@@ -11,7 +11,8 @@ export default class TaskForm extends Component {
     expectedCompDate: "",
     homeId: "",
     status: "",
-    id: ""
+    id: "",
+    cost: ""
   };
 
   // Update state whenever an input field is edited
@@ -20,6 +21,8 @@ export default class TaskForm extends Component {
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
   };
+
+
 
   constructNewCard = evt => {
     // const homeId = this.props.match.params.homeId;
@@ -46,7 +49,8 @@ console.log(`PARAM CAT ID`, paramCatId)
         id: this.state.id,
         status: this.state.status,
         homeId: Number(this.props.match.params.homeId),
-        catId: Number(this.props.match.params.categoryId)
+        catId: Number(this.props.match.params.categoryId),
+        cost: this.state.cost
       };
 
       console.log(`CARD`, card)
@@ -90,6 +94,16 @@ console.log(`PARAM CAT ID`, paramCatId)
               className="form-control"
               onChange={this.handleFieldChange}
               id="expectedCompDate"
+            />
+          </div>
+          <div>
+            <label>approx cost $</label>
+            <input
+              type="text"
+              required
+              className="form-control"
+              onChange={this.handleFieldChange}
+              id="cost"
             />
           </div>
 

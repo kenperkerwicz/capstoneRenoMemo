@@ -120,26 +120,6 @@
       "cost": "4"
     },
     {
-      "catId": 1,
-      "name": "pick out stains",
-      "contact": "763-226-6909",
-      "expectedCompDate": "friday",
-      "homeId": 10,
-      "status": "",
-      "id": 25,
-      "cost": "4"
-    },
-    {
-      "name": "buy more nails ",
-      "contact": "n/a",
-      "expectedCompDate": "friday",
-      "id": 26,
-      "status": "",
-      "homeId": 10,
-      "catId": 1,
-      "cost": "4"
-    },
-    {
       "name": "shop prices",
       "contact": "615-223-0909",
       "expectedCompDate": "today",
@@ -191,7 +171,7 @@
     },
     {
       "catId": 1,
-      "name": "pick up stains",
+      "name": "pick up ",
       "contact": "763-226-6909",
       "expectedCompDate": "end of day",
       "homeId": 10,
@@ -220,26 +200,6 @@
       "cost": "80"
     },
     {
-      "name": "SAVE DAMNIT",
-      "contact": "763-226-6909",
-      "expectedCompDate": "SUNDAY 2",
-      "id": 38,
-      "status": "",
-      "homeId": 10,
-      "catId": 1,
-      "cost": "400"
-    },
-    {
-      "name": "pick up flooring",
-      "contact": "763-226-6909",
-      "expectedCompDate": "friday",
-      "id": 39,
-      "status": "",
-      "homeId": 10,
-      "catId": 1,
-      "cost": "350"
-    },
-    {
       "name": "kenperkerwicz@gmail.com",
       "contact": "763-226-6909",
       "expectedCompDate": "SUNDAY 2",
@@ -248,6 +208,26 @@
       "homeId": 10,
       "catId": 2,
       "cost": "250"
+    },
+    {
+      "name": "kenperkerwicz@gmail.com",
+      "contact": "763-226-6909",
+      "expectedCompDate": "today",
+      "id": 41,
+      "status": "",
+      "homeId": 10,
+      "catId": 1,
+      "cost": "40"
+    },
+    {
+      "name": "pick up sticks",
+      "contact": "n/a",
+      "expectedCompDate": "today",
+      "id": 42,
+      "status": "",
+      "homeId": 10,
+      "catId": 1,
+      "cost": "40"
     }
   ],
   "categories": [

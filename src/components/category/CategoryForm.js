@@ -46,7 +46,6 @@ export default class CategoryForm extends Component {
   render () {
     return <div className="mainDiv">
       <div className="header">
-      <h1>category name goes here</h1>
 
       <div className="form-group">
             <label htmlFor="homeAddress">category name</label>
@@ -56,7 +55,7 @@ export default class CategoryForm extends Component {
               className="form-control"
               onChange={this.handleFieldChange}
               id="categoryName"
-              placeholder="cat goes here"
+              
             />
           </div>
 
