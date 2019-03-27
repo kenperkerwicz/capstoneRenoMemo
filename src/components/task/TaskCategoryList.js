@@ -14,7 +14,7 @@ export default class TaskCategoryList extends Component {
     show: false,
     currentModalData: {},
     categories: [],
-
+    cost: []
   };
 
   showModal = (e, taskId) => {
@@ -40,18 +40,40 @@ export default class TaskCategoryList extends Component {
   };
 
 
+
+  newArray = []
+
   getCosts = () => {
-    let newArray = []
+
     this.state.tasks.forEach(task => {
 
- let cat = task.cost;
-newArray += ' ' + Number(cat);
+ let costNum = Number(task.cost);
+
+this.newArray.push(costNum);
+
 });
 
-console.log(typeof(cat))
 
-console.log(newArray)
+let arrayToAdd = this.newArray
+
+console.log(typeof(parseInt(arrayToAdd)))
+
+console.log(this.newArray)
+
+let sum = 0;
+
+ for (var i = 0; i < arrayToAdd.length; i++) {
+sum = sum + arrayToAdd[i];
 }
+
+console.log(sum)
+
+this.setState({
+  cost: sum
+})
+}
+
+
 
   // get tasks with home id and cat id //
 
@@ -93,6 +115,8 @@ console.log(newArray)
     this.populateData();
 
     // console.log(`categories`, this.state.categories)
+
+   this.getCosts();
   }
 
 
@@ -105,7 +129,7 @@ console.log(newArray)
     let catName = this.state.categories.categoryName
 
 
-    console.log(`costs`, this.state.tasks)
+    // console.log(`costs`, this.state.tasks)
 
 
     return (
@@ -161,15 +185,15 @@ console.log(newArray)
         ))}
          <h2>approx total: </h2>
           <form name="formcalc">
-          Number 1 <input type="text" name="txtnum1"
+          {/* Number 1 <input type="text" name="txtnum1"
             value={this.cost}
          /><br></br>
           Number 2 <input type="text" name="txtnum2"></input>
-           Result: <input type="text" name="txtres"></input>
+           Result: <input type="text" name="txtres"></input> */}
 
             <input type="button" value="Calculate" onClick={() => this.getCosts()}></input>
           </form>
-
+            <h3>{this.state.cost}</h3>
           <script type="text/javascript">
 
 
