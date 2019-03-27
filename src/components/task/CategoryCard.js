@@ -6,6 +6,29 @@ import {Card, CardDeck,
   CardTitle, CardSubtitle, Button, Row, Col, Container,} from 'reactstrap';
 
 export default class TaskCategoryCard extends Component {
+
+state = {
+  cost: []
+}
+
+
+  sumValues = () => {
+
+
+
+    let num1= Number(this.task.cost);
+    let num2= Number(document.formcalc.txtnum2.value);
+   let  res=num1+num2;
+    document.formcalc.txtres.value=res
+  }
+
+componentDidMount () {
+
+
+}
+
+
+
   render() {
     // let filteredVar = this.props.task
     //  .filter(task =>
@@ -18,7 +41,16 @@ export default class TaskCategoryCard extends Component {
     // console.log(`INDEX`, this.props.id)
     // console.log(`TASK ID`, this.props.task.id)
     // console.log(this.props.categories.categoryName)
-    console.log(this.props.task.cost)
+
+
+
+
+
+    // console.log(this.props.task.cost)
+
+
+
+
 
     return (
 
@@ -76,7 +108,7 @@ export default class TaskCategoryCard extends Component {
       </Card>
       </Row>
 
-     
+
       </Container>
     );
   }

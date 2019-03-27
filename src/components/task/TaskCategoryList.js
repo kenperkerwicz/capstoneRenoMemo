@@ -14,7 +14,7 @@ export default class TaskCategoryList extends Component {
     show: false,
     currentModalData: {},
     categories: [],
-    costs: []
+
   };
 
   showModal = (e, taskId) => {
@@ -39,6 +39,19 @@ export default class TaskCategoryList extends Component {
     }
   };
 
+
+  getCosts = () => {
+    let newArray = []
+    this.state.tasks.forEach(task => {
+
+ let cat = task.cost;
+newArray += ' ' + Number(cat);
+});
+
+console.log(typeof(cat))
+
+console.log(newArray)
+}
 
   // get tasks with home id and cat id //
 
@@ -69,8 +82,6 @@ export default class TaskCategoryList extends Component {
 
  sumValues = () => {
 
-
-
     let num1= Number(document.formcalc.txtnum1.value);
     let num2= Number(document.formcalc.txtnum2.value);
    let  res=num1+num2;
@@ -84,11 +95,9 @@ export default class TaskCategoryList extends Component {
     // console.log(`categories`, this.state.categories)
   }
 
+
   render() {
-    // console.log(`STATE TASKS`, this.state.tasks)
-    // console.log("TASKS", this.props.tasks);
-    // console.log("CATEGORIES", this.props.categories);
-    // console.log(`CURRENT MODAL DATA`, this.currentModalData);
+
    let homeIdNumb = this.props.match.params.homeId;
    let catIdNumb = this.props.match.params.categoryId;
 
@@ -96,16 +105,12 @@ export default class TaskCategoryList extends Component {
     let catName = this.state.categories.categoryName
 
 
-
+    console.log(`costs`, this.state.tasks)
 
 
     return (
 
-
-
       <React.Fragment>
-
-
 
         <h2 className="categoryName">{catName}.</h2>
 
@@ -137,6 +142,7 @@ export default class TaskCategoryList extends Component {
 <Row >
         {this.state.tasks.map((task, i) => (
 <Col sm="4" >
+
           <TaskCategoryCard
             task={task}
             {...this.props}
@@ -153,26 +159,24 @@ export default class TaskCategoryList extends Component {
           />
           </Col>
         ))}
-        </Row>
-         </Container>
-
          <h2>approx total: </h2>
           <form name="formcalc">
           Number 1 <input type="text" name="txtnum1"
-
-          // value={this.props.task[0].cost}
-
-          ></input><br></br>
+            value={this.cost}
+         /><br></br>
           Number 2 <input type="text" name="txtnum2"></input>
            Result: <input type="text" name="txtres"></input>
 
-            <input type="button" value="Calculate" onClick={() => this.sumValues()}></input>
+            <input type="button" value="Calculate" onClick={() => this.getCosts()}></input>
           </form>
 
           <script type="text/javascript">
 
 
           </script>
+        </Row>
+         </Container>
+
 
       </React.Fragment>
     );
